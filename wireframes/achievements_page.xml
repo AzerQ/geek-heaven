@@ -1,0 +1,292 @@
+<mxfile host="app.diagrams.net" modified="2023-11-02T15:30:00.000Z" agent="Mozilla/5.0" etag="def456" version="21.6.6">
+  <diagram name="Страница достижений" id="achievements-page">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="logo" value="GeekHeaven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="60" y="55" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="search" value="Поиск..." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="400" y="55" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="Профиль" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="55" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="200" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_dashboard" value="Главная" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_library" value="Моя библиотека" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_collections" value="Мои коллекции" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_achievements" value="Достижения" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_categories" value="Категории контента" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_games" value="Игры" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_movies" value="Фильмы и сериалы" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_books" value="Книги" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_comics" value="Комиксы и манга" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_anime" value="Аниме" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="content" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="880" height="680" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_page_title" value="Достижения" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="300" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_filters" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="840" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_all" value="Все" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="185" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_obtained" value="Полученные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="390" y="185" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_in_progress" value="В процессе" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="500" y="185" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_locked" value="Недоступные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="610" y="185" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_type" value="Тип:" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="185" width="40" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="filter_type_dropdown" value="Все типы" style="rounded=1;whiteSpace=wrap;html=1;align=center;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="770" y="185" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="search_achievements" value="Поиск достижений..." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="900" y="185" width="180" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Секция общих достижений -->
+        <mxCell id="common_achievements_title" value="Общие достижения" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="250" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Ряд достижений 1 -->
+        <mxCell id="achievement_row_1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="290" width="840" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Достижение 1 -->
+        <mxCell id="achievement_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_1_icon" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="290" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_1_emoji" value="🎮" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="290" y="325" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_1_name" value="Первые шаги" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="310" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_1_desc" value="Добавьте первый медиа-объект в свою библиотеку" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_1_status" value="Получено" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="365" width="70" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Достижение 2 -->
+        <mxCell id="achievement_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="550" y="300" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_icon" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_emoji" value="⭐" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="560" y="325" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_name" value="Ценитель" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="630" y="310" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_desc" value="Оцените 10 различных медиа-объектов" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="630" y="330" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_progress" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="630" y="365" width="100" height="10" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_progress_fill" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="630" y="365" width="60" height="10" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_2_status" value="6/10" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="735" y="362" width="40" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Достижение 3 -->
+        <mxCell id="achievement_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="820" y="300" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_3_icon" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="830" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_3_emoji" value="?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="830" y="325" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_3_name" value="Секретное достижение" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="310" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_3_desc" value="Выполните секретное условие для разблокировки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="900" y="330" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_3_status" value="Заблокировано" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="980" y="365" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Ряд достижений 2 -->
+        <mxCell id="achievement_row_2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="410" width="840" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Достижение 4 -->
+        <mxCell id="achievement_4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="280" y="420" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_icon" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="290" y="430" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_emoji" value="🎬" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="290" y="445" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_name" value="Киноман" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="430" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_desc" value="Посмотрите 10 фильмов за месяц" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="450" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_progress" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="360" y="485" width="100" height="10" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_progress_fill" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="485" width="80" height="10" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="achievement_4_status" value="8/10" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="465" y="482" width="40" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Продолжение с другими достижениями -->
+        
+        <!-- Секция тематических достижений -->
+        <mxCell id="themed_achievements_title" value="Тематические достижения" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="530" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_achievements_desc" value="Сезонные и специальные достижения, доступные в определенные периоды" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="260" y="560" width="600" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Ряд тематических достижений -->
+        <mxCell id="themed_row" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="590" width="840" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Достижение тематическое 1 -->
+        <mxCell id="themed_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="280" y="600" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_1_icon" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="290" y="610" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_1_emoji" value="🎃" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="290" y="625" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_1_name" value="Хэллоуинский марафон" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="610" width="160" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_1_desc" value="Посмотрите 5 фильмов ужасов в октябре" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="630" width="160" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="themed_1_limited" value="Доступно до: 31 октября" style="text;html=1;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="665" width="140" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Пагинация -->
+        <mxCell id="pagination" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="710" width="840" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="page_prev" value="&lt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="540" y="720" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="page_1" value="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="570" y="720" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="page_2" value="2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="600" y="720" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="page_3" value="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="630" y="720" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="page_next" value=">" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="660" y="720" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

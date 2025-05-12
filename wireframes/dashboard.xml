@@ -49,6 +49,15 @@
         <mxCell id="content" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
           <mxGeometry x="240" y="100" width="880" height="680" as="geometry" />
         </mxCell>
+        <mxCell id="notifications" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="840" y="110" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="notifications_icon" value="🏆" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="notifications_text" value="Получено новое достижение: &lt;br&gt;&lt;b&gt;Первые шаги&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="890" y="115" width="200" height="40" as="geometry" />
+        </mxCell>
         <mxCell id="recommendations_title" value="Персональные рекомендации" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="260" y="120" width="300" height="30" as="geometry" />
         </mxCell>
