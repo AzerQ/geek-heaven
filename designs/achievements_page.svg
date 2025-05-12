@@ -1,0 +1,150 @@
+<svg width="1169" height="827" viewBox="0 0 1169 827" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="1169" height="827" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="1169" height="70" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="40" y="42" font-family="Montserrat" font-size="24" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Строка поиска -->
+  <rect x="350" y="20" width="400" height="36" rx="18" fill="white" fill-opacity="0.2" stroke="white" stroke-width="1"/>
+  <text x="375" y="42" font-family="Roboto" font-size="14" fill="white" fill-opacity="0.8">Поиск...</text>
+  <path d="M725 33.5C725 37.0899 722.09 40 718.5 40C714.91 40 712 37.0899 712 33.5C712 29.9101 714.91 27 718.5 27C722.09 27 725 29.9101 725 33.5Z" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Иконки в правой части -->
+  <circle cx="1080" cy="35" r="20" fill="white" fill-opacity="0.2"/>
+  <text x="1074" y="41" font-family="Montserrat" font-size="24" fill="white">👤</text>
+  
+  <!-- Боковая навигация -->
+  <rect x="0" y="70" width="240" height="757" fill="#212121"/>
+  
+  <!-- Пункты меню -->
+  <text x="50" y="210" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Главная</text>
+  <path d="M25 210L35 195L45 210" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <text x="50" y="260" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Моя библиотека</text>
+  <path d="M25 260L35 245L45 260" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <text x="50" y="310" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Мои коллекции</text>
+  <path d="M25 310L35 295L45 310" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <rect x="0" y="330" width="240" height="50" fill="#5C6BC0" fill-opacity="0.2"/>
+  <text x="50" y="360" font-family="Roboto" font-size="16" fill="white">Достижения</text>
+  <path d="M25 360L35 345L45 360" stroke="white" stroke-width="2"/>
+  
+  <text x="20" y="420" font-family="Roboto" font-size="14" fill="white" fill-opacity="0.5">КАТЕГОРИИ КОНТЕНТА</text>
+  
+  <text x="50" y="470" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Игры</text>
+  <text x="25" y="470" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">🎮</text>
+  
+  <text x="50" y="520" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Фильмы и сериалы</text>
+  <text x="25" y="520" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">🎬</text>
+  
+  <text x="50" y="570" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Книги</text>
+  <text x="25" y="570" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">📚</text>
+  
+  <text x="50" y="620" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Комиксы и манга</text>
+  <text x="25" y="620" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">💬</text>
+  
+  <text x="50" y="670" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Аниме</text>
+  <text x="25" y="670" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">✨</text>
+  
+  <!-- Основной контент -->
+  <rect x="240" y="70" width="929" height="757" fill="#F5F5F5"/>
+  
+  <!-- Заголовок страницы -->
+  <text x="280" y="120" font-family="Montserrat" font-size="28" font-weight="700" fill="#212121">Достижения</text>
+  <text x="280" y="150" font-family="Roboto" font-size="16" fill="#757575">Отслеживайте свой прогресс и получайте награды</text>
+  
+  <!-- Фильтры и поиск -->
+  <rect x="280" y="170" width="840" height="60" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.05))"/>
+  
+  <rect x="300" y="185" width="100" height="30" rx="15" fill="#5C6BC0"/>
+  <text x="332" y="205" font-family="Roboto" font-size="14" font-weight="500" fill="white">Все</text>
+  
+  <rect x="410" y="185" width="120" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
+  <text x="427" y="205" font-family="Roboto" font-size="14" fill="#757575">Полученные</text>
+  
+  <rect x="540" y="185" width="120" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
+  <text x="564" y="205" font-family="Roboto" font-size="14" fill="#757575">В процессе</text>
+  
+  <rect x="670" y="185" width="120" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
+  <text x="685" y="205" font-family="Roboto" font-size="14" fill="#757575">Недоступные</text>
+  
+  <text x="800" y="205" font-family="Roboto" font-size="14" fill="#757575">Тип:</text>
+  
+  <rect x="835" y="185" width="120" height="30" rx="4" fill="white" stroke="#E0E0E0"/>
+  <text x="850" y="205" font-family="Roboto" font-size="14" fill="#757575">Все типы</text>
+  <path d="M945 195L935 205L925 195" stroke="#757575" stroke-width="2"/>
+  
+  <rect x="965" y="185" width="140" height="30" rx="15" fill="white" stroke="#E0E0E0"/>
+  <text x="980" y="205" font-family="Roboto" font-size="14" fill="#757575">Поиск 🔍</text>
+  
+  <!-- Раздел Общие достижения -->
+  <text x="280" y="260" font-family="Montserrat" font-size="20" font-weight="700" fill="#212121">Общие достижения</text>
+  
+  <!-- Карточки достижений -->
+  <!-- Ряд 1 -->
+  <!-- Достижение 1 -->
+  <rect x="280" y="280" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="340" cy="330" r="40" fill="#4CAF50" opacity="0.9"/>
+  <text x="327" y="346" font-family="Roboto" font-size="32" fill="white">🏆</text>
+  <text x="400" y="310" font-family="Roboto" font-size="16" font-weight="700" fill="#212121">Цифровой Гуру</text>
+  <text x="400" y="330" font-family="Roboto" font-size="14" fill="#757575">Добавьте контент всех типов</text>
+  <text x="400" y="355" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
+  <text x="465" y="355" font-family="Roboto" font-size="12" fill="#9E9E9E">•</text>
+  <text x="480" y="355" font-family="Roboto" font-size="12" fill="#9E9E9E">15.04.2023</text>
+  
+  <!-- Достижение 2 -->
+  <rect x="565" y="280" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="625" cy="330" r="40" fill="#FFC107" opacity="0.9"/>
+  <text x="612" y="346" font-family="Roboto" font-size="32" fill="white">📊</text>
+  <text x="685" y="310" font-family="Roboto" font-size="16" font-weight="700" fill="#212121">Трекер Прогресса</text>
+  <text x="685" y="330" font-family="Roboto" font-size="14" fill="#757575">Отметьте прогресс в 10 играх</text>
+  <rect x="685" y="345" width="100" height="8" rx="4" fill="#E0E0E0"/>
+  <rect x="685" y="345" width="70" height="8" rx="4" fill="#FFC107"/>
+  <text x="795" y="355" font-family="Roboto" font-size="12" fill="#757575">7/10</text>
+  
+  <!-- Достижение 3 -->
+  <rect x="850" y="280" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="910" cy="330" r="40" fill="#9E9E9E" opacity="0.6"/>
+  <text x="897" y="346" font-family="Roboto" font-size="32" fill="white">🎭</text>
+  <text x="970" y="310" font-family="Roboto" font-size="16" font-weight="700" fill="#757575">Киноман</text>
+  <text x="970" y="330" font-family="Roboto" font-size="14" fill="#757575">Посмотрите 50 фильмов</text>
+  <rect x="970" y="345" width="100" height="8" rx="4" fill="#E0E0E0"/>
+  <rect x="970" y="345" width="10" height="8" rx="4" fill="#9E9E9E"/>
+  <text x="1080" y="355" font-family="Roboto" font-size="12" fill="#757575">5/50</text>
+  
+  <!-- Ряд 2 -->
+  <!-- Достижение 4 -->
+  <rect x="280" y="420" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="340" cy="470" r="40" fill="#FF4081" opacity="0.9"/>
+  <text x="327" y="486" font-family="Roboto" font-size="32" fill="white">❤️</text>
+  <text x="400" y="450" font-family="Roboto" font-size="16" font-weight="700" fill="#212121">Фанат</text>
+  <text x="400" y="470" font-family="Roboto" font-size="14" fill="#757575">Поставьте 100 оценок</text>
+  <rect x="400" y="485" width="100" height="8" rx="4" fill="#E0E0E0"/>
+  <rect x="400" y="485" width="95" height="8" rx="4" fill="#FF4081"/>
+  <text x="510" y="495" font-family="Roboto" font-size="12" fill="#757575">95/100</text>
+  
+  <!-- Достижение 5 -->
+  <rect x="565" y="420" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="625" cy="470" r="40" fill="#4CAF50" opacity="0.9"/>
+  <text x="612" y="486" font-family="Roboto" font-size="32" fill="white">❤️</text>
+  <text x="685" y="450" font-family="Roboto" font-size="16" font-weight="700" fill="#212121">Коллекционер</text>
+  <text x="685" y="470" font-family="Roboto" font-size="14" fill="#757575">Создайте 5 коллекций</text>
+  <text x="685" y="495" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
+  <text x="750" y="495" font-family="Roboto" font-size="12" fill="#9E9E9E">•</text>
+  <text x="765" y="495" font-family="Roboto" font-size="12" fill="#9E9E9E">20.05.2023</text>
+  
+  <!-- Достижение 6 -->
+  <rect x="850" y="420" width="265" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="910" cy="470" r="40" fill="#FFC107" opacity="0.9"/>
+  <text x="897" y="486" font-family="Roboto" font-size="32" fill="white">🔍</text>
+  <text x="970" y="450" font-family="Roboto" font-size="16" font-weight="700" fill="#212121">Исследователь</text>
+  <text x="970" y="470" font-family="Roboto" font-size="14" fill="#757575">Оцените 20 аниме</text>
+  <rect x="970" y="485" width="100" height="8" rx="4" fill="#E0E0E0"/>
+  <rect x="970" y="485" width="60" height="8" rx="4" fill="#FFC107"/>
+  <text x="1080" y="495" font-family="Roboto" font-size="12" fill="#757575">12/20</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg width="1169" height="827" viewBox="0 0 1169 827" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="1169" height="827" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="1169" height="70" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="40" y="42" font-family="Montserrat" font-size="24" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Строка поиска -->
+  <rect x="350" y="20" width="400" height="36" rx="18" fill="white" fill-opacity="0.2" stroke="white" stroke-width="1"/>
+  <text x="375" y="42" font-family="Roboto" font-size="14" fill="white" fill-opacity="0.8">Поиск...</text>
+  <path d="M725 33.5C725 37.0899 722.09 40 718.5 40C714.91 40 712 37.0899 712 33.5C712 29.9101 714.91 27 718.5 27C722.09 27 725 29.9101 725 33.5Z" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Иконки в правой части -->
+  <circle cx="1080" cy="35" r="20" fill="white" fill-opacity="0.2"/>
+  <text x="1074" y="41" font-family="Montserrat" font-size="24" fill="white">👤</text>
+  
+  <!-- Боковая навигация -->
+  <rect x="0" y="70" width="240" height="757" fill="#212121"/>
+  
+  <!-- Пункты меню -->
+  <text x="50" y="210" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Главная</text>
+  <path d="M25 210L35 195L45 210" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <text x="50" y="260" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Моя библиотека</text>
+  <path d="M25 260L35 245L45 260" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <rect x="0" y="280" width="240" height="50" fill="#5C6BC0" fill-opacity="0.2"/>
+  <text x="50" y="310" font-family="Roboto" font-size="16" fill="white">Мои коллекции</text>
+  <path d="M25 310L35 295L45 310" stroke="white" stroke-width="2"/>
+  
+  <text x="50" y="360" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Достижения</text>
+  <path d="M25 360L35 345L45 360" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <text x="50" y="410" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Настройки</text>
+  <path d="M25 410L35 395L45 410" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
+  
+  <!-- Основной контент -->
+  <rect x="260" y="90" width="889" height="50" fill="white"/>
+  <text x="280" y="122" font-family="Montserrat" font-size="24" font-weight="700" fill="#212121">Редактирование коллекции</text>
+  
+  <!-- Форма редактирования -->
+  <rect x="260" y="160" width="600" height="647" fill="white"/>
+  
+  <!-- Название коллекции -->
+  <text x="280" y="190" font-family="Roboto" font-size="16" font-weight="500" fill="#616161">Название коллекции</text>
+  <rect x="280" y="200" width="560" height="40" rx="4" fill="#FFFFFF" stroke="#5C6BC0" stroke-width="1.5"/>
+  <text x="290" y="225" font-family="Roboto" font-size="14" fill="#212121">Мои любимые фантастические фильмы</text>
+  
+  <!-- Описание коллекции -->
+  <text x="280" y="270" font-family="Roboto" font-size="16" font-weight="500" fill="#616161">Описание</text>
+  <rect x="280" y="280" width="560" height="100" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="290" y="305" font-family="Roboto" font-size="14" fill="#212121">Подборка фильмов научной фантастики, которые меня впечатлили своим сюжетом и визуальными эффектами.</text>
+  
+  <!-- Обложка коллекции -->
+  <text x="280" y="410" font-family="Roboto" font-size="16" font-weight="500" fill="#616161">Обложка коллекции</text>
+  <rect x="280" y="420" width="160" height="200" rx="4" fill="#EEEEEE" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="322" y="520" font-family="Roboto" font-size="14" fill="#757575" text-anchor="middle">Загрузить
+изображение</text>
+  
+  <!-- Настройки приватности -->
+  <text x="480" y="410" font-family="Roboto" font-size="16" font-weight="500" fill="#616161">Настройки приватности</text>
+  <rect x="480" y="420" width="360" height="50" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <circle cx="500" cy="445" r="10" fill="#FFFFFF" stroke="#5C6BC0" stroke-width="1.5"/>
+  <circle cx="500" cy="445" r="5" fill="#5C6BC0"/>
+  <text x="520" y="450" font-family="Roboto" font-size="14" fill="#212121">Публичная коллекция</text>
+  
+  <rect x="480" y="480" width="360" height="50" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <circle cx="500" cy="505" r="10" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+  <text x="520" y="510" font-family="Roboto" font-size="14" fill="#212121">Личная коллекция</text>
+  
+  <!-- Элементы коллекции -->
+  <text x="280" y="650" font-family="Roboto" font-size="16" font-weight="500" fill="#616161">Элементы коллекции (3)</text>
+  
+  <!-- Карточки элементов коллекции -->
+  <rect x="280" y="660" width="560" height="80" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <rect x="280" y="660" width="60" height="80" fill="#EEEEEE"/>
+  <text x="350" y="685" font-family="Roboto" font-size="16" font-weight="500" fill="#212121">Начало</text>
+  <text x="350" y="705" font-family="Roboto" font-size="14" fill="#757575">2010, Научная фантастика</text>
+  <text x="825" y="700" font-family="Montserrat" font-size="16" fill="#F44336">✕</text>
+  
+  <rect x="280" y="750" width="560" height="80" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <rect x="280" y="750" width="60" height="80" fill="#EEEEEE"/>
+  <text x="350" y="775" font-family="Roboto" font-size="16" font-weight="500" fill="#212121">Интерстеллар</text>
+  <text x="350" y="795" font-family="Roboto" font-size="14" fill="#757575">2014, Научная фантастика</text>
+  <text x="825" y="790" font-family="Montserrat" font-size="16" fill="#F44336">✕</text>
+  
+  <!-- Кнопка добавления элементов -->
+  <rect x="280" y="850" width="200" height="40" rx="20" fill="#FFFFFF" stroke="#5C6BC0" stroke-width="1.5"/>
+  <text x="370" y="875" font-family="Roboto" font-size="14" font-weight="500" fill="#5C6BC0" text-anchor="middle">+ Добавить элемент</text>
+  
+  <!-- Кнопки сохранения -->
+  <rect x="640" y="850" width="100" height="40" rx="4" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="690" y="875" font-family="Roboto" font-size="14" font-weight="500" fill="#616161" text-anchor="middle">Отмена</text>
+  
+  <rect x="750" y="850" width="90" height="40" rx="4" fill="#5C6BC0" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="795" y="875" font-family="Roboto" font-size="14" font-weight="500" fill="white" text-anchor="middle">Сохранить</text>
+</svg>

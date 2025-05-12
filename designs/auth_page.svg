@@ -1,0 +1,59 @@
+<svg width="1169" height="827" viewBox="0 0 1169 827" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="1169" height="827" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="1169" height="70" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="40" y="42" font-family="Montserrat" font-size="24" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Центральный блок авторизации -->
+  <rect x="384.5" y="163.5" width="400" height="500" rx="10" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Заголовок формы -->
+  <text x="485" y="220" font-family="Montserrat" font-size="24" font-weight="700" fill="#212121">Вход в систему</text>
+  
+  <!-- Вкладки авторизации и регистрации -->
+  <rect x="384.5" y="245.5" width="400" height="40" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="384.5" y="245.5" width="200" height="40" fill="#5C6BC0" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="464" y="270" font-family="Roboto" font-size="16" fill="white">Вход</text>
+  <text x="644" y="270" font-family="Roboto" font-size="16" fill="#757575">Регистрация</text>
+  
+  <!-- Поле Email -->
+  <rect x="434.5" y="315.5" width="300" height="50" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="449" y="345" font-family="Roboto" font-size="16" fill="#BDBDBD">Email</text>
+  
+  <!-- Поле Пароль -->
+  <rect x="434.5" y="385.5" width="300" height="50" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="449" y="415" font-family="Roboto" font-size="16" fill="#BDBDBD">Пароль</text>
+  
+  <!-- Чекбокс "Запомнить меня" -->
+  <rect x="434.5" y="455.5" width="18" height="18" rx="4" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="464" y="470" font-family="Roboto" font-size="14" fill="#757575">Запомнить меня</text>
+  
+  <!-- Ссылка "Забыли пароль?" -->
+  <text x="610" y="470" font-family="Roboto" font-size="14" fill="#5C6BC0">Забыли пароль?</text>
+  
+  <!-- Кнопка Войти--> 
+  <rect x="434.5" y="495.5" width="300" height="50" rx="4" fill="#5C6BC0" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="570" y="525" font-family="Roboto" font-size="16" font-weight="500" fill="white" text-anchor="middle">Войти</text>
+  
+  <!-- Разделитель -->
+  <line x1="434.5" y1="575.5" x2="734.5" y2="575.5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="584.5" y="595" font-family="Roboto" font-size="14" fill="#757575" text-anchor="middle">или войти через</text>
+  
+  <!-- Кнопки входа через социальные сети -->
+  <rect x="434.5" y="615.5" width="142" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="505.5" y="640" font-family="Roboto" font-size="14" font-weight="500" fill="#757575" text-anchor="middle">Google</text>
+  
+  <rect x="592.5" y="615.5" width="142" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="663.5" y="640" font-family="Roboto" font-size="14" font-weight="500" fill="#757575" text-anchor="middle">Discord</text>
+  
+  <!-- Подсказка для создания аккаунта -->
+  <text x="520" y="690" font-family="Roboto" font-size="14" fill="#757575">Нет аккаунта?</text>
+  <text x="626" y="690" font-family="Roboto" font-size="14" fill="#5C6BC0">Регистрация</text>
+  
+  <!-- Нижний футер -->
+  <text x="584.5" y="730" font-family="Roboto" font-size="12" fill="#9E9E9E" text-anchor="middle">© 2023 GeekHeaven. Все права защищены.</text>
+</svg>
