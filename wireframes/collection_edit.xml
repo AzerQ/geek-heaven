@@ -1,0 +1,148 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T12:00:00.000Z" agent="Mozilla/5.0" etag="abc123" version="21.6.6">
+  <diagram name="Страница создания/редактирования списка" id="collection-edit-page">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="logo" value="GeekHeaven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="60" y="55" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="search" value="Поиск..." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="400" y="55" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="Профиль" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="55" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="200" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_dashboard" value="Главная" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_library" value="Моя библиотека" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_collections" value="Мои коллекции" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_categories" value="Категории контента" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_games" value="Игры" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_movies" value="Фильмы и сериалы" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_books" value="Книги" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_comics" value="Комиксы и манга" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_anime" value="Аниме" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="content" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="880" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="collection_title" value="Создание коллекции" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="collection_form" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="840" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="form_name_label" value="Название коллекции:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="190" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="form_name_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="form_description_label" value="Описание:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="270" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="form_description_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="800" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="form_privacy_label" value="Приватность:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="form_privacy_public" value="Публичная" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="410" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="form_privacy_private" value="Приватная" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="410" y="410" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="collection_items" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="420" width="840" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="items_title" value="Элементы коллекции" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="items_search" value="Поиск медиа-объектов для добавления..." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="280" y="470" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="items_search_button" value="Поиск" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="970" y="470" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="items_list" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="520" width="800" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="item_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="290" y="530" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item_1_title" value="Название медиа-объекта 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_1_type" value="Фильм" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_1_year" value="2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="540" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_1_remove" value="Удалить" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="990" y="535" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="item_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="290" y="580" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item_2_title" value="Название медиа-объекта 2" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="590" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_2_type" value="Игра" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="590" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_2_year" value="2022" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="590" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_2_remove" value="Удалить" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="990" y="585" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="item_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="290" y="630" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="item_3_title" value="Название медиа-объекта 3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="640" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_3_type" value="Книга" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="640" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_3_year" value="2021" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="640" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="item_3_remove" value="Удалить" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="990" y="635" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="save_button" value="Сохранить коллекцию" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="720" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cancel_button" value="Отмена" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="490" y="720" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

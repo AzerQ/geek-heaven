@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T12:00:00.000Z" agent="Mozilla/5.0" etag="abc123" version="21.6.6">
+  <diagram name="Страница регистрации и авторизации" id="auth-page">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="logo" value="GeekHeaven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="60" y="55" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="content" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="1080" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="340" y="150" width="480" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_tabs" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="340" y="150" width="480" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_login" value="Вход" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="160" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_register" value="Регистрация" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="580" y="160" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="login_form" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="440" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="login_title" value="Вход в аккаунт" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="login_email_label" value="Email:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="290" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_email_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="320" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="login_password_label" value="Пароль:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="380" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_password_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="410" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="login_remember" value="Запомнить меня" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="470" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_remember_checkbox" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="470" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_forgot" value="Забыли пароль?" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="580" y="470" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_button" value="Войти" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="login_divider" value="или" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="590" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="login_google" value="Войти через Google" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="380" y="630" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="register_form" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="440" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="register_title" value="Создание аккаунта" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="register_username_label" value="Имя пользователя:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="290" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="register_username_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="320" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="register_email_label" value="Email:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="380" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="register_email_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="410" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="register_password_label" value="Пароль:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="470" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="register_password_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="500" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="register_confirm_label" value="Подтверждение пароля:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="560" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="register_confirm_input" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="380" y="590" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="register_button" value="Зарегистрироваться" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="650" width="400" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
