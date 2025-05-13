@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T12:00:00.000Z" agent="Mozilla/5.0" etag="abc123" version="21.6.6">
+  <diagram name="Главная страница (Dashboard) - Мобильная версия" id="dashboard-page-mobile">
+    <mxGraphModel dx="375" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="375" pageHeight="667" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Верхняя панель навигации -->
+        <mxCell id="header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="375" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="logo" value="GeekHeaven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="107.5" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="search_icon" value="🔍" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="320" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Основной контент -->
+        <mxCell id="content" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="50" width="375" height="567" as="geometry" />
+        </mxCell>
+        <!-- Уведомление -->
+        <mxCell id="notifications" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="335" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="notifications_icon" value="🏆" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="notifications_text" value="Получено новое достижение: &lt;br&gt;&lt;b&gt;Первые шаги&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="65" width="200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Персональные рекомендации -->
+        <mxCell id="recommendations_title" value="Персональные рекомендации" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="recommendations_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="150" width="335" height="120" as="geometry" />
+        </mxCell>
+        <!-- Горизонтальная прокрутка для рекомендаций -->
+        <mxCell id="rec_item_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rec_item_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rec_item_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="210" y="160" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="scroll_indicator" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="300" y="195" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Новинки -->
+        <mxCell id="new_releases_title" value="Новинки" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="20" y="280" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="new_releases_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="310" width="335" height="120" as="geometry" />
+        </mxCell>
+        <!-- Горизонтальная прокрутка для новинок -->
+        <mxCell id="new_item_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="320" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="new_item_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="new_item_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="210" y="320" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="new_scroll_indicator" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="300" y="355" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Популярное -->
+        <mxCell id="popular_title" value="Популярное" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="20" y="440" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="popular_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="470" width="335" height="120" as="geometry" />
+        </mxCell>
+        <!-- Горизонтальная прокрутка для популярного -->
+        <mxCell id="popular_item_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="480" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="popular_item_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="popular_item_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="210" y="480" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="popular_scroll_indicator" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="300" y="515" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Нижняя навигационная панель -->
+        <mxCell id="bottom_nav" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="0" y="617" width="375" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_home" value="🏠" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="20" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_search" value="🔍" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="100" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_library" value="📚" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="180" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_achievements" value="🏆" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="260" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_profile" value="👤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="330" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

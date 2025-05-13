@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T12:00:00.000Z" agent="Mozilla/5.0" etag="abc123" version="21.6.6">
+  <diagram name="Страница профиля - Мобильная версия" id="profile-page-mobile">
+    <mxGraphModel dx="375" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="375" pageHeight="667" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Верхняя панель навигации -->
+        <mxCell id="header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="375" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="page_title" value="Профиль" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="107.5" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="settings_button" value="⚙️" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="320" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Информация профиля -->
+        <mxCell id="profile_info" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="0" y="50" width="375" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_avatar" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_name" value="Имя пользователя" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="110" y="60" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_status" value="🟢 Онлайн" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="90" width="245" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_bio" value="Краткая биография пользователя" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="150" width="335" height="40" as="geometry" />
+        </mxCell>
+        <!-- Статистика -->
+        <mxCell id="stats_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="200" width="375" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="stats_items" value="88&#10;Элементов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stats_achievements" value="42&#10;Достижения" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stats_reviews" value="15&#10;Отзывов" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="200" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stats_lists" value="5&#10;Списков" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <!-- Вкладки -->
+        <mxCell id="tabs_container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="280" width="375" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_activity" value="Активность" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_lists" value="Списки" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="110" y="290" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_reviews" value="Отзывы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="80" height="30" as="geometry" />
+        </mxCell>
+        <!-- Лента активности -->
+        <mxCell id="activity_feed" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="330" width="375" height="287" as="geometry" />
+        </mxCell>
+        <!-- Активность 1 -->
+        <mxCell id="activity_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="335" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_1_icon" value="🏆" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="30" y="350" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_1_text" value="Получено достижение &quot;Первые шаги&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="350" width="265" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_1_time" value="2 часа назад" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=bottom;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="390" width="265" height="20" as="geometry" />
+        </mxCell>
+        <!-- Активность 2 -->
+        <mxCell id="activity_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="20" y="430" width="335" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_2_icon" value="📚" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="30" y="440" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_2_text" value="Добавлена новая книга в библиотеку" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="265" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_2_time" value="5 часов назад" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=bottom;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="265" height="20" as="geometry" />
+        </mxCell>
+        <!-- Нижняя навигационная панель -->
+        <mxCell id="bottom_nav" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="0" y="617" width="375" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_home" value="🏠" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_search" value="🔍" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="100" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_library" value="📚" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="180" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_achievements" value="🏆" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="260" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_profile" value="👤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="627" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
