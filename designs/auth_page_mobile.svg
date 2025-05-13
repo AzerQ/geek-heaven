@@ -1,0 +1,72 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="390" height="844" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="390" height="60" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="20" y="37" font-family="Montserrat" font-size="18" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Основной контент -->
+  <rect x="20" y="100" width="350" height="600" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
+  
+  <!-- Заголовок формы -->
+  <text x="195" y="150" font-family="Montserrat" font-size="24" font-weight="700" fill="#212121" text-anchor="middle">Вход в систему</text>
+  
+  <!-- Переключатель между входом и регистрацией -->
+  <rect x="70" y="180" width="250" height="40" rx="20" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="70" y="180" width="125" height="40" rx="20" fill="#5C6BC0"/>
+  <text x="132" y="205" font-family="Roboto" font-size="14" font-weight="500" fill="white" text-anchor="middle">Вход</text>
+  <text x="195" y="205" font-family="Roboto" font-size="14" font-weight="500" fill="#757575" text-anchor="middle">Регистрация</text>
+  
+  <!-- Форма входа -->
+  <text x="70" y="260" font-family="Roboto" font-size="14" fill="#757575">Email или имя пользователя</text>
+  <rect x="70" y="270" width="250" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="85" y="295" font-family="Roboto" font-size="14" fill="#212121">user@example.com</text>
+  
+  <text x="70" y="340" font-family="Roboto" font-size="14" fill="#757575">Пароль</text>
+  <rect x="70" y="350" width="250" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="85" y="375" font-family="Roboto" font-size="14" fill="#212121">••••••••</text>
+  <text x="270" y="375" font-family="Roboto" font-size="14" fill="#5C6BC0">👁</text>
+  
+  <text x="70" y="410" font-family="Roboto" font-size="12" fill="#5C6BC0">Забыли пароль?</text>
+  
+  <!-- Чекбокс "Запомнить меня" -->
+  <rect x="70" y="430" width="16" height="16" rx="2" fill="white" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="95" y="443" font-family="Roboto" font-size="14" fill="#212121">Запомнить меня</text>
+  
+  <!-- Кнопка входа -->
+  <rect x="70" y="470" width="250" height="45" rx="22.5" fill="#5C6BC0"/>
+  <text x="195" y="498" font-family="Roboto" font-size="16" font-weight="500" fill="white" text-anchor="middle">Войти</text>
+  
+  <!-- Разделитель -->
+  <line x1="70" y1="550" x2="320" y2="550" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="170" y="540" width="50" height="20" fill="white"/>
+  <text x="195" y="555" font-family="Roboto" font-size="12" fill="#757575" text-anchor="middle">или</text>
+  
+  <!-- Социальные входы -->
+  <rect x="70" y="580" width="250" height="45" rx="22.5" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="110" y="608" font-family="Roboto" font-size="16" fill="#212121">G</text>
+  <text x="195" y="608" font-family="Roboto" font-size="14" fill="#212121" text-anchor="middle">Войти через Google</text>
+  
+  <rect x="70" y="640" width="250" height="45" rx="22.5" fill="#1877F2"/>
+  <text x="110" y="668" font-family="Roboto" font-size="16" fill="white">f</text>
+  <text x="195" y="668" font-family="Roboto" font-size="14" fill="white" text-anchor="middle">Войти через Facebook</text>
+  
+  <!-- Нижняя навигация для мобильной версии -->
+  <rect x="0" y="800" width="390" height="44" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Иконки нижней навигации -->
+  <circle cx="60" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="60" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏠</text>
+  
+  <circle cx="140" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="140" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">📚</text>
+  
+  <circle cx="220" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="220" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏆</text>
+  
+  <circle cx="300" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="300" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">⚙️</text>
+</svg>

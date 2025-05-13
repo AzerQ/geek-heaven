@@ -1,0 +1,116 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="390" height="844" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="390" height="60" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="20" y="37" font-family="Montserrat" font-size="18" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Иконка поиска -->
+  <circle cx="325" cy="30" r="15" fill="white" fill-opacity="0.2"/>
+  <path d="M332 33.5C332 37.0899 329.09 40 325.5 40C321.91 40 319 37.0899 319 33.5C319 29.9101 321.91 27 325.5 27C329.09 27 332 29.9101 332 33.5Z" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Иконка профиля (активная) -->
+  <circle cx="360" cy="30" r="15" fill="white" fill-opacity="0.3"/>
+  <text x="354" y="36" font-family="Montserrat" font-size="18" fill="white">👤</text>
+  
+  <!-- Профиль пользователя -->
+  <rect x="20" y="80" width="350" height="180" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
+  
+  <!-- Аватар пользователя -->
+  <circle cx="70" cy="130" r="40" fill="#5C6BC0" opacity="0.8"/>
+  <text x="55" y="140" font-family="Montserrat" font-size="30" fill="white">GG</text>
+  
+  <!-- Информация о пользователе -->
+  <text x="130" y="110" font-family="Montserrat" font-size="18" font-weight="700" fill="#212121">GameGuru</text>
+  <text x="130" y="130" font-family="Roboto" font-size="12" fill="#757575">На сайте с: 12 марта 2023</text>
+  <text x="130" y="150" font-family="Roboto" font-size="12" fill="#757575">Геймер, любитель фантастики</text>
+  <text x="130" y="170" font-family="Roboto" font-size="12" fill="#757575">и азиатской культуры.</text>
+  <text x="130" y="190" font-family="Roboto" font-size="12" fill="#757575">Любимые жанры: RPG, научная фантастика</text>
+  
+  <!-- Кнопка редактирования -->
+  <rect x="130" y="210" width="160" height="30" rx="15" fill="#5C6BC0" filter="drop-shadow(0px 2px 2px rgba(0,0,0,0.1))"/>
+  <text x="155" y="230" font-family="Roboto" font-size="12" font-weight="500" fill="white">Редактировать профиль</text>
+  
+  <!-- Статистика пользователя -->
+  <rect x="20" y="260" width="350" height="120" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
+  
+  <text x="35" y="280" font-family="Montserrat" font-size="14" font-weight="700" fill="#212121">Статистика</text>
+  
+  <!-- Статистика по категориям -->
+  <text x="35" y="300" font-family="Roboto" font-size="12" fill="#212121">Игры: 15</text>
+  <rect x="35" y="310" width="80" height="4" rx="2" fill="#5C6BC0"/>
+  
+  <text x="35" y="330" font-family="Roboto" font-size="12" fill="#212121">Фильмы: 42</text>
+  <rect x="35" y="340" width="100" height="4" rx="2" fill="#FF4081"/>
+  
+  <text x="200" y="300" font-family="Roboto" font-size="12" fill="#212121">Сериалы: 12</text>
+  <rect x="200" y="310" width="70" height="4" rx="2" fill="#FF4081"/>
+  
+  <text x="200" y="330" font-family="Roboto" font-size="12" fill="#212121">Книги: 28</text>
+  <rect x="200" y="340" width="90" height="4" rx="2" fill="#FFC107"/>
+  
+  <text x="35" y="360" font-family="Roboto" font-size="12" fill="#212121">Комиксы: 7</text>
+  <rect x="35" y="370" width="60" height="4" rx="2" fill="#9C27B0"/>
+  
+  <text x="200" y="360" font-family="Roboto" font-size="12" fill="#212121">Аниме: 23</text>
+  <rect x="200" y="370" width="85" height="4" rx="2" fill="#2196F3"/>
+  
+  <!-- Заголовок достижений -->
+  <text x="20" y="410" font-family="Montserrat" font-size="16" font-weight="700" fill="#212121">Достижения</text>
+  <text x="130" y="410" font-family="Roboto" font-size="12" fill="#4CAF50">12 получено</text>
+  <text x="210" y="410" font-family="Roboto" font-size="12" fill="#757575">•</text>
+  <text x="220" y="410" font-family="Roboto" font-size="12" fill="#FFC107">8 в процессе</text>
+  <text x="320" y="410" font-family="Roboto" font-size="12" fill="#5C6BC0">Все →</text>
+  
+  <!-- Плитка достижений -->
+  <rect x="20" y="430" width="350" height="80" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="50" cy="470" r="20" fill="#4CAF50"/>
+  <text x="45" y="476" font-family="Roboto" font-size="14" fill="white">🏆</text>
+  <text x="80" y="460" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Коллекционер</text>
+  <text x="80" y="480" font-family="Roboto" font-size="12" fill="#757575">Создайте 5 коллекций</text>
+  <text x="80" y="500" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
+  
+  <rect x="20" y="520" width="350" height="80" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="50" cy="560" r="20" fill="#4CAF50"/>
+  <text x="45" y="566" font-family="Roboto" font-size="14" fill="white">📚</text>
+  <text x="80" y="550" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Книжный червь</text>
+  <text x="80" y="570" font-family="Roboto" font-size="12" fill="#757575">Прочтите 25 книг</text>
+  <text x="80" y="590" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
+  
+  <rect x="20" y="610" width="350" height="80" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="50" cy="650" r="20" fill="#FFC107"/>
+  <text x="45" y="656" font-family="Roboto" font-size="14" fill="white">🎮</text>
+  <text x="80" y="640" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Геймер</text>
+  <text x="80" y="660" font-family="Roboto" font-size="12" fill="#757575">Пройдите 20 игр</text>
+  <rect x="80" y="675" width="100" height="6" rx="3" fill="#E0E0E0"/>
+  <rect x="80" y="675" width="75" height="6" rx="3" fill="#FFC107"/>
+  <text x="190" y="680" font-family="Roboto" font-size="10" fill="#757575">15/20</text>
+  
+  <rect x="20" y="700" width="350" height="80" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
+  <circle cx="50" cy="740" r="20" fill="#9E9E9E" opacity="0.6"/>
+  <text x="45" y="746" font-family="Roboto" font-size="14" fill="white">🎬</text>
+  <text x="80" y="730" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Кинокритик</text>
+  <text x="80" y="750" font-family="Roboto" font-size="12" fill="#757575">Напишите 10 рецензий на фильмы</text>
+  <rect x="80" y="765" width="100" height="6" rx="3" fill="#E0E0E0"/>
+  <rect x="80" y="765" width="30" height="6" rx="3" fill="#9E9E9E"/>
+  <text x="190" y="770" font-family="Roboto" font-size="10" fill="#757575">3/10</text>
+  
+  <!-- Нижняя навигация для мобильной версии -->
+  <rect x="0" y="800" width="390" height="44" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Иконки нижней навигации -->
+  <circle cx="60" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="60" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏠</text>
+  
+  <circle cx="140" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="140" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">📚</text>
+  
+  <circle cx="220" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="220" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏆</text>
+  
+  <circle cx="300" cy="822" r="20" fill="#5C6BC0" fill-opacity="0.2"/>
+  <text x="300" y="828" font-family="Montserrat" font-size="16" fill="#5C6BC0" text-anchor="middle">⚙️</text>
+</svg>

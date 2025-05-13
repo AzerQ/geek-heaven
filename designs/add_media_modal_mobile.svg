@@ -1,0 +1,52 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы (затемненный) -->
+  <rect width="390" height="844" fill="rgba(0,0,0,0.5)"/>
+  
+  <!-- Модальное окно -->
+  <rect x="20" y="150" width="350" height="550" rx="10" fill="white" filter="drop-shadow(0px 4px 8px rgba(0,0,0,0.2))"/>
+  
+  <!-- Заголовок модального окна -->
+  <text x="35" y="180" font-family="Montserrat" font-size="18" font-weight="700" fill="#212121">Добавление медиа-контента</text>
+  
+  <!-- Кнопка закрытия -->
+  <circle cx="350" cy="170" r="15" fill="#F5F5F5"/>
+  <text x="350" y="175" font-family="Roboto" font-size="18" fill="#757575" text-anchor="middle">×</text>
+  
+  <!-- Форма добавления -->
+  <text x="35" y="210" font-family="Roboto" font-size="14" fill="#757575">Тип контента</text>
+  <rect x="35" y="220" width="320" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="245" font-family="Roboto" font-size="14" fill="#212121">Фильм</text>
+  <text x="340" y="245" font-family="Roboto" font-size="14" fill="#757575">▼</text>
+  
+  <text x="35" y="280" font-family="Roboto" font-size="14" fill="#757575">Название</text>
+  <rect x="35" y="290" width="320" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="315" font-family="Roboto" font-size="14" fill="#212121">Интерстеллар</text>
+  
+  <text x="35" y="350" font-family="Roboto" font-size="14" fill="#757575">Год выпуска</text>
+  <rect x="35" y="360" width="150" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="385" font-family="Roboto" font-size="14" fill="#212121">2014</text>
+  
+  <text x="205" y="350" font-family="Roboto" font-size="14" fill="#757575">Ваша оценка</text>
+  <rect x="205" y="360" width="150" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="220" y="385" font-family="Roboto" font-size="14" fill="#212121">9 ★</text>
+  
+  <text x="35" y="420" font-family="Roboto" font-size="14" fill="#757575">Статус</text>
+  <rect x="35" y="430" width="320" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="455" font-family="Roboto" font-size="14" fill="#212121">Просмотрено</text>
+  <text x="340" y="455" font-family="Roboto" font-size="14" fill="#757575">▼</text>
+  
+  <text x="35" y="490" font-family="Roboto" font-size="14" fill="#757575">Жанры</text>
+  <rect x="35" y="500" width="320" height="40" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="525" font-family="Roboto" font-size="14" fill="#212121">Научная фантастика, Драма</text>
+  
+  <text x="35" y="560" font-family="Roboto" font-size="14" fill="#757575">Заметки (необязательно)</text>
+  <rect x="35" y="570" width="320" height="60" rx="4" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="50" y="595" font-family="Roboto" font-size="14" fill="#9E9E9E">Ваши мысли о произведении...</text>
+  
+  <!-- Кнопки действий -->
+  <rect x="35" y="650" width="150" height="40" rx="20" fill="#5C6BC0"/>
+  <text x="110" y="675" font-family="Roboto" font-size="14" font-weight="500" fill="white" text-anchor="middle">Добавить</text>
+  
+  <rect x="205" y="650" width="150" height="40" rx="20" fill="white" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="280" y="675" font-family="Roboto" font-size="14" font-weight="500" fill="#757575" text-anchor="middle">Отмена</text>
+</svg>

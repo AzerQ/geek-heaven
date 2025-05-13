@@ -1,0 +1,115 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон страницы -->
+  <rect width="390" height="844" fill="#F5F5F5"/>
+  
+  <!-- Верхняя навигационная панель -->
+  <rect y="0" width="390" height="60" fill="#5C6BC0"/>
+  
+  <!-- Лого -->
+  <text x="20" y="37" font-family="Montserrat" font-size="18" font-weight="700" fill="white">GeekHeaven</text>
+  
+  <!-- Иконка поиска -->
+  <circle cx="325" cy="30" r="15" fill="white" fill-opacity="0.2"/>
+  <path d="M332 33.5C332 37.0899 329.09 40 325.5 40C321.91 40 319 37.0899 319 33.5C319 29.9101 321.91 27 325.5 27C329.09 27 332 29.9101 332 33.5Z" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Иконка профиля -->
+  <circle cx="360" cy="30" r="15" fill="white" fill-opacity="0.2"/>
+  <text x="354" y="36" font-family="Montserrat" font-size="18" fill="white">👤</text>
+  
+  <!-- Заголовок страницы -->
+  <text x="20" y="90" font-family="Montserrat" font-size="20" font-weight="700" fill="#212121">Моя библиотека</text>
+  
+  <!-- Фильтры библиотеки -->
+  <text x="20" y="120" font-family="Roboto" font-size="14" fill="#616161">Фильтры</text>
+  
+  <!-- Чипсы фильтров -->
+  <rect x="20" y="130" width="70" height="30" rx="15" fill="#5C6BC0"/>
+  <text x="55" y="150" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">Все</text>
+  
+  <rect x="100" y="130" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="135" y="150" font-family="Roboto" font-size="12" fill="#616161" text-anchor="middle">Фильмы</text>
+  
+  <rect x="180" y="130" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="215" y="150" font-family="Roboto" font-size="12" fill="#616161" text-anchor="middle">Игры</text>
+  
+  <rect x="260" y="130" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="295" y="150" font-family="Roboto" font-size="12" fill="#616161" text-anchor="middle">Книги</text>
+  
+  <!-- Статусы -->
+  <text x="20" y="180" font-family="Roboto" font-size="14" fill="#616161">Статус</text>
+  
+  <!-- Чипсы статусов -->
+  <rect x="20" y="190" width="100" height="30" rx="15" fill="#5C6BC0"/>
+  <text x="70" y="210" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">Все статусы</text>
+  
+  <rect x="130" y="190" width="100" height="30" rx="15" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="180" y="210" font-family="Roboto" font-size="12" fill="#616161" text-anchor="middle">Завершено</text>
+  
+  <rect x="240" y="190" width="100" height="30" rx="15" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="290" y="210" font-family="Roboto" font-size="12" fill="#616161" text-anchor="middle">В процессе</text>
+  
+  <!-- Сортировка -->
+  <text x="20" y="240" font-family="Roboto" font-size="14" fill="#616161">Сортировка: По дате добавления ▼</text>
+  
+  <!-- Элементы библиотеки -->
+  <rect x="20" y="260" width="350" height="100" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="20" y="260" width="70" height="100" fill="#EEEEEE" rx="8 0 0 8"/>
+  <text x="100" y="280" font-family="Roboto" font-size="14" font-weight="500" fill="#212121">Начало</text>
+  <text x="100" y="300" font-family="Roboto" font-size="12" fill="#757575">2010, Фильм</text>
+  <text x="100" y="320" font-family="Roboto" font-size="12" fill="#757575">9.3 ⭐</text>
+  <rect x="290" y="270" width="70" height="25" rx="4" fill="#4CAF50"/>
+  <text x="325" y="287" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">Завершено</text>
+  <text x="290" y="320" font-family="Roboto" font-size="12" fill="#757575">Изменить ⋮</text>
+  
+  <rect x="20" y="370" width="350" height="100" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="20" y="370" width="70" height="100" fill="#EEEEEE" rx="8 0 0 8"/>
+  <text x="100" y="390" font-family="Roboto" font-size="14" font-weight="500" fill="#212121">Интерстеллар</text>
+  <text x="100" y="410" font-family="Roboto" font-size="12" fill="#757575">2014, Фильм</text>
+  <text x="100" y="430" font-family="Roboto" font-size="12" fill="#757575">8.9 ⭐</text>
+  <rect x="290" y="380" width="70" height="25" rx="4" fill="#4CAF50"/>
+  <text x="325" y="397" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">Завершено</text>
+  <text x="290" y="430" font-family="Roboto" font-size="12" fill="#757575">Изменить ⋮</text>
+  
+  <rect x="20" y="480" width="350" height="100" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="20" y="480" width="70" height="100" fill="#EEEEEE" rx="8 0 0 8"/>
+  <text x="100" y="500" font-family="Roboto" font-size="14" font-weight="500" fill="#212121">Ведьмак 3</text>
+  <text x="100" y="520" font-family="Roboto" font-size="12" fill="#757575">2015, Игра</text>
+  <text x="100" y="540" font-family="Roboto" font-size="12" fill="#757575">9.5 ⭐</text>
+  <rect x="290" y="490" width="70" height="25" rx="4" fill="#FF9800"/>
+  <text x="325" y="507" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">В процессе</text>
+  <text x="290" y="540" font-family="Roboto" font-size="12" fill="#757575">Изменить ⋮</text>
+  
+  <rect x="20" y="590" width="350" height="100" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="20" y="590" width="70" height="100" fill="#EEEEEE" rx="8 0 0 8"/>
+  <text x="100" y="610" font-family="Roboto" font-size="14" font-weight="500" fill="#212121">Дюна</text>
+  <text x="100" y="630" font-family="Roboto" font-size="12" fill="#757575">2021, Фильм</text>
+  <text x="100" y="650" font-family="Roboto" font-size="12" fill="#757575">8.7 ⭐</text>
+  <rect x="290" y="600" width="70" height="25" rx="4" fill="#4CAF50"/>
+  <text x="325" y="617" font-family="Roboto" font-size="12" fill="white" text-anchor="middle">Завершено</text>
+  <text x="290" y="650" font-family="Roboto" font-size="12" fill="#757575">Изменить ⋮</text>
+  
+  <rect x="20" y="700" width="350" height="100" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1" opacity="0.4"/>
+  <rect x="20" y="700" width="70" height="100" fill="#EEEEEE" rx="8 0 0 8" opacity="0.4"/>
+  <text x="100" y="720" font-family="Roboto" font-size="14" font-weight="500" fill="#212121" opacity="0.4">Нейромант</text>
+  <text x="100" y="740" font-family="Roboto" font-size="12" fill="#757575" opacity="0.4">1984, Книга</text>
+  <text x="100" y="760" font-family="Roboto" font-size="12" fill="#757575" opacity="0.4">9.1 ⭐</text>
+  <rect x="290" y="710" width="70" height="25" rx="4" fill="#9E9E9E" opacity="0.4"/>
+  <text x="325" y="727" font-family="Roboto" font-size="12" fill="white" text-anchor="middle" opacity="0.4">Планирую</text>
+  <text x="290" y="760" font-family="Roboto" font-size="12" fill="#757575" opacity="0.4">Изменить ⋮</text>
+  
+  <!-- Нижняя навигация для мобильной версии -->
+  <rect x="0" y="800" width="390" height="44" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Иконки нижней навигации -->
+  <circle cx="60" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="60" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏠</text>
+  
+  <circle cx="140" cy="822" r="20" fill="#5C6BC0" fill-opacity="0.2"/>
+  <text x="140" y="828" font-family="Montserrat" font-size="16" fill="#5C6BC0" text-anchor="middle">📚</text>
+  
+  <circle cx="220" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="220" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏆</text>
+  
+  <circle cx="300" cy="822" r="20" fill="#F5F5F5"/>
+  <text x="300" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">⚙️</text>
+</svg>
