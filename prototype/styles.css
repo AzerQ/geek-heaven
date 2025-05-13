@@ -1,4 +1,19 @@
 /* Основные стили */
+/* Стили для главного баннера */
+.main-banner {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 :root {
     --primary-color: #6200ea;
     --secondary-color: #03dac6;
