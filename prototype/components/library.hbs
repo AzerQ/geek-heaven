@@ -1,7 +1,4 @@
-<section class="screen" id="library">
-    <h1>Моя библиотека</h1>
-    
-    <div class="library-tabs">
+<div class="library-tabs">
         <div class="tab-buttons">
             {{#each statuses}}
             <button class="tab-button{{#if isActive}} active{{/if}}" data-tab="{{id}}">{{label}}</button>
@@ -16,8 +13,8 @@
                     {{> content-card this}}
                     <div class="library-item-actions">
                         <select class="status-select" data-item-id="{{id}}">
-                            {{#each ../statuses}}
-                            <option value="{{id}}"{{#if (eq ../status id)}} selected{{/if}}>{{label}}</option>
+                            {{#each ../../statuses}}
+                            <option value="{{id}}">{{label}}</option>
                             {{/each}}
                         </select>
                         {{#if ../actions}}
@@ -37,4 +34,3 @@
         </div>
         {{/each}}
     </div>
-</section>
