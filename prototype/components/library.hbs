@@ -3,111 +3,38 @@
     
     <div class="library-tabs">
         <div class="tab-buttons">
-            <button class="tab-button active" data-tab="watching">Смотрю/Играю</button>
-            <button class="tab-button" data-tab="completed">Просмотрено/Пройдено</button>
-            <button class="tab-button" data-tab="planned">В планах</button>
-            <button class="tab-button" data-tab="dropped">Брошено</button>
-            <button class="tab-button" data-tab="favorites">Любимое</button>
+            {{#each statuses}}
+            <button class="tab-button{{#if isActive}} active{{/if}}" data-tab="{{id}}">{{label}}</button>
+            {{/each}}
         </div>
         
-        <div class="tab-content active" id="watching">
+        {{#each statuses}}
+        <div class="tab-content{{#if isActive}} active{{/if}}" id="{{id}}">
             <div class="library-grid">
-                {{#each watching}}
+                {{#each items}}
                 <div class="library-item">
                     {{> content-card this}}
                     <div class="library-item-actions">
-                        <select class="status-select">
-                            <option value="watching" selected>Смотрю/Играю</option>
-                            <option value="completed">Просмотрено/Пройдено</option>
-                            <option value="planned">В планах</option>
-                            <option value="dropped">Брошено</option>
-                            <option value="favorites">Любимое</option>
+                        <select class="status-select" data-item-id="{{id}}">
+                            {{#each ../statuses}}
+                            <option value="{{id}}"{{#if (eq ../status id)}} selected{{/if}}>{{label}}</option>
+                            {{/each}}
                         </select>
-                        <button class="rate-button">Оценить</button>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        
-        <div class="tab-content" id="completed">
-            <div class="library-grid">
-                {{#each completed}}
-                <div class="library-item">
-                    {{> content-card this}}
-                    <div class="library-item-actions">
-                        <select class="status-select">
-                            <option value="watching">Смотрю/Играю</option>
-                            <option value="completed" selected>Просмотрено/Пройдено</option>
-                            <option value="planned">В планах</option>
-                            <option value="dropped">Брошено</option>
-                            <option value="favorites">Любимое</option>
-                        </select>
+                        {{#if ../actions}}
+                            {{#each ../actions}}
+                                {{#if (shouldShowAction this ../status)}}
+                                <button class="{{class}}" data-item-id="{{../id}}">{{label}}</button>
+                                {{/if}}
+                            {{/each}}
+                        {{/if}}
+                        {{#if userRating}}
                         <div class="user-rating">Ваша оценка: <span>{{userRating}}</span>/10</div>
+                        {{/if}}
                     </div>
                 </div>
                 {{/each}}
             </div>
         </div>
-        
-        <div class="tab-content" id="planned">
-            <div class="library-grid">
-                {{#each planned}}
-                <div class="library-item">
-                    {{> content-card this}}
-                    <div class="library-item-actions">
-                        <select class="status-select">
-                            <option value="watching">Смотрю/Играю</option>
-                            <option value="completed">Просмотрено/Пройдено</option>
-                            <option value="planned" selected>В планах</option>
-                            <option value="dropped">Брошено</option>
-                            <option value="favorites">Любимое</option>
-                        </select>
-                        <button class="start-button">Начать</button>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        
-        <div class="tab-content" id="dropped">
-            <div class="library-grid">
-                {{#each dropped}}
-                <div class="library-item">
-                    {{> content-card this}}
-                    <div class="library-item-actions">
-                        <select class="status-select">
-                            <option value="watching">Смотрю/Играю</option>
-                            <option value="completed">Просмотрено/Пройдено</option>
-                            <option value="planned">В планах</option>
-                            <option value="dropped" selected>Брошено</option>
-                            <option value="favorites">Любимое</option>
-                        </select>
-                        <button class="resume-button">Возобновить</button>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        
-        <div class="tab-content" id="favorites">
-            <div class="library-grid">
-                {{#each favorites}}
-                <div class="library-item">
-                    {{> content-card this}}
-                    <div class="library-item-actions">
-                        <select class="status-select">
-                            <option value="watching">Смотрю/Играю</option>
-                            <option value="completed">Просмотрено/Пройдено</option>
-                            <option value="planned">В планах</option>
-                            <option value="dropped">Брошено</option>
-                            <option value="favorites" selected>Любимое</option>
-                        </select>
-                        <div class="user-rating">Ваша оценка: <span>{{userRating}}</span>/10</div>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
+        {{/each}}
     </div>
 </section>
