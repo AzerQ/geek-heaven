@@ -1,0 +1,113 @@
+<section class="screen" id="library">
+    <h1>Моя библиотека</h1>
+    
+    <div class="library-tabs">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="watching">Смотрю/Играю</button>
+            <button class="tab-button" data-tab="completed">Просмотрено/Пройдено</button>
+            <button class="tab-button" data-tab="planned">В планах</button>
+            <button class="tab-button" data-tab="dropped">Брошено</button>
+            <button class="tab-button" data-tab="favorites">Любимое</button>
+        </div>
+        
+        <div class="tab-content active" id="watching">
+            <div class="library-grid">
+                {{#each watching}}
+                <div class="library-item">
+                    {{> content-card this}}
+                    <div class="library-item-actions">
+                        <select class="status-select">
+                            <option value="watching" selected>Смотрю/Играю</option>
+                            <option value="completed">Просмотрено/Пройдено</option>
+                            <option value="planned">В планах</option>
+                            <option value="dropped">Брошено</option>
+                            <option value="favorites">Любимое</option>
+                        </select>
+                        <button class="rate-button">Оценить</button>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        
+        <div class="tab-content" id="completed">
+            <div class="library-grid">
+                {{#each completed}}
+                <div class="library-item">
+                    {{> content-card this}}
+                    <div class="library-item-actions">
+                        <select class="status-select">
+                            <option value="watching">Смотрю/Играю</option>
+                            <option value="completed" selected>Просмотрено/Пройдено</option>
+                            <option value="planned">В планах</option>
+                            <option value="dropped">Брошено</option>
+                            <option value="favorites">Любимое</option>
+                        </select>
+                        <div class="user-rating">Ваша оценка: <span>{{userRating}}</span>/10</div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        
+        <div class="tab-content" id="planned">
+            <div class="library-grid">
+                {{#each planned}}
+                <div class="library-item">
+                    {{> content-card this}}
+                    <div class="library-item-actions">
+                        <select class="status-select">
+                            <option value="watching">Смотрю/Играю</option>
+                            <option value="completed">Просмотрено/Пройдено</option>
+                            <option value="planned" selected>В планах</option>
+                            <option value="dropped">Брошено</option>
+                            <option value="favorites">Любимое</option>
+                        </select>
+                        <button class="start-button">Начать</button>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        
+        <div class="tab-content" id="dropped">
+            <div class="library-grid">
+                {{#each dropped}}
+                <div class="library-item">
+                    {{> content-card this}}
+                    <div class="library-item-actions">
+                        <select class="status-select">
+                            <option value="watching">Смотрю/Играю</option>
+                            <option value="completed">Просмотрено/Пройдено</option>
+                            <option value="planned">В планах</option>
+                            <option value="dropped" selected>Брошено</option>
+                            <option value="favorites">Любимое</option>
+                        </select>
+                        <button class="resume-button">Возобновить</button>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        
+        <div class="tab-content" id="favorites">
+            <div class="library-grid">
+                {{#each favorites}}
+                <div class="library-item">
+                    {{> content-card this}}
+                    <div class="library-item-actions">
+                        <select class="status-select">
+                            <option value="watching">Смотрю/Играю</option>
+                            <option value="completed">Просмотрено/Пройдено</option>
+                            <option value="planned">В планах</option>
+                            <option value="dropped">Брошено</option>
+                            <option value="favorites" selected>Любимое</option>
+                        </select>
+                        <div class="user-rating">Ваша оценка: <span>{{userRating}}</span>/10</div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

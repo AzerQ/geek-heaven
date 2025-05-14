@@ -1,0 +1,143 @@
+{
+  "user": {
+    "name": "Алексей Гик",
+    "avatar": "assets/images/avatars/user-avatar.svg",
+    "description": "Любитель научной фантастики, фэнтези и всего, что связано с гик-культурой. Коллекционирую фигурки и комиксы.",
+    "stats": {
+      "watched": 127,
+      "rated": 98,
+      "reviews": 42,
+      "lists": 7
+    },
+    "achievements": [
+      {
+        "title": "Киноман",
+        "description": "Посмотрите 100 фильмов",
+        "icon": "fas fa-film",
+        "unlocked": true,
+        "date": "15.03.2023"
+      },
+      {
+        "title": "Критик",
+        "description": "Напишите 50 отзывов",
+        "icon": "fas fa-pen-fancy",
+        "unlocked": false,
+        "progress": 84
+      },
+      {
+        "title": "Геймер",
+        "description": "Пройдите 30 игр",
+        "icon": "fas fa-gamepad",
+        "unlocked": true,
+        "date": "02.05.2023"
+      },
+      {
+        "title": "Книжный червь",
+        "description": "Прочитайте 20 книг",
+        "icon": "fas fa-book",
+        "unlocked": true,
+        "date": "10.01.2023"
+      },
+      {
+        "title": "Коллекционер",
+        "description": "Создайте 10 публичных списков",
+        "icon": "fas fa-list",
+        "unlocked": false,
+        "progress": 70
+      },
+      {
+        "title": "Марафонец",
+        "description": "Посмотрите 5 сериалов полностью",
+        "icon": "fas fa-tv",
+        "unlocked": true,
+        "date": "28.02.2023"
+      }
+    ],
+    "contentStats": {
+      "movies": 65,
+      "moviesCount": 78,
+      "series": 40,
+      "seriesCount": 32,
+      "games": 30,
+      "gamesCount": 24,
+      "books": 15,
+      "booksCount": 12
+    },
+    "genreStats": [
+      { "name": "Фантастика", "count": 45, "fontSize": 24 },
+      { "name": "Фэнтези", "count": 38, "fontSize": 22 },
+      { "name": "Приключения", "count": 30, "fontSize": 20 },
+      { "name": "Боевик", "count": 25, "fontSize": 18 },
+      { "name": "Драма", "count": 20, "fontSize": 16 },
+      { "name": "Комедия", "count": 18, "fontSize": 15 },
+      { "name": "Триллер", "count": 15, "fontSize": 14 },
+      { "name": "Ужасы", "count": 12, "fontSize": 13 },
+      { "name": "Детектив", "count": 10, "fontSize": 12 },
+      { "name": "Аниме", "count": 8, "fontSize": 11 }
+    ],
+    "activity": [
+      {
+        "icon": "fas fa-star",
+        "text": "Оценил <strong>Дюна</strong> на 8/10",
+        "date": "Сегодня, 14:25"
+      },
+      {
+        "icon": "fas fa-plus",
+        "text": "Добавил <strong>Мандалорец</strong> в список 'Смотрю'",
+        "date": "Вчера, 20:15"
+      },
+      {
+        "icon": "fas fa-check",
+        "text": "Завершил просмотр <strong>Ведьмак</strong>",
+        "date": "3 дня назад"
+      },
+      {
+        "icon": "fas fa-comment",
+        "text": "Написал отзыв на <strong>Elden Ring</strong>",
+        "date": "5 дней назад"
+      },
+      {
+        "icon": "fas fa-trophy",
+        "text": "Получил достижение <strong>Геймер</strong>",
+        "date": "02.05.2023"
+      },
+      {
+        "icon": "fas fa-list",
+        "text": "Создал новый список <strong>Лучшие киберпанк-произведения</strong>",
+        "date": "25.04.2023"
+      }
+    ],
+    "lists": [
+      {
+        "title": "Лучшие киберпанк-произведения",
+        "description": "Мой личный топ киберпанк-произведений всех времен",
+        "preview": [
+          "https://images.unsplash.com/photo-1605106702734-205df224ecce?w=100",
+          "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=100",
+          "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=100"
+        ],
+        "count": 12
+      },
+      {
+        "title": "Космическая фантастика",
+        "description": "Лучшие произведения о космосе и межзвездных путешествиях",
+        "preview": [
+          "https://images.unsplash.com/photo-1547700055-b61cacebece9?w=100",
+          "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=100",
+          "https://images.unsplash.com/photo-1581822261290-991b38693d1b?w=100"
+        ],
+        "count": 8
+      },
+      {
+        "title": "Фэнтези миры",
+        "description": "Самые проработанные и интересные фэнтези вселенные",
+        "preview": [
+          "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=100",
+          "https://images.unsplash.com/photo-1616729557064-c1b5e1a0ee0d?w=100",
+          "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?w=100"
+        ],
+        "count": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "watching": [
+    {
+      "id": 101,
+      "title": "Мандалорец",
+      "image": "https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?w=500",
+      "imageAlt": "Постер сериала Мандалорец",
+      "rating": "8.7",
+      "tags": ["Фантастика", "Боевик", "Приключения"],
+      "userRating": null,
+      "progress": "Сезон 2, Эпизод 4"
+    },
+    {
+      "id": 102,
+      "title": "Elden Ring",
+      "image": "https://images.unsplash.com/photo-1616729557064-c1b5e1a0ee0d?w=500",
+      "imageAlt": "Постер игры Elden Ring",
+      "rating": "9.5",
+      "tags": ["RPG", "Фэнтези", "Открытый мир"],
+      "userRating": null,
+      "progress": "20 часов игры"
+    },
+    {
+      "id": 103,
+      "title": "Песочный человек",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500",
+      "imageAlt": "Постер сериала Песочный человек",
+      "rating": "8.2",
+      "tags": ["Фэнтези", "Драма", "Мистика"],
+      "userRating": null,
+      "progress": "Сезон 1, Эпизод 7"
+    }
+  ],
+  "completed": [
+    {
+      "id": 201,
+      "title": "Звёздные войны: Новая надежда",
+      "image": "https://images.unsplash.com/photo-1547700055-b61cacebece9?w=500",
+      "imageAlt": "Постер фильма Звёздные войны: Новая надежда",
+      "rating": "9.2",
+      "tags": ["Фантастика", "Приключения", "Космос"],
+      "userRating": 9
+    },
+    {
+      "id": 202,
+      "title": "Ведьмак 3: Дикая Охота",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500",
+      "imageAlt": "Постер игры Ведьмак 3",
+      "rating": "9.7",
+      "tags": ["RPG", "Фэнтези", "Открытый мир"],
+      "userRating": 10
+    },
+    {
+      "id": 203,
+      "title": "Дюна",
+      "image": "https://images.unsplash.com/photo-1630500874620-8d5a8d79d9c5?w=500",
+      "imageAlt": "Постер фильма Дюна",
+      "rating": "8.9",
+      "tags": ["Фантастика", "Приключения", "Эпос"],
+      "userRating": 8
+    },
+    {
+      "id": 204,
+      "title": "Нейромант",
+      "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=500",
+      "imageAlt": "Обложка книги Нейромант",
+      "rating": "9.1",
+      "tags": ["Киберпанк", "Научная фантастика"],
+      "userRating": 9
+    }
+  ],
+  "planned": [
+    {
+      "id": 301,
+      "title": "Фундамент",
+      "image": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=500",
+      "imageAlt": "Постер сериала Фундамент",
+      "rating": "8.4",
+      "tags": ["Фантастика", "Драма", "Космос"]
+    },
+    {
+      "id": 302,
+      "title": "Starfield",
+      "image": "https://images.unsplash.com/photo-1581822261290-991b38693d1b?w=500",
+      "imageAlt": "Постер игры Starfield",
+      "rating": "8.8",
+      "tags": ["RPG", "Космос", "Открытый мир"]
+    },
+    {
+      "id": 303,
+      "title": "Бегущий по лезвию 2049",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500",
+      "imageAlt": "Постер фильма Бегущий по лезвию 2049",
+      "rating": "8.9",
+      "tags": ["Киберпанк", "Фантастика", "Неонуар"]
+    }
+  ],
+  "dropped": [
+    {
+      "id": 401,
+      "title": "Колесо времени",
+      "image": "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?w=500",
+      "imageAlt": "Постер сериала Колесо времени",
+      "rating": "7.2",
+      "tags": ["Фэнтези", "Приключения", "Драма"],
+      "progress": "Сезон 1, Эпизод 3"
+    },
+    {
+      "id": 402,
+      "title": "Cyberpunk 2077",
+      "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500",
+      "imageAlt": "Постер игры Cyberpunk 2077",
+      "rating": "7.8",
+      "tags": ["RPG", "Киберпанк", "Открытый мир"],
+      "progress": "10 часов игры"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 201,
+      "title": "Звёздные войны: Новая надежда",
+      "image": "https://images.unsplash.com/photo-1547700055-b61cacebece9?w=500",
+      "imageAlt": "Постер фильма Звёздные войны: Новая надежда",
+      "rating": "9.2",
+      "tags": ["Фантастика", "Приключения", "Космос"],
+      "userRating": 9
+    },
+    {
+      "id": 202,
+      "title": "Ведьмак 3: Дикая Охота",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500",
+      "imageAlt": "Постер игры Ведьмак 3",
+      "rating": "9.7",
+      "tags": ["RPG", "Фэнтези", "Открытый мир"],
+      "userRating": 10
+    },
+    {
+      "id": 501,
+      "title": "Бегущий по лезвию",
+      "image": "https://images.unsplash.com/photo-1605106702734-205df224ecce?w=500",
+      "imageAlt": "Постер фильма Бегущий по лезвию",
+      "rating": "9.0",
+      "tags": ["Киберпанк", "Фантастика", "Неонуар"],
+      "userRating": 10
+    }
+  ]
+}

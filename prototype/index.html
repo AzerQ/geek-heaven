@@ -6,42 +6,14 @@
     <title>GeekHeaven - Прототип</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключение Handlebars -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </head>
 <body>
-    <!-- Верхняя навигационная панель -->
-    <header class="top-nav">
-        <div class="logo">GeekHeaven</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Поиск...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-        <div class="user-menu">
-            <button class="notifications"><i class="fas fa-bell"></i></button>
-            <div class="user-avatar" id="profileBtn">
-                <img src="assets/images/avatars/user1.svg" alt="Аватар">
-            </div>
-        </div>
-    </header>
-
-    <!-- Боковая навигация -->
-    <nav class="side-nav">
-        <ul>
-            <li class="active" data-screen="dashboard"><i class="fas fa-home"></i> <span>Главная</span></li>
-            <li data-screen="search"><i class="fas fa-search"></i> <span>Поиск</span></li>
-            <li data-screen="library"><i class="fas fa-book"></i> <span>Библиотека</span></li>
-            <li data-screen="profile"><i class="fas fa-user"></i> <span>Профиль</span></li>
-        </ul>
-    </nav>
-
-    <!-- Мобильная навигация -->
-    <nav class="mobile-nav">
-        <ul>
-            <li class="active" data-screen="dashboard"><i class="fas fa-home"></i></li>
-            <li data-screen="search"><i class="fas fa-search"></i></li>
-            <li data-screen="library"><i class="fas fa-book"></i></li>
-            <li data-screen="profile"><i class="fas fa-user"></i></li>
-        </ul>
-    </nav>
+    <!-- Контейнеры для компонентов -->
+    <div id="header-container"></div>
+    <div id="side-nav-container"></div>
+    <div id="mobile-nav-container"></div>
 
     <!-- Основной контент -->
     <main class="content">
@@ -52,94 +24,12 @@
             </div>
             <h1>Главная страница</h1>
             
-            <div class="section">
-                <h2>Персональные рекомендации</h2>
-                <div class="content-grid">
-                    <div class="content-card" data-id="1">
-                        <div class="card-image">
-                            <img src="assets/images/posters/sci-fi-poster.svg" alt="Космическая одиссея">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 1</h3>
-                            <div class="card-tags">
-                                <span>Фильм</span>
-                                <span>Фантастика</span>
-                            </div>
-                            <div class="card-rating">★ 9.2</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="2">
-                        <div class="card-image">
-                            <img src="assets/images/posters/sci-fi-poster.svg" alt="Легенды Подземелья">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 2</h3>
-                            <div class="card-tags">
-                                <span>Игра</span>
-                                <span>RPG</span>
-                            </div>
-                            <div class="card-rating">★ 8.7</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="3">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300" alt="Научная фантастика">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 3</h3>
-                            <div class="card-tags">
-                                <span>Сериал</span>
-                                <span>Драма</span>
-                            </div>
-                            <div class="card-rating">★ 9.5</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section" id="recommendations-container">
+                <!-- Сюда будут загружены рекомендации -->
             </div>
 
-            <div class="section">
-                <h2>Новинки</h2>
-                <div class="content-grid">
-                    <div class="content-card" data-id="4">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300" alt="Фэнтези книга">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 4</h3>
-                            <div class="card-tags">
-                                <span>Книга</span>
-                                <span>Фэнтези</span>
-                            </div>
-                            <div class="card-rating">★ 8.9</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="5">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300" alt="Игровой контент">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 5</h3>
-                            <div class="card-tags">
-                                <span>Игра</span>
-                                <span>Экшен</span>
-                            </div>
-                            <div class="card-rating">★ 9.1</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="6">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300" alt="Научная фантастика 2">
-                        </div>
-                        <div class="card-info">
-                            <h3>Название контента 6</h3>
-                            <div class="card-tags">
-                                <span>Фильм</span>
-                                <span>Комедия</span>
-                            </div>
-                            <div class="card-rating">★ 7.8</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section" id="new-content-container">
+                <!-- Сюда будут загружены новинки -->
             </div>
         </section>
 
@@ -147,105 +37,12 @@
         <section class="screen" id="search">
             <h1>Поиск</h1>
             
-            <div class="search-filters">
-                <div class="filter-group">
-                    <label>Тип контента</label>
-                    <select>
-                        <option>Все</option>
-                        <option>Фильмы</option>
-                        <option>Сериалы</option>
-                        <option>Игры</option>
-                        <option>Книги</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Жанр</label>
-                    <select>
-                        <option>Все</option>
-                        <option>Фантастика</option>
-                        <option>Фэнтези</option>
-                        <option>Боевик</option>
-                        <option>Драма</option>
-                        <option>Комедия</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Год</label>
-                    <select>
-                        <option>Все</option>
-                        <option>2023</option>
-                        <option>2022</option>
-                        <option>2021</option>
-                        <option>2020</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Рейтинг</label>
-                    <select>
-                        <option>Все</option>
-                        <option>9+</option>
-                        <option>8+</option>
-                        <option>7+</option>
-                        <option>6+</option>
-                    </select>
-                </div>
+            <div id="search-filters-container">
+                <!-- Сюда будут загружены фильтры поиска -->
             </div>
 
-            <div class="search-results">
-                <div class="content-grid">
-                    <div class="content-card" data-id="7">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300" alt="Фантастический мир">
-                        </div>
-                        <div class="card-info">
-                            <h3>Результат поиска 1</h3>
-                            <div class="card-tags">
-                                <span>Фильм</span>
-                                <span>Фантастика</span>
-                            </div>
-                            <div class="card-rating">★ 8.5</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="8">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=300" alt="Научная фантастика 3">
-                        </div>
-                        <div class="card-info">
-                            <h3>Результат поиска 2</h3>
-                            <div class="card-tags">
-                                <span>Сериал</span>
-                                <span>Драма</span>
-                            </div>
-                            <div class="card-rating">★ 9.3</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="9">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300" alt="Игровой мир">
-                        </div>
-                        <div class="card-info">
-                            <h3>Результат поиска 3</h3>
-                            <div class="card-tags">
-                                <span>Игра</span>
-                                <span>Экшен</span>
-                            </div>
-                            <div class="card-rating">★ 8.8</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="10">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=300" alt="Фэнтези">
-                        </div>
-                        <div class="card-info">
-                            <h3>Результат поиска 4</h3>
-                            <div class="card-tags">
-                                <span>Книга</span>
-                                <span>Фэнтези</span>
-                            </div>
-                            <div class="card-rating">★ 7.9</div>
-                        </div>
-                    </div>
-                </div>
+            <div id="search-results-container">
+                <!-- Сюда будут загружены результаты поиска -->
             </div>
         </section>
 
@@ -253,102 +50,8 @@
         <section class="screen" id="content-details">
             <div class="back-button"><i class="fas fa-arrow-left"></i> Назад</div>
             
-            <div class="content-header">
-                <div class="content-poster">
-                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300" alt="Poster">
-                </div>
-                <div class="content-info">
-                    <h1>Название контента</h1>
-                    <div class="content-meta">
-                        <span>2023</span> • 
-                        <span>Фильм</span> • 
-                        <span>120 мин</span>
-                    </div>
-                    <div class="content-rating">★ 9.2</div>
-                    <div class="content-tags">
-                        <span>Фантастика</span>
-                        <span>Приключения</span>
-                        <span>Драма</span>
-                    </div>
-                    <div class="content-actions">
-                        <button class="primary-button">Добавить в библиотеку</button>
-                        <button class="secondary-button">Оценить</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-description">
-                <h2>Описание</h2>
-                <p>Подробное описание контента. Здесь может быть сюжет фильма, описание игры или книги. Текст может быть достаточно длинным, чтобы дать полное представление о контенте.</p>
-            </div>
-
-            <div class="content-gallery">
-                <h2>Галерея</h2>
-                <div class="gallery-grid">
-                    <img src="https://images.unsplash.com/photo-1596727147705-61a532a659bd?w=300" alt="Скриншот игрового процесса">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300" alt="Сцена из фильма">
-                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=300" alt="Концепт-арт">
-                </div>
-            </div>
-
-            <div class="content-reviews">
-                <h2>Отзывы пользователей</h2>
-                <div class="review">
-                    <div class="review-header">
-                        <div class="review-user">
-                            <img src="assets/images/avatars/user1.svg" alt="Пользователь">
-                            <span>Пользователь 1</span>
-                        </div>
-                        <div class="review-rating">★ 9.0</div>
-                    </div>
-                    <div class="review-text">
-                        <p>Отличный контент! Очень понравилось. Рекомендую всем любителям жанра.</p>
-                    </div>
-                </div>
-                <div class="review">
-                    <div class="review-header">
-                        <div class="review-user">
-                            <img src="assets/images/avatars/user1.svg" alt="Пользователь">
-                            <span>Пользователь 2</span>
-                        </div>
-                        <div class="review-rating">★ 8.5</div>
-                    </div>
-                    <div class="review-text">
-                        <p>Хороший контент, но есть некоторые недостатки. В целом, стоит внимания.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="related-content">
-                <h2>Похожий контент</h2>
-                <div class="content-grid">
-                    <div class="content-card" data-id="11">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300" alt="Похожий контент - Научная фантастика">
-                        </div>
-                        <div class="card-info">
-                            <h3>Похожий контент 1</h3>
-                            <div class="card-tags">
-                                <span>Фильм</span>
-                                <span>Фантастика</span>
-                            </div>
-                            <div class="card-rating">★ 8.7</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="12">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300" alt="Похожий контент - Фэнтези">
-                        </div>
-                        <div class="card-info">
-                            <h3>Похожий контент 2</h3>
-                            <div class="card-tags">
-                                <span>Фильм</span>
-                                <span>Приключения</span>
-                            </div>
-                            <div class="card-rating">★ 9.0</div>
-                        </div>
-                    </div>
-                </div>
+            <div id="content-details-container">
+                <!-- Сюда будут загружены детали контента -->
             </div>
         </section>
 
@@ -356,146 +59,26 @@
         <section class="screen" id="library">
             <h1>Моя библиотека</h1>
             
-            <div class="library-tabs">
-                <button class="tab active">Смотрю/Играю</button>
-                <button class="tab">Просмотрено/Пройдено</button>
-                <button class="tab">В планах</button>
-                <button class="tab">Брошено</button>
-                <button class="tab">Любимое</button>
+            <div id="library-tabs-container">
+                <!-- Сюда будут загружены вкладки библиотеки -->
             </div>
 
-            <div class="library-content">
-                <div class="content-grid">
-                    <div class="content-card" data-id="13">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=300" alt="Библиотека - Научная фантастика">
-                        </div>
-                        <div class="card-info">
-                            <h3>Контент в библиотеке 1</h3>
-                            <div class="card-tags">
-                                <span>Сериал</span>
-                                <span>Драма</span>
-                            </div>
-                            <div class="card-rating">★ 9.4</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="14">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=300" alt="Библиотека - Игра">
-                        </div>
-                        <div class="card-info">
-                            <h3>Контент в библиотеке 2</h3>
-                            <div class="card-tags">
-                                <span>Игра</span>
-                                <span>RPG</span>
-                            </div>
-                            <div class="card-rating">★ 8.9</div>
-                        </div>
-                    </div>
-                    <div class="content-card" data-id="15">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300" alt="Библиотека - Фэнтези">
-                        </div>
-                        <div class="card-info">
-                            <h3>Контент в библиотеке 3</h3>
-                            <div class="card-tags">
-                                <span>Книга</span>
-                                <span>Фэнтези</span>
-                            </div>
-                            <div class="card-rating">★ 9.2</div>
-                        </div>
-                    </div>
-                </div>
+            <div id="library-content-container">
+                <!-- Сюда будет загружен контент библиотеки -->
             </div>
         </section>
 
         <!-- Страница профиля -->
         <section class="screen" id="profile">
-            <h1>Профиль</h1>
+            <h1>Мой профиль</h1>
             
-            <div class="profile-header">
-                <div class="profile-avatar">
-                    <img src="assets/images/avatars/user2.svg" alt="Аватар профиля">
-                </div>
-                <div class="profile-info">
-                    <h2>Имя пользователя</h2>
-                    <p>Описание профиля. Здесь пользователь может рассказать о себе и своих предпочтениях.</p>
-                </div>
-            </div>
-
-            <div class="profile-stats">
-                <div class="stat-item">
-                    <div class="stat-value">42</div>
-                    <div class="stat-label">Просмотрено</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">18</div>
-                    <div class="stat-label">Пройдено</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">35</div>
-                    <div class="stat-label">Прочитано</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">27</div>
-                    <div class="stat-label">Отзывов</div>
-                </div>
-            </div>
-
-            <div class="profile-achievements">
-                <h2>Достижения</h2>
-                <div class="achievements-grid">
-                    <div class="achievement">
-                        <div class="achievement-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Киноман</h3>
-                            <p>Просмотрено 30+ фильмов</p>
-                        </div>
-                    </div>
-                    <div class="achievement">
-                        <div class="achievement-icon">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Геймер</h3>
-                            <p>Пройдено 15+ игр</p>
-                        </div>
-                    </div>
-                    <div class="achievement">
-                        <div class="achievement-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="achievement-info">
-                            <h3>Книжный червь</h3>
-                            <p>Прочитано 25+ книг</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="profile-lists">
-                <h2>Мои списки</h2>
-                <div class="lists-grid">
-                    <div class="list-item">
-                        <h3>Любимые фильмы</h3>
-                        <p>15 элементов</p>
-                    </div>
-                    <div class="list-item">
-                        <h3>Лучшие игры 2023</h3>
-                        <p>8 элементов</p>
-                    </div>
-                    <div class="list-item">
-                        <h3>Книги для саморазвития</h3>
-                        <p>12 элементов</p>
-                    </div>
-                </div>
+            <div id="profile-container">
+                <!-- Сюда будут загружены данные профиля -->
             </div>
         </section>
     </main>
 
-    <!-- Модальное окно уведомления о достижении -->
+    <!-- Модальное окно достижения -->
     <div class="modal" id="achievementModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -506,10 +89,8 @@
                 <div class="achievement-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
-                <div class="achievement-info">
-                    <h3>Первые шаги</h3>
-                    <p>Добавлено 5 элементов в библиотеку</p>
-                </div>
+                <h3>Первые шаги</h3>
+                <p>Вы успешно зарегистрировались и начали использовать GeekHeaven!</p>
             </div>
             <div class="modal-footer">
                 <button class="primary-button">Отлично!</button>
@@ -517,6 +98,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Подключение JavaScript -->
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "dashboard",
+      "title": "Главная",
+      "icon": "home",
+      "active": true
+    },
+    {
+      "id": "search",
+      "title": "Поиск",
+      "icon": "search",
+      "active": false
+    },
+    {
+      "id": "library",
+      "title": "Библиотека",
+      "icon": "book",
+      "active": false
+    },
+    {
+      "id": "profile",
+      "title": "Профиль",
+      "icon": "user",
+      "active": false
+    }
+  ]
+}

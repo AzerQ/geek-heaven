@@ -1,0 +1,29 @@
+{
+  "title": "Новинки",
+  "items": [
+    {
+      "id": 4,
+      "title": "Название контента 4",
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300",
+      "imageAlt": "Фэнтези книга",
+      "tags": ["Книга", "Фэнтези"],
+      "rating": 8.9
+    },
+    {
+      "id": 5,
+      "title": "Название контента 5",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300",
+      "imageAlt": "Игровой контент",
+      "tags": ["Игра", "Экшен"],
+      "rating": 9.1
+    },
+    {
+      "id": 6,
+      "title": "Название контента 6",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300",
+      "imageAlt": "Научная фантастика 2",
+      "tags": ["Фильм", "Комедия"],
+      "rating": 7.8
+    }
+  ]
+}

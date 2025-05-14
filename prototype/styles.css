@@ -200,6 +200,96 @@ body {
     display: block;
 }
 
+/* Лента активности */
+.activity-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(98, 0, 234, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.activity-icon i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content p {
+    margin-bottom: 5px;
+}
+
+.activity-date {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Списки пользователя */
+.lists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.list-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.list-preview {
+    display: flex;
+    height: 120px;
+}
+
+.list-preview img {
+    flex: 1;
+    object-fit: cover;
+}
+
+.list-info {
+    padding: 15px;
+}
+
+.list-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.list-info p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.list-count {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
 h1 {
     margin-bottom: 20px;
     color: var(--text-color);

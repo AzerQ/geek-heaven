@@ -1,0 +1,29 @@
+{
+  "title": "Персональные рекомендации",
+  "items": [
+    {
+      "id": 1,
+      "title": "Название контента 1",
+      "image": "assets/images/posters/sci-fi-poster.svg",
+      "imageAlt": "Космическая одиссея",
+      "tags": ["Фильм", "Фантастика"],
+      "rating": 9.2
+    },
+    {
+      "id": 2,
+      "title": "Название контента 2",
+      "image": "assets/images/posters/sci-fi-poster.svg",
+      "imageAlt": "Легенды Подземелья",
+      "tags": ["Игра", "RPG"],
+      "rating": 8.7
+    },
+    {
+      "id": 3,
+      "title": "Название контента 3",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300",
+      "imageAlt": "Научная фантастика",
+      "tags": ["Сериал", "Драма"],
+      "rating": 9.5
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<div class="search-filters">
+    {{#each filters}}
+    <div class="filter-group">
+        <label>{{label}}</label>
+        <select>
+            {{#each options}}
+            <option>{{this}}</option>
+            {{/each}}
+        </select>
+    </div>
+    {{/each}}
+</div>

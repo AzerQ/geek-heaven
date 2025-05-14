@@ -1,0 +1,64 @@
+<div class="content-header">
+    <div class="content-poster">
+        <img src="{{image}}" alt="{{title}}">
+    </div>
+    <div class="content-info">
+        <h1>{{title}}</h1>
+        <div class="content-meta">
+            <span>{{year}}</span> • 
+            <span>{{type}}</span> • 
+            <span>{{duration}}</span>
+        </div>
+        <div class="content-rating">★ {{rating}}</div>
+        <div class="content-tags">
+            {{#each tags}}
+            <span>{{this}}</span>
+            {{/each}}
+        </div>
+        <div class="content-actions">
+            <button class="primary-button">{{addToLibraryText}}</button>
+            <button class="secondary-button">{{rateText}}</button>
+        </div>
+    </div>
+</div>
+
+<div class="content-description">
+    <h2>{{descriptionTitle}}</h2>
+    <p>{{description}}</p>
+</div>
+
+<div class="content-gallery">
+    <h2>{{galleryTitle}}</h2>
+    <div class="gallery-grid">
+        {{#each gallery}}
+        <img src="{{this.src}}" alt="{{this.alt}}">
+        {{/each}}
+    </div>
+</div>
+
+<div class="content-reviews">
+    <h2>{{reviewsTitle}}</h2>
+    {{#each reviews}}
+    <div class="review">
+        <div class="review-header">
+            <div class="review-user">
+                <img src="{{this.user.avatar}}" alt="{{this.user.name}}">
+                <span>{{this.user.name}}</span>
+            </div>
+            <div class="review-rating">★ {{this.rating}}</div>
+        </div>
+        <div class="review-text">
+            <p>{{this.text}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<div class="related-content">
+    <h2>{{relatedTitle}}</h2>
+    <div class="content-grid">
+        {{#each related}}
+            {{> content-card this}}
+        {{/each}}
+    </div>
+</div>

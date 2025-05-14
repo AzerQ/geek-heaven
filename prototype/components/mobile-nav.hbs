@@ -1,0 +1,7 @@
+<nav class="mobile-nav">
+    <ul>
+        {{#each items}}
+        <li {{#if active}}class="active"{{/if}} data-screen="{{id}}"><i class="fas fa-{{icon}}"></i></li>
+        {{/each}}
+    </ul>
+</nav>
