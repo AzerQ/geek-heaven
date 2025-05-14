@@ -1,5 +1,9 @@
 // Основной файл приложения
 
+Handlebars.registerHelper('json', function (obj) {
+    return JSON.stringify(obj);
+});
+
 // Загрузка шаблонов и данных
 const templates = {};
 const data = {};

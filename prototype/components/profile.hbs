@@ -91,44 +91,17 @@
         <div class="stats-grid">
             <div class="stats-card">
                 <h3>По типам контента</h3>
-                <div class="stats-chart">
-                    <div class="chart-item">
-                        <span class="chart-label">Фильмы</span>
-                        <div class="chart-bar">
-                            <div class="chart-fill" style="width: {{user.contentStats.movies}}%;"></div>
-                        </div>
-                        <span class="chart-value">{{user.contentStats.moviesCount}}</span>
-                    </div>
-                    <div class="chart-item">
-                        <span class="chart-label">Сериалы</span>
-                        <div class="chart-bar">
-                            <div class="chart-fill" style="width: {{user.contentStats.series}}%;"></div>
-                        </div>
-                        <span class="chart-value">{{user.contentStats.seriesCount}}</span>
-                    </div>
-                    <div class="chart-item">
-                        <span class="chart-label">Игры</span>
-                        <div class="chart-bar">
-                            <div class="chart-fill" style="width: {{user.contentStats.games}}%;"></div>
-                        </div>
-                        <span class="chart-value">{{user.contentStats.gamesCount}}</span>
-                    </div>
-                    <div class="chart-item">
-                        <span class="chart-label">Книги</span>
-                        <div class="chart-bar">
-                            <div class="chart-fill" style="width: {{user.contentStats.books}}%;"></div>
-                        </div>
-                        <span class="chart-value">{{user.contentStats.booksCount}}</span>
-                    </div>
+                <div class="stats-chart" style="height: 300px;">
+                    <canvas id="contentTypeChart"></canvas>
                 </div>
+                <div id="contentStats" data-stats='{{json user.contentStats}}'></div>
             </div>
             <div class="stats-card">
                 <h3>По жанрам</h3>
-                <div class="genre-tags">
-                    {{#each user.genreStats}}
-                    <span class="genre-tag" style="font-size: {{fontSize}}px;">{{name}} ({{count}})</span>
-                    {{/each}}
+                <div class="stats-chart" style="height: 400px;">
+                    <canvas id="genreChart"></canvas>
                 </div>
+                <div id="genreStats" data-stats='{{json user.genreStats}}'></div>
             </div>
         </div>
     </div>
