@@ -71,6 +71,7 @@ async function initApp() {
         // Рендеринг компонентов
         renderComponent('header', '#header-container', {
             siteName: 'GeekHeaven',
+            siteNameShort: 'GH',
             searchPlaceholder: 'Поиск...',
             user: {
                 avatar: 'assets/images/avatars/user1.svg',
