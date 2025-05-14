@@ -1,283 +1,135 @@
-<section class="screen" id="profile">
-    <div class="profile-header">
-        <div class="profile-avatar">
-            <img src="{{user.avatar}}" alt="Аватар пользователя">
-        </div>
-        <div class="profile-info">
-            <h1>{{user.name}}</h1>
-            <p class="profile-description">{{user.description}}</p>
-            <div class="profile-stats">
-                <div class="stat-item">
-                    <span class="stat-value">{{user.stats.watched}}</span>
-                    <span class="stat-label">Просмотрено</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">{{user.stats.rated}}</span>
-                    <span class="stat-label">Оценено</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">{{user.stats.reviews}}</span>
-                    <span class="stat-label">Отзывов</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">{{user.stats.lists}}</span>
-                    <span class="stat-label">Списков</span>
-                </div>
+<div class="profile-header">
+    <div class="profile-avatar">
+        <img src="{{user.avatar}}" alt="Аватар пользователя">
+    </div>
+    <div class="profile-info">
+        <h1>{{user.name}}</h1>
+        <p class="profile-description">{{user.description}}</p>
+        <div class="profile-stats">
+            <div class="stat-item">
+                <span class="stat-value">{{user.stats.watched}}</span>
+                <span class="stat-label">Просмотрено</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">{{user.stats.rated}}</span>
+                <span class="stat-label">Оценено</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">{{user.stats.reviews}}</span>
+                <span class="stat-label">Отзывов</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">{{user.stats.lists}}</span>
+                <span class="stat-label">Списков</span>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="profile-sections">
-        <div class="section">
-            <h2>Лента активности</h2>
-            <div class="activity-feed">
-                {{#each user.activity}}
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>{{{text}}}</p>
-                        <span class="activity-date">{{date}}</span>
-                    </div>
+<div class="profile-sections">
+    <div class="section">
+        <h2>Лента активности</h2>
+        <div class="activity-feed">
+            {{#each user.activity}}
+            <div class="activity-item">
+                <div class="activity-icon">
+                    <i class="{{icon}}"></i>
                 </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Мои списки</h2>
-            <div class="lists-grid">
-                {{#each user.lists}}
-                <div class="list-card">
-                    <div class="list-preview">
-                        {{#each preview}}
-                        <img src="{{this}}" alt="Превью списка">
-                        {{/each}}
-                    </div>
-                    <div class="list-info">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        <span class="list-count">{{count}} элементов</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Достижения</h2>
-            <div class="achievements-grid">
-                {{#each user.achievements}}
-                <div class="achievement-item {{#unless unlocked}}locked{{/unless}}">
-                    <div class="achievement-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="achievement-info">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        {{#if unlocked}}
-                        <span class="achievement-date">Получено: {{date}}</span>
-                        {{else}}
-                        <span class="achievement-progress">Прогресс: {{progress}}%</span>
-                        {{/if}}
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Лента активности</h2>
-            <div class="activity-feed">
-                {{#each user.activity}}
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>{{{text}}}</p>
-                        <span class="activity-date">{{date}}</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Мои списки</h2>
-            <div class="lists-grid">
-                {{#each user.lists}}
-                <div class="list-card">
-                    <div class="list-preview">
-                        {{#each preview}}
-                        <img src="{{this}}" alt="Превью списка">
-                        {{/each}}
-                    </div>
-                    <div class="list-info">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        <span class="list-count">{{count}} элементов</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Статистика</h2>
-            <div class="stats-grid">
-                <div class="stats-card">
-                    <h3>По типам контента</h3>
-                    <div class="stats-chart">
-                        <div class="chart-item">
-                            <span class="chart-label">Фильмы</span>
-                            <div class="chart-bar">
-                                <div class="chart-fill" style="width: {{user.contentStats.movies}}%;"></div>
-                            </div>
-                            <span class="chart-value">{{user.contentStats.moviesCount}}</span>
-                        </div>
-                        <div class="chart-item">
-                            <span class="chart-label">Сериалы</span>
-                            <div class="chart-bar">
-                                <div class="chart-fill" style="width: {{user.contentStats.series}}%;"></div>
-                            </div>
-                            <span class="chart-value">{{user.contentStats.seriesCount}}</span>
-                        </div>
-                        <div class="chart-item">
-                            <span class="chart-label">Игры</span>
-                            <div class="chart-bar">
-                                <div class="chart-fill" style="width: {{user.contentStats.games}}%;"></div>
-                            </div>
-                            <span class="chart-value">{{user.contentStats.gamesCount}}</span>
-                        </div>
-                        <div class="chart-item">
-                            <span class="chart-label">Книги</span>
-                            <div class="chart-bar">
-                                <div class="chart-fill" style="width: {{user.contentStats.books}}%;"></div>
-                            </div>
-                            <span class="chart-value">{{user.contentStats.booksCount}}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="stats-card">
-                    <h3>По жанрам</h3>
-                    <div class="genre-tags">
-                        {{#each user.genreStats}}
-                        <span class="genre-tag" style="font-size: {{fontSize}}px;">{{name}} ({{count}})</span>
-                        {{/each}}
-                    </div>
+                <div class="activity-content">
+                    <p>{{{text}}}</p>
+                    <span class="activity-date">{{date}}</span>
                 </div>
             </div>
+            {{/each}}
         </div>
+    </div>
 
-        <div class="section">
-            <h2>Лента активности</h2>
-            <div class="activity-feed">
-                {{#each user.activity}}
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>{{{text}}}</p>
-                        <span class="activity-date">{{date}}</span>
-                    </div>
+    <div class="section">
+        <h2>Мои списки</h2>
+        <div class="lists-grid">
+            {{#each user.lists}}
+            <div class="list-card">
+                <div class="list-preview">
+                    {{#each preview}}
+                    <img src="{{this}}" alt="Превью списка">
+                    {{/each}}
                 </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Мои списки</h2>
-            <div class="lists-grid">
-                {{#each user.lists}}
-                <div class="list-card">
-                    <div class="list-preview">
-                        {{#each preview}}
-                        <img src="{{this}}" alt="Превью списка">
-                        {{/each}}
-                    </div>
-                    <div class="list-info">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        <span class="list-count">{{count}} элементов</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Активность</h2>
-            <div class="activity-feed">
-                {{#each user.activity}}
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>{{{text}}}</p>
-                        <span class="activity-date">{{date}}</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Лента активности</h2>
-            <div class="activity-feed">
-                {{#each user.activity}}
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="{{icon}}"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>{{{text}}}</p>
-                        <span class="activity-date">{{date}}</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Мои списки</h2>
-            <div class="lists-grid">
-                {{#each user.lists}}
-                <div class="list-card">
-                    <div class="list-preview">
-                        {{#each preview}}
-                        <img src="{{this}}" alt="Превью списка">
-                        {{/each}}
-                    </div>
-                    <div class="list-info">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        <span class="list-count">{{count}} элементов</span>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Публичные списки</h2>
-            <div class="lists-grid">
-                {{#each user.lists}}
-                <div class="list-card">
+                <div class="list-info">
                     <h3>{{title}}</h3>
                     <p>{{description}}</p>
-                    <div class="list-preview">
-                        {{#each preview}}
-                        <img src="{{this}}" alt="Превью контента">
-                        {{/each}}
-                    </div>
                     <span class="list-count">{{count}} элементов</span>
                 </div>
-                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Достижения</h2>
+        <div class="achievements-grid">
+            {{#each user.achievements}}
+            <div class="achievement-item {{#unless unlocked}}locked{{/unless}}">
+                <div class="achievement-icon">
+                    <i class="{{icon}}"></i>
+                </div>
+                <div class="achievement-info">
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                    {{#if unlocked}}
+                    <span class="achievement-date">Получено: {{date}}</span>
+                    {{else}}
+                    <span class="achievement-progress">Прогресс: {{progress}}%</span>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Статистика</h2>
+        <div class="stats-grid">
+            <div class="stats-card">
+                <h3>По типам контента</h3>
+                <div class="stats-chart">
+                    <div class="chart-item">
+                        <span class="chart-label">Фильмы</span>
+                        <div class="chart-bar">
+                            <div class="chart-fill" style="width: {{user.contentStats.movies}}%;"></div>
+                        </div>
+                        <span class="chart-value">{{user.contentStats.moviesCount}}</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="chart-label">Сериалы</span>
+                        <div class="chart-bar">
+                            <div class="chart-fill" style="width: {{user.contentStats.series}}%;"></div>
+                        </div>
+                        <span class="chart-value">{{user.contentStats.seriesCount}}</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="chart-label">Игры</span>
+                        <div class="chart-bar">
+                            <div class="chart-fill" style="width: {{user.contentStats.games}}%;"></div>
+                        </div>
+                        <span class="chart-value">{{user.contentStats.gamesCount}}</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="chart-label">Книги</span>
+                        <div class="chart-bar">
+                            <div class="chart-fill" style="width: {{user.contentStats.books}}%;"></div>
+                        </div>
+                        <span class="chart-value">{{user.contentStats.booksCount}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-card">
+                <h3>По жанрам</h3>
+                <div class="genre-tags">
+                    {{#each user.genreStats}}
+                    <span class="genre-tag" style="font-size: {{fontSize}}px;">{{name}} ({{count}})</span>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>

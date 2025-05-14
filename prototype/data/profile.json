@@ -1,7 +1,7 @@
 {
   "user": {
     "name": "Алексей Гик",
-    "avatar": "assets/images/avatars/user-avatar.svg",
+    "avatar": "assets/images/avatars/user1.svg",
     "description": "Любитель научной фантастики, фэнтези и всего, что связано с гик-культурой. Коллекционирую фигурки и комиксы.",
     "stats": {
       "watched": 127,
@@ -133,7 +133,7 @@
         "description": "Самые проработанные и интересные фэнтези вселенные",
         "preview": [
           "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=100",
-          "https://images.unsplash.com/photo-1616729557064-c1b5e1a0ee0d?w=100",
+          "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=100",
           "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?w=100"
         ],
         "count": 15
