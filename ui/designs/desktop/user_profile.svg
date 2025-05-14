@@ -1,134 +1,711 @@
-<svg width="1169" height="827" viewBox="0 0 1169 827" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1169"
+   height="827"
+   viewBox="0 0 1169 827"
+   fill="none"
+   version="1.1"
+   id="svg51"
+   sodipodi:docname="user_profile.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs51" />
+  <sodipodi:namedview
+     id="namedview51"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.43007825"
+     inkscape:cx="487.12066"
+     inkscape:cy="163.92366"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg51" />
   <!-- Фон страницы -->
-  <rect width="1169" height="827" fill="#F5F5F5"/>
-  
+  <rect
+     width="1169"
+     height="827"
+     fill="#F5F5F5"
+     id="rect1" />
   <!-- Верхняя навигационная панель -->
-  <rect y="0" width="1169" height="70" fill="#5C6BC0"/>
-  
+  <rect
+     y="0"
+     width="1169"
+     height="70"
+     fill="#5C6BC0"
+     id="rect2" />
   <!-- Лого -->
-  <text x="40" y="42" font-family="Montserrat" font-size="24" font-weight="700" fill="white">GeekHeaven</text>
-  
+  <text
+     x="40"
+     y="42"
+     font-family="Montserrat"
+     font-size="24"
+     font-weight="700"
+     fill="white"
+     id="text2">GeekHeaven</text>
   <!-- Строка поиска -->
-  <rect x="350" y="20" width="400" height="36" rx="18" fill="white" fill-opacity="0.2" stroke="white" stroke-width="1"/>
-  <text x="375" y="42" font-family="Roboto" font-size="14" fill="white" fill-opacity="0.8">Поиск...</text>
-  <path d="M725 33.5C725 37.0899 722.09 40 718.5 40C714.91 40 712 37.0899 712 33.5C712 29.9101 714.91 27 718.5 27C722.09 27 725 29.9101 725 33.5Z" stroke="white" stroke-width="1.5"/>
-  
+  <rect
+     x="350"
+     y="20"
+     width="400"
+     height="36"
+     rx="18"
+     fill="white"
+     fill-opacity="0.2"
+     stroke="white"
+     stroke-width="1"
+     id="rect3" />
+  <text
+     x="375"
+     y="42"
+     font-family="Roboto"
+     font-size="14"
+     fill="white"
+     fill-opacity="0.8"
+     id="text3">Поиск...</text>
   <!-- Иконки в правой части -->
-  <circle cx="1080" cy="35" r="20" fill="white" fill-opacity="0.3"/>
-  <text x="1074" y="41" font-family="Montserrat" font-size="24" fill="white">👤</text>
-  
+  <circle
+     cx="1080"
+     cy="35"
+     r="20"
+     fill="white"
+     fill-opacity="0.3"
+     id="circle3" />
+  <text
+     x="1067.0245"
+     y="43.325157"
+     font-family="Montserrat"
+     font-size="24px"
+     fill="#ffffff"
+     id="text4">👤</text>
   <!-- Боковая навигация -->
-  <rect x="0" y="70" width="240" height="757" fill="#212121"/>
-  
+  <rect
+     x="0"
+     y="70"
+     width="240"
+     height="757"
+     fill="#212121"
+     id="rect4" />
   <!-- Пункты меню -->
-  <text x="50" y="210" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Главная</text>
-  <path d="M25 210L35 195L45 210" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
-  
-  <text x="50" y="260" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Моя библиотека</text>
-  <path d="M25 260L35 245L45 260" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
-  
-  <text x="50" y="310" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Мои коллекции</text>
-  <path d="M25 310L35 295L45 310" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
-  
-  <text x="50" y="360" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Достижения</text>
-  <path d="M25 360L35 345L45 360" stroke="white" stroke-width="2" stroke-opacity="0.7"/>
-  
-  <text x="20" y="420" font-family="Roboto" font-size="14" fill="white" fill-opacity="0.5">КАТЕГОРИИ КОНТЕНТА</text>
-  
-  <text x="50" y="470" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Игры</text>
-  <text x="25" y="470" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">🎮</text>
-  
-  <text x="50" y="520" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Фильмы и сериалы</text>
-  <text x="25" y="520" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">🎬</text>
-  
-  <text x="50" y="570" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Книги</text>
-  <text x="25" y="570" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">📚</text>
-  
-  <text x="50" y="620" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Комиксы и манга</text>
-  <text x="25" y="620" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">💬</text>
-  
-  <text x="50" y="670" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">Аниме</text>
-  <text x="25" y="670" font-family="Roboto" font-size="16" fill="white" fill-opacity="0.7">✨</text>
-  
+  <text
+     x="50"
+     y="210"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text5">Главная</text>
+  <path
+     d="M25 210L35 195L45 210"
+     stroke="white"
+     stroke-width="2"
+     stroke-opacity="0.7"
+     id="path5" />
+  <text
+     x="50"
+     y="260"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text6">Моя библиотека</text>
+  <path
+     d="M25 260L35 245L45 260"
+     stroke="white"
+     stroke-width="2"
+     stroke-opacity="0.7"
+     id="path6" />
+  <text
+     x="50"
+     y="310"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text7">Мои коллекции</text>
+  <path
+     d="M25 310L35 295L45 310"
+     stroke="white"
+     stroke-width="2"
+     stroke-opacity="0.7"
+     id="path7" />
+  <text
+     x="50"
+     y="360"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text8">Достижения</text>
+  <path
+     d="M25 360L35 345L45 360"
+     stroke="white"
+     stroke-width="2"
+     stroke-opacity="0.7"
+     id="path8" />
+  <text
+     x="20"
+     y="420"
+     font-family="Roboto"
+     font-size="14"
+     fill="white"
+     fill-opacity="0.5"
+     id="text9">КАТЕГОРИИ КОНТЕНТА</text>
+  <text
+     x="50"
+     y="470"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text10">Игры</text>
+  <text
+     x="25"
+     y="470"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text11">🎮</text>
+  <text
+     x="50"
+     y="520"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text12">Фильмы и сериалы</text>
+  <text
+     x="25"
+     y="520"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text13">🎬</text>
+  <text
+     x="50"
+     y="570"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text14">Книги</text>
+  <text
+     x="25"
+     y="570"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text15">📚</text>
+  <text
+     x="50"
+     y="620"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text16">Комиксы и манга</text>
+  <text
+     x="25"
+     y="620"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text17">💬</text>
+  <text
+     x="50"
+     y="670"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text18">Аниме</text>
+  <text
+     x="25"
+     y="670"
+     font-family="Roboto"
+     font-size="16"
+     fill="white"
+     fill-opacity="0.7"
+     id="text19">✨</text>
   <!-- Основной контент -->
-  <rect x="240" y="70" width="929" height="757" fill="#F5F5F5"/>
-  
+  <rect
+     x="240"
+     y="70"
+     width="929"
+     height="757"
+     fill="#F5F5F5"
+     id="rect19" />
   <!-- Профиль пользователя -->
-  <rect x="280" y="100" width="840" height="180" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
-  
+  <rect
+     x="280"
+     y="100"
+     width="840"
+     height="180"
+     rx="10"
+     fill="white"
+     filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"
+     id="rect20" />
   <!-- Аватар пользователя -->
-  <circle cx="360" cy="160" r="60" fill="#5C6BC0" opacity="0.8"/>
-  <text x="335" y="175" font-family="Montserrat" font-size="50" fill="white">GG</text>
-  
+  <circle
+     cx="360"
+     cy="160"
+     r="60"
+     fill="#5C6BC0"
+     opacity="0.8"
+     id="circle20" />
+  <text
+     x="321.84692"
+     y="176.64413"
+     font-family="Montserrat"
+     font-size="50px"
+     fill="#ffffff"
+     id="text20">GG</text>
   <!-- Информация о пользователе -->
-  <text x="440" y="140" font-family="Montserrat" font-size="28" font-weight="700" fill="#212121">GameGuru</text>
-  <text x="440" y="170" font-family="Roboto" font-size="16" fill="#757575">На сайте с: 12 марта 2023</text>
-  <text x="440" y="200" font-family="Roboto" font-size="16" fill="#757575">Геймер, любитель фантастики и азиатской культуры. Увлекаюсь коллекционированием редких изданий и прохождением инди-игр.</text>
-  <text x="440" y="220" font-family="Roboto" font-size="16" fill="#757575">Любимые жанры: RPG, научная фантастика, киберпанк.</text>
-  
+  <text
+     x="440"
+     y="140"
+     font-family="Montserrat"
+     font-size="28"
+     font-weight="700"
+     fill="#212121"
+     id="text21">GameGuru</text>
+  <text
+     x="443.48773"
+     y="166.51227"
+     font-family="Roboto"
+     font-size="16px"
+     fill="#757575"
+     id="text22">На сайте с: 12 марта 2023</text>
+  <text
+     x="443.48773"
+     y="196.51227"
+     font-family="Roboto"
+     font-size="16px"
+     fill="#757575"
+     id="text23"><tspan
+       sodipodi:role="line"
+       id="tspan55"
+       x="443.48773"
+       y="196.51227">Геймер, любитель фантастики и азиатской культуры.</tspan><tspan
+       sodipodi:role="line"
+       id="tspan56"
+       x="443.48773"
+       y="216.51227">Увлекаюсь коллекционированием редких изданий и прохождением инди-игр.</tspan></text>
+  <text
+     x="442.04306"
+     y="250.35806"
+     font-family="Roboto"
+     font-size="16px"
+     fill="#757575"
+     id="text24">Любимые жанры: RPG, научная фантастика, киберпанк.</text>
   <!-- Кнопка редактирования -->
-  <rect x="940" y="120" width="160" height="40" rx="20" fill="#5C6BC0" filter="drop-shadow(0px 2px 2px rgba(0,0,0,0.1))"/>
-  <text x="965" y="145" font-family="Roboto" font-size="14" font-weight="500" fill="white">Редактировать профиль</text>
-  
+  <rect
+     x="936.71173"
+     y="121.64413"
+     width="183.83287"
+     height="40"
+     rx="22.979109"
+     fill="#5c6bc0"
+     filter="drop-shadow(0px 2px 2px rgba(0,0,0,0.1))"
+     id="rect24"
+     style="stroke-width:1.07189" />
+  <text
+     x="942.91101"
+     y="144.41872"
+     font-family="Roboto"
+     font-size="14px"
+     font-weight="500"
+     fill="#ffffff"
+     id="text25">Редактировать профиль</text>
   <!-- Статистика пользователя -->
-  <rect x="280" y="300" width="840" height="80" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
-  
-  <text x="300" y="330" font-family="Montserrat" font-size="18" font-weight="700" fill="#212121">Статистика</text>
-  
+  <rect
+     x="280"
+     y="300"
+     width="840"
+     height="80"
+     rx="10"
+     fill="white"
+     filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"
+     id="rect25" />
+  <text
+     x="300"
+     y="330"
+     font-family="Montserrat"
+     font-size="18"
+     font-weight="700"
+     fill="#212121"
+     id="text26">Статистика</text>
   <!-- Статистика по категориям -->
-  <text x="300" y="360" font-family="Roboto" font-size="14" fill="#212121">Игры: 15</text>
-  <rect x="300" y="370" width="80" height="4" rx="2" fill="#5C6BC0"/>
-  
-  <text x="400" y="360" font-family="Roboto" font-size="14" fill="#212121">Фильмы: 42</text>
-  <rect x="400" y="370" width="100" height="4" rx="2" fill="#FF4081"/>
-  
-  <text x="520" y="360" font-family="Roboto" font-size="14" fill="#212121">Сериалы: 12</text>
-  <rect x="520" y="370" width="70" height="4" rx="2" fill="#FF4081"/>
-  
-  <text x="610" y="360" font-family="Roboto" font-size="14" fill="#212121">Книги: 28</text>
-  <rect x="610" y="370" width="90" height="4" rx="2" fill="#FFC107"/>
-  
-  <text x="720" y="360" font-family="Roboto" font-size="14" fill="#212121">Комиксы: 7</text>
-  <rect x="720" y="370" width="60" height="4" rx="2" fill="#9C27B0"/>
-  
-  <text x="800" y="360" font-family="Roboto" font-size="14" fill="#212121">Аниме: 23</text>
-  <rect x="800" y="370" width="85" height="4" rx="2" fill="#2196F3"/>
-  
-  <text x="905" y="360" font-family="Roboto" font-size="14" fill="#212121">Отзывы: 35</text>
-  <rect x="905" y="370" width="95" height="4" rx="2" fill="#4CAF50"/>
-  
+  <text
+     x="300"
+     y="360"
+     font-family="Roboto"
+     font-size="14"
+     fill="#212121"
+     id="text27">Игры: 15</text>
+  <rect
+     x="300"
+     y="370"
+     width="80"
+     height="4"
+     rx="2"
+     fill="#5C6BC0"
+     id="rect27" />
+  <text
+     x="400"
+     y="360"
+     font-family="Roboto"
+     font-size="14"
+     fill="#212121"
+     id="text28">Фильмы: 42</text>
+  <rect
+     x="400"
+     y="370"
+     width="100"
+     height="4"
+     rx="2"
+     fill="#FF4081"
+     id="rect28" />
+  <text
+     x="520"
+     y="360"
+     font-family="Roboto"
+     font-size="14"
+     fill="#212121"
+     id="text29">Сериалы: 12</text>
+  <rect
+     x="520"
+     y="370"
+     width="70"
+     height="4"
+     rx="2"
+     fill="#FF4081"
+     id="rect29" />
+  <g
+     id="g56"
+     transform="translate(16.441352)">
+    <text
+       x="610"
+       y="360"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#212121"
+       id="text30">Книги: 28</text>
+    <rect
+       x="610"
+       y="370"
+       width="90"
+       height="4"
+       rx="2"
+       fill="#ffc107"
+       id="rect30" />
+  </g>
+  <g
+     id="g53"
+     transform="translate(9.0427435)">
+    <text
+       x="720"
+       y="360"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#212121"
+       id="text31">Комиксы: 7</text>
+    <rect
+       x="720"
+       y="370"
+       width="60"
+       height="4"
+       rx="2"
+       fill="#9c27b0"
+       id="rect31" />
+  </g>
+  <g
+     id="g52"
+     transform="translate(27.950298)">
+    <text
+       x="800"
+       y="360"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#212121"
+       id="text32">Аниме: 23</text>
+    <rect
+       x="800"
+       y="370"
+       width="85"
+       height="4"
+       rx="2"
+       fill="#2196f3"
+       id="rect32" />
+  </g>
+  <g
+     id="g51"
+     transform="translate(20.926425)">
+    <text
+       x="905"
+       y="360"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#212121"
+       id="text33">Отзывы: 35</text>
+    <rect
+       x="905"
+       y="370"
+       width="95"
+       height="4"
+       rx="2"
+       fill="#4caf50"
+       id="rect33" />
+  </g>
   <!-- Заголовок достижений -->
-  <text x="280" y="410" font-family="Montserrat" font-size="22" font-weight="700" fill="#212121">Достижения</text>
-  <text x="440" y="410" font-family="Roboto" font-size="14" fill="#4CAF50">12 получено</text>
-  <text x="530" y="410" font-family="Roboto" font-size="14" fill="#757575">•</text>
-  <text x="540" y="410" font-family="Roboto" font-size="14" fill="#FFC107">8 в процессе</text>
-  <text x="800" y="410" font-family="Roboto" font-size="14" fill="#5C6BC0">Показать все →</text>
-  
+  <text
+     x="280"
+     y="410"
+     font-family="Montserrat"
+     font-size="22"
+     font-weight="700"
+     fill="#212121"
+     id="text34">Достижения</text>
+  <text
+     x="444.65033"
+     y="407.67484"
+     font-family="Roboto"
+     font-size="14px"
+     fill="#4caf50"
+     id="text35">12 получено</text>
+  <g
+     id="g57"
+     transform="translate(-6.9875746)">
+    <text
+       x="546.85242"
+       y="408.35587"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#757575"
+       id="text36">•</text>
+    <text
+       x="555.61926"
+       y="408.35587"
+       font-family="Roboto"
+       font-size="14px"
+       fill="#ffc107"
+       id="text37">8 в процессе</text>
+  </g>
+  <text
+     x="800"
+     y="410"
+     font-family="Roboto"
+     font-size="14"
+     fill="#5C6BC0"
+     id="text38">Показать все →</text>
   <!-- Плитка достижений -->
-  <rect x="280" y="430" width="180" height="90" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  <circle cx="310" cy="460" r="20" fill="#4CAF50"/>
-  <text x="305" y="466" font-family="Roboto" font-size="14" fill="white">🏆</text>
-  <text x="340" y="455" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Коллекционер</text>
-  <text x="340" y="475" font-family="Roboto" font-size="12" fill="#757575">Создайте 5 коллекций</text>
-  <text x="340" y="495" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
-  
-  <rect x="480" y="430" width="180" height="90" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  <circle cx="510" cy="460" r="20" fill="#4CAF50"/>
-  <text x="505" y="466" font-family="Roboto" font-size="14" fill="white">📚</text>
-  <text x="540" y="455" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Книжный червь</text>
-  <text x="540" y="475" font-family="Roboto" font-size="12" fill="#757575">Прочтите 25 книг</text>
-  <text x="540" y="495" font-family="Roboto" font-size="12" fill="#4CAF50">Выполнено</text>
-  
-  <rect x="680" y="430" width="180" height="90" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  <circle cx="710" cy="460" r="20" fill="#FFC107"/>
-  <text x="705" y="466" font-family="Roboto" font-size="14" fill="white">🎮</text>
-  <text x="740" y="455" font-family="Roboto" font-size="14" font-weight="700" fill="#212121">Геймер</text>
-  <text x="740" y="475" font-family="Roboto" font-size="12" fill="#757575">Пройдите 20 игр</text>
-  <rect x="740" y="490" width="100" height="6" rx="3" fill="#E0E0E0"/>
-  <rect x="740" y="490" width="75" height="6" rx="3" fill="#FFC107"/>
-  <text x="855" y="495" font-family="Roboto" font-size="10" fill="#757575">15/20</text>
-  
-   <rect x="880" y="430" width="180" height="90" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  <circle cx="910" cy="460" r="20" fill="#9E9E9E" opacity="0.6"/>
-  <text x="905" y="466" font-family="Roboto" font-size="14" fill="white">🎬</text>
+  <rect
+     x="280"
+     y="430"
+     width="180"
+     height="90"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect38" />
+  <circle
+     cx="310"
+     cy="460"
+     r="20"
+     fill="#4CAF50"
+     id="circle38" />
+  <text
+     x="300.47864"
+     y="464.76691"
+     font-family="Roboto"
+     font-size="14px"
+     fill="#ffffff"
+     id="text39">🏆</text>
+  <text
+     x="340"
+     y="455"
+     font-family="Roboto"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text40">Коллекционер</text>
+  <text
+     x="340"
+     y="475"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text41">Создайте 5 коллекций</text>
+  <text
+     x="340"
+     y="495"
+     font-family="Roboto"
+     font-size="12"
+     fill="#4CAF50"
+     id="text42">Выполнено</text>
+  <rect
+     x="480"
+     y="430"
+     width="180"
+     height="90"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect42" />
+  <circle
+     cx="510"
+     cy="460"
+     r="20"
+     fill="#4CAF50"
+     id="circle42" />
+  <text
+     x="500.88965"
+     y="463.53378"
+     font-family="Roboto"
+     font-size="14px"
+     fill="#ffffff"
+     id="text43">📚</text>
+  <text
+     x="540"
+     y="455"
+     font-family="Roboto"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text44">Книжный червь</text>
+  <text
+     x="540"
+     y="475"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text45">Прочтите 25 книг</text>
+  <text
+     x="540"
+     y="495"
+     font-family="Roboto"
+     font-size="12"
+     fill="#4CAF50"
+     id="text46">Выполнено</text>
+  <rect
+     x="680"
+     y="430"
+     width="180"
+     height="90"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect46" />
+  <circle
+     cx="710"
+     cy="460"
+     r="20"
+     fill="#FFC107"
+     id="circle46" />
+  <text
+     x="700.34967"
+     y="464.54678"
+     font-family="Roboto"
+     font-size="14px"
+     fill="#ffffff"
+     id="text47">🎮</text>
+  <text
+     x="740"
+     y="455"
+     font-family="Roboto"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text48">Геймер</text>
+  <text
+     x="740"
+     y="475"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text49">Пройдите 20 игр</text>
+  <rect
+     x="740"
+     y="490"
+     width="100"
+     height="6"
+     rx="3"
+     fill="#E0E0E0"
+     id="rect49" />
+  <rect
+     x="740"
+     y="490"
+     width="75"
+     height="6"
+     rx="3"
+     fill="#FFC107"
+     id="rect50" />
+  <text
+     x="848.02454"
+     y="495"
+     font-family="Roboto"
+     font-size="10px"
+     fill="#757575"
+     id="text50">15/20</text>
+  <rect
+     x="880"
+     y="430"
+     width="180"
+     height="90"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect51" />
+  <circle
+     cx="910"
+     cy="460"
+     r="20"
+     fill="#9E9E9E"
+     opacity="0.6"
+     id="circle51" />
+  <text
+     x="905"
+     y="466"
+     font-family="Roboto"
+     font-size="14"
+     fill="white"
+     id="text51">🎬</text>
+  <g
+     transform="translate(721.10586,34.394135)"
+     id="g3"
+     inkscape:highlight-color="#c82727"
+     onclick="alert(&quot;HIIII&quot;)">
+    <circle
+       cx="0"
+       cy="0"
+       r="8"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="1.5"
+       id="circle3-8" />
+    <line
+       x1="5.5"
+       y1="5.5"
+       x2="11"
+       y2="11"
+       stroke="#ffffff"
+       stroke-width="1.5"
+       stroke-linecap="round"
+       id="line3" />
+  </g>
 </svg>

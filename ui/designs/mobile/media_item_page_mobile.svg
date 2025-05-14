@@ -1,115 +1,575 @@
-<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="390"
+   height="844"
+   viewBox="0 0 390 844"
+   fill="none"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="media_item_page_mobile.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs41" />
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1919431"
+     inkscape:cx="289.44334"
+     inkscape:cy="227.77932"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg41" />
   <!-- Фон страницы -->
-  <rect width="390" height="844" fill="#F5F5F5"/>
-  
+  <rect
+     width="390"
+     height="844"
+     fill="#F5F5F5"
+     id="rect1" />
   <!-- Верхняя навигационная панель -->
-  <rect y="0" width="390" height="60" fill="#5C6BC0"/>
-  
+  <rect
+     y="0"
+     width="390"
+     height="60"
+     fill="#5C6BC0"
+     id="rect2" />
   <!-- Лого -->
-  <text x="20" y="37" font-family="Montserrat" font-size="18" font-weight="700" fill="white">GeekHeaven</text>
-  
+  <text
+     x="20"
+     y="37"
+     font-family="Montserrat"
+     font-size="18"
+     font-weight="700"
+     fill="white"
+     id="text2">GeekHeaven</text>
   <!-- Иконка поиска -->
-  <circle cx="325" cy="30" r="15" fill="white" fill-opacity="0.2"/>
-  <path d="M332 33.5C332 37.0899 329.09 40 325.5 40C321.91 40 319 37.0899 319 33.5C319 29.9101 321.91 27 325.5 27C329.09 27 332 29.9101 332 33.5Z" stroke="white" stroke-width="1.5"/>
-  
+  <circle
+     cx="325"
+     cy="30"
+     r="15"
+     fill="white"
+     fill-opacity="0.2"
+     id="circle2" />
+  <g
+     transform="translate(323.52137,27.199304)"
+     id="g3"
+     inkscape:highlight-color="#c82727"
+     onclick="alert(&quot;HIIII&quot;)">
+    <circle
+       cx="0"
+       cy="0"
+       r="8"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="1.5"
+       id="circle3-5" />
+    <line
+       x1="5.5"
+       y1="5.5"
+       x2="11"
+       y2="11"
+       stroke="#ffffff"
+       stroke-width="1.5"
+       stroke-linecap="round"
+       id="line3" />
+  </g>
   <!-- Иконка профиля -->
-  <circle cx="360" cy="30" r="15" fill="white" fill-opacity="0.2"/>
-  <text x="354" y="36" font-family="Montserrat" font-size="18" fill="white">👤</text>
-  
+  <circle
+     cx="360"
+     cy="30"
+     r="15"
+     fill="white"
+     fill-opacity="0.2"
+     id="circle3" />
+  <text
+     x="350.64413"
+     y="36"
+     font-family="Montserrat"
+     font-size="18px"
+     fill="#ffffff"
+     id="text3">👤</text>
   <!-- Шапка медиа-объекта -->
-  <rect x="20" y="80" width="350" height="200" rx="10" fill="white" filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"/>
-  
+  <rect
+     x="20"
+     y="80"
+     width="350"
+     height="200"
+     rx="10"
+     fill="white"
+     filter="drop-shadow(0px 2px 6px rgba(0,0,0,0.1))"
+     id="rect3" />
   <!-- Постер медиа-объекта -->
-  <rect x="35" y="95" width="100" height="140" rx="8" fill="#5C6BC0" opacity="0.8"/>
-  <text x="85" y="165" font-family="Montserrat" font-size="24" fill="white" text-anchor="middle">🎬</text>
-  
+  <rect
+     x="35"
+     y="95"
+     width="100"
+     height="140"
+     rx="8"
+     fill="#5C6BC0"
+     opacity="0.8"
+     id="rect4" />
+  <text
+     x="85"
+     y="165"
+     font-family="Montserrat"
+     font-size="24"
+     fill="white"
+     text-anchor="middle"
+     id="text4">🎬</text>
   <!-- Информация о медиа -->
-  <text x="150" y="115" font-family="Montserrat" font-size="16" font-weight="700" fill="#212121">Стрейнджер Синдж</text>
-  <text x="150" y="135" font-family="Roboto" font-size="12" fill="#757575">Сериал • 2016-2023 • 4 сезона</text>
-  <text x="150" y="155" font-family="Roboto" font-size="12" fill="#757575">Жанры: Научная фантастика, Драма</text>
-  <text x="150" y="175" font-family="Roboto" font-size="12" font-weight="700" fill="#212121">⭐ 9.3/10</text>
-  <text x="220" y="175" font-family="Roboto" font-size="12" fill="#4CAF50">97% соответствие</text>
-  
+  <text
+     x="150"
+     y="115"
+     font-family="Montserrat"
+     font-size="16"
+     font-weight="700"
+     fill="#212121"
+     id="text5">Стрейнджер Синдж</text>
+  <text
+     x="150"
+     y="135"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text6">Сериал • 2016-2023 • 4 сезона</text>
+  <text
+     x="150"
+     y="155"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text7">Жанры: Научная фантастика, Драма</text>
+  <text
+     x="150"
+     y="175"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#212121"
+     id="text8">⭐ 9.3/10</text>
+  <text
+     x="222.51689"
+     y="175.83896"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#4caf50"
+     id="text9">97% соответствие</text>
   <!-- Панель с кнопками действий -->
-  <rect x="35" y="245" width="160" height="30" rx="15" fill="#5C6BC0"/>
-  <text x="60" y="265" font-family="Roboto" font-size="12" font-weight="500" fill="white">Добавить в библиотеку</text>
-  
-  <rect x="205" y="245" width="80" height="30" rx="15" fill="#4CAF50"/>
-  <text x="220" y="265" font-family="Roboto" font-size="12" font-weight="500" fill="white">Оценить ★</text>
-  
-  <rect x="295" y="245" width="60" height="30" rx="15" fill="#FF4081"/>
-  <text x="305" y="265" font-family="Roboto" font-size="12" font-weight="500" fill="white">Отзыв</text>
-  
+  <rect
+     x="35"
+     y="245"
+     width="160"
+     height="30"
+     rx="15"
+     fill="#5C6BC0"
+     id="rect9" />
+  <text
+     x="41.542744"
+     y="263.32208"
+     font-family="Roboto"
+     font-size="12px"
+     font-weight="500"
+     fill="#ffffff"
+     id="text10">Добавить в библиотеку</text>
+  <rect
+     x="205"
+     y="245"
+     width="80"
+     height="30"
+     rx="15"
+     fill="#4CAF50"
+     id="rect10" />
+  <text
+     x="211.61034"
+     y="264.16104"
+     font-family="Roboto"
+     font-size="12px"
+     font-weight="500"
+     fill="#ffffff"
+     id="text11">Оценить ★</text>
+  <rect
+     x="295"
+     y="245"
+     width="60"
+     height="30"
+     rx="15"
+     fill="#FF4081"
+     id="rect11" />
+  <text
+     x="305"
+     y="265"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="500"
+     fill="white"
+     id="text12">Отзыв</text>
   <!-- Вкладки -->
-  <rect x="20" y="290" width="350" height="40" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.05))"/>
-  
-  <rect x="30" y="295" width="80" height="30" rx="15" fill="#5C6BC0"/>
-  <text x="45" y="315" font-family="Roboto" font-size="12" font-weight="500" fill="white">Информация</text>
-  
-  <rect x="120" y="295" width="80" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
-  <text x="135" y="315" font-family="Roboto" font-size="12" fill="#757575">Скриншоты</text>
-  
-  <rect x="210" y="295" width="70" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
-  <text x="225" y="315" font-family="Roboto" font-size="12" fill="#757575">Отзывы</text>
-  
-  <rect x="290" y="295" width="70" height="30" rx="15" fill="#F5F5F5" stroke="#E0E0E0"/>
-  <text x="305" y="315" font-family="Roboto" font-size="12" fill="#757575">Связи</text>
-  
+  <rect
+     x="20"
+     y="290"
+     width="350"
+     height="40"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.05))"
+     id="rect12" />
+  <rect
+     x="30"
+     y="295"
+     width="85.872765"
+     height="30"
+     rx="16.101143"
+     fill="#5c6bc0"
+     id="rect13"
+     style="stroke-width:1.03605" />
+  <text
+     x="33.254475"
+     y="314.16104"
+     font-family="Roboto"
+     font-size="12px"
+     font-weight="500"
+     fill="#ffffff"
+     id="text13">Информация</text>
+  <rect
+     x="120"
+     y="295"
+     width="80"
+     height="30"
+     rx="15"
+     fill="#F5F5F5"
+     stroke="#E0E0E0"
+     id="rect14" />
+  <text
+     x="135"
+     y="315"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text14">Скриншоты</text>
+  <rect
+     x="210"
+     y="295"
+     width="70"
+     height="30"
+     rx="15"
+     fill="#F5F5F5"
+     stroke="#E0E0E0"
+     id="rect15" />
+  <text
+     x="225"
+     y="315"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text15">Отзывы</text>
+  <rect
+     x="290"
+     y="295"
+     width="70"
+     height="30"
+     rx="15"
+     fill="#F5F5F5"
+     stroke="#E0E0E0"
+     id="rect16" />
+  <text
+     x="305"
+     y="315"
+     font-family="Roboto"
+     font-size="12"
+     fill="#757575"
+     id="text16">Связи</text>
   <!-- Блок описания -->
-  <rect x="20" y="340" width="350" height="150" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  
-  <text x="35" y="360" font-family="Montserrat" font-size="14" font-weight="700" fill="#212121">Описание</text>
-  
-  <text x="35" y="380" font-family="Roboto" font-size="12" fill="#212121">В маленьком городке Хокинс пропадает мальчик по имени Уилл Байерс. Его друзья начинают поиски и сталкиваются со сверхъестественными силами и секретной правительственной лабораторией.</text>
-  
-  <text x="35" y="430" font-family="Roboto" font-size="12" fill="#212121">В последующих сезонах друзья сталкиваются с новыми угрозами из Изнанки, параллельного измерения, которое связано с нашим миром.</text>
-  
+  <rect
+     x="20"
+     y="340"
+     width="350"
+     height="150"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect17" />
+  <text
+     x="35"
+     y="360"
+     font-family="Montserrat"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text17">Описание</text>
+  <text
+     x="35"
+     y="380"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text18"><tspan
+       sodipodi:role="line"
+       id="tspan41"
+       x="35"
+       y="380">В маленьком городке Хокинс пропадает мальчик по</tspan><tspan
+       sodipodi:role="line"
+       id="tspan42"
+       x="35"
+       y="395">имени Уилл Байерс. Его друзья начинают поиски и</tspan><tspan
+       sodipodi:role="line"
+       x="35"
+       y="410"
+       id="tspan43">сталкиваются со сверхъестественными силами и</tspan><tspan
+       sodipodi:role="line"
+       x="35"
+       y="425"
+       id="tspan44">секретной правительственной лабораторией.</tspan></text>
+  <text
+     x="35.838966"
+     y="444.26242"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text19"><tspan
+       sodipodi:role="line"
+       id="tspan45"
+       x="35.838966"
+       y="444.26242">В последующих сезонах друзья сталкиваются с новыми</tspan><tspan
+       sodipodi:role="line"
+       id="tspan46"
+       x="35.838966"
+       y="459.26242">угрозами из Изнанки, параллельного измерения,</tspan><tspan
+       sodipodi:role="line"
+       x="35.838966"
+       y="474.26242"
+       id="tspan47">которое связано с нашим миром.</tspan></text>
   <!-- Раздел с создателями -->
-  <rect x="20" y="500" width="350" height="140" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  
-  <text x="35" y="520" font-family="Montserrat" font-size="14" font-weight="700" fill="#212121">Создатели</text>
-  
-  <text x="35" y="540" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Режиссеры:</text>
-  <text x="110" y="540" font-family="Roboto" font-size="12" fill="#212121">Братья Даффер, Шон Леви</text>
-  
-  <text x="35" y="560" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Студия:</text>
-  <text x="110" y="560" font-family="Roboto" font-size="12" fill="#212121">Netflix</text>
-  
-  <text x="35" y="580" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">В ролях:</text>
-  <text x="110" y="580" font-family="Roboto" font-size="12" fill="#212121">Винона Райдер, Дэвид Харбор,</text>
-  <text x="110" y="600" font-family="Roboto" font-size="12" fill="#212121">Финн Вулфхард, Милли Бобби Браун</text>
-  <text x="110" y="620" font-family="Roboto" font-size="12" fill="#212121">Гейтен Матараццо, Калеб Маклафлин</text>
-  
+  <rect
+     x="20"
+     y="500"
+     width="350"
+     height="140"
+     rx="8"
+     fill="white"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect19" />
+  <text
+     x="35"
+     y="520"
+     font-family="Montserrat"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text20">Создатели</text>
+  <text
+     x="35"
+     y="540"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text21">Режиссеры:</text>
+  <text
+     x="122.99512"
+     y="540.00006"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text22">Братья Даффер, Шон Леви</text>
+  <text
+     x="35"
+     y="560"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text23">Студия:</text>
+  <text
+     x="122.99512"
+     y="559.16107"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text24">Netflix</text>
+  <text
+     x="35"
+     y="580"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text25">В ролях:</text>
+  <text
+     x="122.99512"
+     y="579.16107"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text26">Винона Райдер, Дэвид Харбор,</text>
+  <text
+     x="123.55177"
+     y="599.16107"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text27">Финн Вулфхард, Милли Бобби Браун</text>
+  <text
+     x="122.99512"
+     y="619.16107"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text28">Гейтен Матараццо, Калеб Маклафлин</text>
   <!-- Раздел с рейтингами -->
-  <rect x="20" y="650" width="350" height="120" rx="8" fill="white" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"/>
-  
-  <text x="35" y="670" font-family="Montserrat" font-size="14" font-weight="700" fill="#212121">Рейтинги и информация</text>
-  
-  <text x="35" y="690" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Рейтинг IMDb:</text>
-  <text x="130" y="690" font-family="Roboto" font-size="12" fill="#212121">8.7/10</text>
-  
-  <text x="35" y="710" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Рейтинг RT:</text>
-  <text x="130" y="710" font-family="Roboto" font-size="12" fill="#212121">94%</text>
-  
-  <text x="35" y="730" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Возрастной рейтинг:</text>
-  <text x="160" y="730" font-family="Roboto" font-size="12" fill="#212121">16+</text>
-  
-  <text x="35" y="750" font-family="Roboto" font-size="12" font-weight="700" fill="#757575">Длительность:</text>
-  <text x="130" y="750" font-family="Roboto" font-size="12" fill="#212121">42-78 мин./эпизод</text>
-  
+  <rect
+     x="20"
+     y="648.32208"
+     width="350"
+     height="120"
+     rx="8"
+     fill="#ffffff"
+     filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.1))"
+     id="rect28" />
+  <text
+     x="35"
+     y="670"
+     font-family="Montserrat"
+     font-size="14"
+     font-weight="700"
+     fill="#212121"
+     id="text29">Рейтинги и информация</text>
+  <text
+     x="35"
+     y="690"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text30">Рейтинг IMDb:</text>
+  <text
+     x="184.69669"
+     y="690"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text31">8.7/10</text>
+  <text
+     x="35"
+     y="710"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text32">Рейтинг RT:</text>
+  <text
+     x="184.74942"
+     y="709.16101"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text33">94%</text>
+  <text
+     x="35"
+     y="730"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text34">Возрастной рейтинг:</text>
+  <text
+     x="183.78262"
+     y="730"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text35">16+</text>
+  <text
+     x="35"
+     y="750"
+     font-family="Roboto"
+     font-size="12"
+     font-weight="700"
+     fill="#757575"
+     id="text36">Длительность:</text>
+  <text
+     x="184.96036"
+     y="750"
+     font-family="Roboto"
+     font-size="12px"
+     fill="#212121"
+     id="text37">42-78 мин./эпизод</text>
   <!-- Нижняя навигация для мобильной версии -->
-  <rect x="0" y="800" width="390" height="44" fill="white" stroke="#E0E0E0" stroke-width="1"/>
-  
+  <rect
+     x="0"
+     y="800"
+     width="390"
+     height="44"
+     fill="white"
+     stroke="#E0E0E0"
+     stroke-width="1"
+     id="rect37" />
   <!-- Иконки нижней навигации -->
-  <circle cx="60" cy="822" r="20" fill="#F5F5F5"/>
-  <text x="60" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏠</text>
-  
-  <circle cx="140" cy="822" r="20" fill="#F5F5F5"/>
-  <text x="140" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">📚</text>
-  
-  <circle cx="220" cy="822" r="20" fill="#F5F5F5"/>
-  <text x="220" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">🏆</text>
-  
-  <circle cx="300" cy="822" r="20" fill="#F5F5F5"/>
-  <text x="300" y="828" font-family="Montserrat" font-size="16" fill="#9E9E9E" text-anchor="middle">⚙️</text>
+  <circle
+     cx="60"
+     cy="822"
+     r="20"
+     fill="#F5F5F5"
+     id="circle37" />
+  <text
+     x="60"
+     y="828"
+     font-family="Montserrat"
+     font-size="16"
+     fill="#9E9E9E"
+     text-anchor="middle"
+     id="text38">🏠</text>
+  <circle
+     cx="140"
+     cy="822"
+     r="20"
+     fill="#F5F5F5"
+     id="circle38" />
+  <text
+     x="140"
+     y="828"
+     font-family="Montserrat"
+     font-size="16"
+     fill="#9E9E9E"
+     text-anchor="middle"
+     id="text39">📚</text>
+  <circle
+     cx="220"
+     cy="822"
+     r="20"
+     fill="#F5F5F5"
+     id="circle39" />
+  <text
+     x="220"
+     y="828"
+     font-family="Montserrat"
+     font-size="16"
+     fill="#9E9E9E"
+     text-anchor="middle"
+     id="text40">🏆</text>
+  <circle
+     cx="300"
+     cy="822"
+     r="20"
+     fill="#F5F5F5"
+     id="circle40" />
+  <text
+     x="300"
+     y="828"
+     font-family="Montserrat"
+     font-size="16"
+     fill="#9E9E9E"
+     text-anchor="middle"
+     id="text41">⚙️</text>
 </svg>
