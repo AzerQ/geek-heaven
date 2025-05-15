@@ -88,7 +88,7 @@
       <Badge variant="secondary">Вторичный</Badge>
       <Badge variant="success">Успех</Badge>
       <Badge variant="warning">Предупреждение</Badge>
-      <Badge variant="error">Ошибка</Badge>
+      <Badge variant="danger">Ошибка</Badge>
     </div>
   </section>
 
