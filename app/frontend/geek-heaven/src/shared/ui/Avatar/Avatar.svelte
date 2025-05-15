@@ -1,17 +1,16 @@
-<script>
+<script lang="ts">
+  import type { AvatarProps } from '../types';
+
   /**
    * Avatar component for displaying user profile images or initials
-   * @prop {string} src - Image source URL
-   * @prop {string} alt - Alternative text
-   * @prop {string} size - Size of avatar: 'small', 'medium', 'large'
-   * @prop {boolean} rounded - Make avatar round
-   * @prop {string} fallback - Fallback text (e.g., initials)
+   * @component Avatar
    */
-  export let src = '';
-  export let alt = 'Avatar';
-  export let size = 'medium'; // small, medium, large
-  export let rounded = true;
-  export let fallback = '';
+  export let src: AvatarProps['src'] = '';
+  export let alt: AvatarProps['alt'] = 'Avatar';
+  export let size: AvatarProps['size'] = 'medium';
+  export let rounded: AvatarProps['rounded'] = true;
+  export let fallback: AvatarProps['fallback'] = '';
+
 
   $: avatarClass = [
     'avatar',

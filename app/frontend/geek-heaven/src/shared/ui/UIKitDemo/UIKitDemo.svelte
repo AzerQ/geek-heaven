@@ -95,9 +95,9 @@
   <section class="demo-section">
     <Typography variant="h3" gutterBottom>Аватары</Typography>
     <div class="avatar-row">
-      <Avatar size="sm" src="https://i.pravatar.cc/32" />
-      <Avatar size="md" src="https://i.pravatar.cc/48" />
-      <Avatar size="lg" src="https://i.pravatar.cc/64" />
+      <Avatar size="small" src="https://i.pravatar.cc/32" />
+      <Avatar size="medium" src="https://i.pravatar.cc/48" />
+      <Avatar size="large" src="https://i.pravatar.cc/64" />
       <Avatar>AB</Avatar>
     </div>
   </section>

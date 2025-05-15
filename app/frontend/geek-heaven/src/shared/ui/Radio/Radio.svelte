@@ -1,17 +1,20 @@
-<script>
+<script lang="ts">
+  import type { RadioProps } from '../types';
+
   /**
    * Radio component for forms
+   * @component Radio
    */
-  export let label = '';
-  export let checked = false;
-  export let value = '';
-  export let name = '';
-  export let id = '';
-  export let disabled = false;
-  export let required = false;
-  export let error = '';
-  export let helperText = '';
-  export let group = undefined;
+  export let label: RadioProps['label'] = '';
+  export let checked: RadioProps['checked'] = false;
+  export let value: RadioProps['value'] = '';
+  export let name: RadioProps['name'] = '';
+  export let id: RadioProps['id'] = '';
+  export let disabled: RadioProps['disabled'] = false;
+  export let required: RadioProps['required'] = false;
+  export let error: RadioProps['error'] = '';
+  export let helperText: RadioProps['helperText'] = '';
+  export let group: RadioProps['group'] = undefined;
 
   // Генерируем уникальный ID, если не был передан
   if (!id && name) {

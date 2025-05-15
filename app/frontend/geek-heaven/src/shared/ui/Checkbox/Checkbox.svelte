@@ -1,16 +1,20 @@
-<script>
+<script lang="ts">
+  import type { FormEventHandler } from 'svelte/elements';
+  import type { CheckboxProps } from '../types';
+
   /**
    * Checkbox component for forms
+   * @component Checkbox
    */
-  export let label = '';
-  export let checked = false;
-  export let value = '';
-  export let name = '';
-  export let id = '';
-  export let disabled = false;
-  export let required = false;
-  export let error = '';
-  export let helperText = '';
+  export let label: CheckboxProps['label'] = '';
+  export let checked: CheckboxProps['checked'] = false;
+  export let value: CheckboxProps['value'] = '';
+  export let name: CheckboxProps['name'] = '';
+  export let id: CheckboxProps['id'] = '';
+  export let disabled: CheckboxProps['disabled'] = false;
+  export let required: CheckboxProps['required'] = false;
+  export let error: CheckboxProps['error'] = '';
+  export let helperText: CheckboxProps['helperText'] = '';
 
   // Генерируем уникальный ID, если не был передан
   if (!id && name) {
@@ -19,11 +23,9 @@
     id = `checkbox-${Math.random().toString(36).substring(2, 9)}`;
   }
 
-  // Обработчик изменения значения
-  function handleChange(event) {
-    checked = event.target.checked;
+  const handleChange: FormEventHandler<HTMLInputElement> = (event) => {
+    checked = event.currentTarget.checked;
   }
-
   // Определяем классы для стилизации
   $: checkboxClasses = [
     'checkbox',

@@ -1,24 +1,18 @@
 <script lang="ts">
+  import type { ButtonProps } from '../types';
+
   /**
    * Компонент кнопки
-   * 
    * @component Button
    */
-  
-  // Варианты кнопки
-  type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
-  
-  // Размеры кнопки
-  type ButtonSize = 'sm' | 'md' | 'lg';
-  
-  // Пропсы компонента
-  export let variant: ButtonVariant = 'primary';
-  export let size: ButtonSize = 'md';
-  export let type: 'button' | 'submit' | 'reset' = 'button';
-  export let disabled: boolean = false;
-  export let fullWidth: boolean = false;
-  export let icon: string | null = null;
-  export let iconPosition: 'left' | 'right' = 'left';
+
+  export let variant: ButtonProps['variant'] = 'primary';
+  export let size: ButtonProps['size'] = 'md';
+  export let type: ButtonProps['type'] = 'button';
+  export let disabled: ButtonProps['disabled'] = false;
+  export let fullWidth: ButtonProps['fullWidth'] = false;
+  export let icon: ButtonProps['icon'] = null;
+  export let iconPosition: ButtonProps['iconPosition'] = 'left';
 </script>
 
 <button

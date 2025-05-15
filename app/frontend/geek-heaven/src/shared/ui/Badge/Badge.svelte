@@ -1,13 +1,16 @@
-<script>
+<script lang="ts">
+  import type { BadgeProps } from '../types';
+
   /**
    * Badge component for visual elements
+   * @component Badge
    */
-  export let text = '';
-  export let variant = 'primary'; // primary, secondary, success, warning, danger, info
-  export let size = 'medium'; // small, medium, large
-  export let rounded = false;
-  export let outlined = false;
-  export let icon = '';
+  export let text: BadgeProps['text'] = '';
+  export let variant: BadgeProps['variant'] = 'primary';
+  export let size: BadgeProps['size'] = 'medium';
+  export let rounded: BadgeProps['rounded'] = false;
+  export let outlined: BadgeProps['outlined'] = false;
+  export let icon: BadgeProps['icon'] = '';
   
   // Определяем классы для стилизации
   $: badgeClasses = [

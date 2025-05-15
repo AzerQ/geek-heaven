@@ -1,19 +1,23 @@
-<script>
+<script lang="ts">
+  import type { ChangeEventHandler, FormEventHandler } from 'svelte/elements';
+  import type { SelectProps, SelectOption } from '../types';
+
   /**
    * Select component for forms
+   * @component Select
    */
-  export let label = '';
-  export let value = '';
-  export let name = '';
-  export let id = '';
-  export let disabled = false;
-  export let readonly = false;
-  export let required = false;
-  export let error = '';
-  export let success = '';
-  export let helperText = '';
-  export let placeholder = 'Выберите...';
-  export let options = []; // Массив объектов {value: string, label: string}
+  export let label: SelectProps['label'] = '';
+  export let value: SelectProps['value'] = '';
+  export let name: SelectProps['name'] = '';
+  export let id: SelectProps['id'] = '';
+  export let disabled: SelectProps['disabled'] = false;
+  export let readonly: SelectProps['readonly'] = false;
+  export let required: SelectProps['required'] = false;
+  export let error: SelectProps['error'] = '';
+  export let success: SelectProps['success'] = '';
+  export let helperText: SelectProps['helperText'] = '';
+  export let placeholder: SelectProps['placeholder'] = 'Выберите...';
+  export let options: SelectOption[] = [];
 
   // Генерируем уникальный ID, если не был передан
   if (!id && name) {
@@ -22,9 +26,8 @@
     id = `select-${Math.random().toString(36).substring(2, 9)}`;
   }
 
-  // Обработчик изменения значения
-  function handleChange(event) {
-    value = event.target.value;
+   const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
+    value = event.currentTarget.value;
   }
 
   // Определяем классы для стилизации

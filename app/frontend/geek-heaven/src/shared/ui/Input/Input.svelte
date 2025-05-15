@@ -1,26 +1,30 @@
-<script>
+<script lang="ts">
+  import type { FormEventHandler } from 'svelte/elements';
+  import type { InputProps } from '../types';
+
   /**
    * Input component for forms with validation support
+   * @component Input
    */
-  export let type = 'text'; // text, password, email, number, etc.
-  export let label = '';
-  export let placeholder = '';
-  export let value = '';
-  export let name = '';
-  export let id = '';
-  export let disabled = false;
-  export let readonly = false;
-  export let required = false;
-  export let error = '';
-  export let success = '';
-  export let helperText = '';
-  export let autocomplete = 'off';
-  export let maxlength = undefined;
-  export let minlength = undefined;
-  export let pattern = undefined;
-  export let min = undefined;
-  export let max = undefined;
-  export let step = undefined;
+  export let type: InputProps['type'] = 'text';
+  export let label: InputProps['label'] = '';
+  export let placeholder: InputProps['placeholder'] = '';
+  export let value: InputProps['value'] = '';
+  export let name: InputProps['name'] = '';
+  export let id: InputProps['id'] = '';
+  export let disabled: InputProps['disabled'] = false;
+  export let readonly: InputProps['readonly'] = false;
+  export let required: InputProps['required'] = false;
+  export let error: InputProps['error'] = '';
+  export let success: InputProps['success'] = '';
+  export let helperText: InputProps['helperText'] = '';
+  export let autocomplete: InputProps['autocomplete'] = 'off';
+  export let maxlength: InputProps['maxlength'] = undefined;
+  export let minlength: InputProps['minlength'] = undefined;
+  export let pattern: InputProps['pattern'] = undefined;
+  export let min: InputProps['min'] = undefined;
+  export let max: InputProps['max'] = undefined;
+  export let step: InputProps['step'] = undefined;
 
   // Генерируем уникальный ID, если не был передан
   if (!id && name) {
@@ -30,8 +34,8 @@
   }
 
   // Обработчик изменения значения
-  function handleInput(event) {
-    value = event.target.value;
+  const handleInput: FormEventHandler<HTMLInputElement> = (event) => {
+    value = event.currentTarget.value;
   }
 
   // Определяем классы для стилизации

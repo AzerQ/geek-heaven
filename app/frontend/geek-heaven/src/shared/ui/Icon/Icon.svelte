@@ -1,17 +1,16 @@
-<script>
+<script lang="ts">
+  import type { IconProps } from '../types';
+
   /**
    * Icon component for displaying SVG or font icons
-   * @prop {string} name - Icon name (for sprite or font)
-   * @prop {string} size - Icon size: 'small', 'medium', 'large', 'custom'
-   * @prop {string} color - Icon color
-   * @prop {string} viewBox - SVG viewBox (if using SVG)
-   * @prop {string} svg - Inline SVG markup (optional)
+   * @component Icon
    */
-  export let name = '';
-  export let size = 'medium'; // small, medium, large, custom
-  export let color = '';
-  export let viewBox = '0 0 24 24';
-  export let svg = '';
+  export let name: IconProps['name'] = '';
+  export let size: IconProps['size'] = 'medium';
+  export let color: IconProps['color'] = '';
+  export let viewBox: IconProps['viewBox'] = '0 0 24 24';
+  export let svg: IconProps['svg'] = '';
+
 
   $: iconClass = [
     'icon',
