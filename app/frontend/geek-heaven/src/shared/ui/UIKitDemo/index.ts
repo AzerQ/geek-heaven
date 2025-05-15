@@ -1,0 +1,1 @@
+export { default as UIKitDemo } from './UIKitDemo.svelte';
