@@ -435,8 +435,18 @@
                      {/if}
                      {#if review.userRating !== undefined}
                        <div class="movie-details__review-rating">
-                         <span class="movie-details__review-likes"><span class="emoji-like">▲</span> {review.reviewLikes || 0}</span>
-                <span class="movie-details__review-dislikes"><span class="emoji-dislike">▼</span> {review.reviewDislikes || 0}</span>
+                         <span 
+                            class="movie-details__review-likes" 
+                            title="{review.reviewLikes || 0} {(review.reviewLikes || 0) === 1 ? 'человек посчитал' : 'людей посчитали'} этот отзыв полезным"
+                          >
+                            <span class="emoji-like">▲</span> {review.reviewLikes || 0}
+                          </span>
+                          <span 
+                            class="movie-details__review-dislikes" 
+                            title="{review.reviewDislikes || 0} {(review.reviewDislikes || 0) === 1 ? 'человеку' : 'людям'} отзыв не понравился"
+                          >
+                            <span class="emoji-dislike">▼</span> {review.reviewDislikes || 0}
+                          </span>
                        </div>
                      {/if}
                   </div>
@@ -813,24 +823,36 @@
     }
     
     &__review-likes {
-       color: #22c55e;
-       
-       .emoji-like {
-         color: #22c55e;
-         font-weight: bold;
-         font-size: 1.3rem;
-       }
-     }
-     
-     &__review-dislikes {
-       color: #ef4444;
-       
-       .emoji-dislike {
-         color: #ef4444;
-         font-weight: bold;
-         font-size: 1.3rem;
-       }
-     }
+        color: #22c55e;
+        cursor: help;
+        transition: opacity 0.2s ease;
+        
+        &:hover {
+          opacity: 0.8;
+        }
+        
+        .emoji-like {
+          color: #22c55e;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
+      
+      &__review-dislikes {
+        color: #ef4444;
+        cursor: help;
+        transition: opacity 0.2s ease;
+        
+        &:hover {
+          opacity: 0.8;
+        }
+        
+        .emoji-dislike {
+          color: #ef4444;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
     
     &__reviews-loading,
     &__reviews-error,
