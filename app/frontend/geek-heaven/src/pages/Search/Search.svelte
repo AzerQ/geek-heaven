@@ -11,6 +11,7 @@
 
   export let category: string = ''; // Category from navigation
   export let contentType: string = ''; // Content type from navigation
+  export let query: string = ''; // Search query from header
 
   let searchQuery = '';
   let searchResults: Movie[] = [];
@@ -83,6 +84,14 @@
   $: if (contentType && contentType !== selectedType) {
     selectedType = contentType;
     if (apiKeyConfigured && hasSearched) {
+      handleSearch();
+    }
+  }
+  
+  // Автоматически устанавливаем поисковый запрос и запускаем поиск
+  $: if (query && query !== searchQuery) {
+    searchQuery = query;
+    if (apiKeyConfigured) {
       handleSearch();
     }
   }

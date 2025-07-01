@@ -10,6 +10,8 @@
   function handleSearch() {
     if (searchQuery.trim()) {
       dispatch('navigate', { page: 'search', query: searchQuery });
+      // Очищаем поле поиска после отправки
+      searchQuery = '';
     }
   }
   
