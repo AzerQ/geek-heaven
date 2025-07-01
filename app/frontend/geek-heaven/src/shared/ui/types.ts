@@ -106,8 +106,33 @@ export interface AvatarProps {
 }
 
 // Icon
+export type IconName = 
+  | 'home'
+  | 'search'
+  | 'library'
+  | 'profile'
+  | 'notification'
+  | 'star'
+  | 'star-outline'
+  | 'heart'
+  | 'heart-outline'
+  | 'plus'
+  | 'check'
+  | 'close'
+  | 'menu'
+  | 'arrow-left'
+  | 'arrow-right'
+  | 'arrow-up'
+  | 'arrow-down'
+  | 'gamepad'
+  | 'movie'
+  | 'tv'
+  | 'book'
+  | 'comic'
+  | 'anime';
+
 export interface IconProps {
-  name?: string
+  name?: IconName
   size?: 'small' | 'medium' | 'large' | 'custom'
   color?: string
   viewBox?: string

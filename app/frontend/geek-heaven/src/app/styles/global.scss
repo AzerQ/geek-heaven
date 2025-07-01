@@ -3,26 +3,32 @@
  */
 
 :root {
-  /* Основные цвета */
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #4f46e5;
+  /* Основные цвета согласно дизайн-системе GeekHeaven */
+  --color-primary: #5C6BC0;
+  --color-primary-light: #8e99f3;
+  --color-primary-dark: #3f4771;
   
-  --color-secondary: #10b981;
-  --color-secondary-light: #34d399;
-  --color-secondary-dark: #059669;
+  --color-secondary: #4CAF50;
+  --color-secondary-light: #81c784;
+  --color-secondary-dark: #388e3c;
+  
+  --color-accent: #FF4081;
+  --color-accent-light: #ff79b0;
+  --color-accent-dark: #c60055;
   
   /* Нейтральные цвета */
-  --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-text: #111827;
-  --color-text-secondary: #6b7280;
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-dark-background: #212121;
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-text-light: #ffffff;
   
   /* Состояния */
-  --color-error: #ef4444;
-  --color-warning: #f59e0b;
-  --color-success: #10b981;
-  --color-info: #3b82f6;
+  --color-error: #F44336;
+  --color-warning: #FFC107;
+  --color-success: #4CAF50;
+  --color-info: #2196F3;
   
   /* Размеры */
   --spacing-xs: 0.25rem;
@@ -31,16 +37,23 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   
-  /* Типография */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
+  /* Типография согласно дизайн-системе GeekHeaven */
+  --font-family-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
   
   /* Скругления */
   --radius-sm: 0.25rem;
@@ -57,10 +70,10 @@
 /* Темная тема */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #111827;
-    --color-surface: #1f2937;
-    --color-text: #f9fafb;
-    --color-text-secondary: #d1d5db;
+    --color-background: #212121;
+    --color-surface: #2c2c2c;
+    --color-text: #ffffff;
+    --color-text-secondary: #cccccc;
   }
 }
 
@@ -68,11 +81,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family);
+  font-family: var(--font-family-body);
   font-size: var(--font-size-md);
   color: var(--color-text);
   background-color: var(--color-background);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 * {
@@ -82,9 +95,18 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: var(--spacing-md);
-  font-weight: 600;
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
   line-height: 1.2;
+  color: var(--color-text);
 }
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-md); }
 
 p {
   margin-top: 0;

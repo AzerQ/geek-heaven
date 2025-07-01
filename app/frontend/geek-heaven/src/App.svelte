@@ -1,81 +1,97 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg';
-  import viteLogo from '/vite.svg';
-  import { Typography, UIKitDemo } from './shared/ui';
+  import { Header, SideNav, MobileNav } from './widgets';
+  import { Dashboard } from './pages/Dashboard';
+  import { Search } from './pages/Search';
+  import { Library } from './pages/Library';
+  import { Settings } from './pages/Settings';
+  import { MovieDetails } from './pages/MovieDetails';
+  import { settings } from './shared/stores/settings';
+  import type { Movie } from './shared/services/kinopoisk';
+
   import './app/styles/global.scss';
+
+  let currentPage: 'dashboard' | 'search' | 'library' | 'settings' | 'movie-details' = 'dashboard';
+  let selectedMovie: Movie | null = null;
+  let selectedMovieId: number | null = null;
+  let searchCategory: string = '';
+
+  // Settings are loaded automatically when the store is created
+  // No need for manual loading in onMount
+
+  function handleNavigation(event: CustomEvent) {
+    const { page, category } = event.detail;
+    currentPage = page;
+    
+    // Set category for search page
+    if (page === 'search' && category) {
+      searchCategory = category;
+    } else if (page !== 'search') {
+      searchCategory = '';
+    }
+    
+    // Clear movie selection when navigating away from movie details
+    if (page !== 'movie-details') {
+      selectedMovie = null;
+      selectedMovieId = null;
+    }
+  }
+
+  function handleMovieSelect(event: CustomEvent) {
+    const { movie } = event.detail;
+    selectedMovie = movie;
+    selectedMovieId = movie.id;
+    currentPage = 'movie-details';
+  }
+
+  function handleBackFromMovie() {
+    selectedMovie = null;
+    selectedMovieId = null;
+    currentPage = 'search'; // Go back to search by default
+  }
 </script>
 
-<main class="container">
-  <div class="logo-container">
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
+<div class="app">
+  <Header on:navigate={handleNavigation} />
+  <SideNav {currentPage} on:navigate={handleNavigation} />
   
-  <Typography variant="h1" gutterBottom>GeekHeaven</Typography>
-  <Typography variant="body1" gutterBottom>Платформа для истинных гиков</Typography>
+  <main class="main-content">
+    {#if currentPage === 'dashboard'}
+      <Dashboard on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
+    {:else if currentPage === 'search'}
+      <Search category={searchCategory} on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
+    {:else if currentPage === 'library'}
+      <Library on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
+    {:else if currentPage === 'settings'}
+      <Settings on:navigate={handleNavigation} />
+    {:else if currentPage === 'movie-details' && selectedMovieId}
+      <MovieDetails 
+        movieId={selectedMovieId} 
+        movie={selectedMovie}
+        on:back={handleBackFromMovie}
+      />
+    {/if}
+  </main>
   
-  <UIKitDemo />
-  
-  <p class="info">
-    Проект организован по архитектуре Feature Sliced Design
-  </p>
-</main>
+  <MobileNav {currentPage} on:navigate={handleNavigation} />
+</div>
 
 <style lang="scss">
-  .logo-container {
-    display: flex;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-  }
-  
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-    
-    &:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    
-    &.svelte:hover {
-      filter: drop-shadow(0 0 2em #ff3e00aa);
-    }
-  }
-  
-  h1 {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-xs);
-  }
-  
-  .button-showcase {
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg);
-    background-color: var(--color-surface);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-  
-  .button-row {
-    display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-    flex-wrap: wrap;
-  }
-  
-  .info {
-    margin-top: var(--spacing-xl);
-    color: var(--color-text-secondary);
-  }
-  
-  .typography-showcase {
-    margin-bottom: var(--spacing-xl);
+  .app {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+  }
+  
+  .main-content {
+    margin-top: 70px; /* Header height */
+    margin-left: 240px; /* SideNav width */
+    min-height: calc(100vh - 70px);
+    background-color: var(--color-background);
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 60px; /* MobileNav height */
+      min-height: calc(100vh - 70px - 60px);
+    }
   }
 </style>

@@ -13,6 +13,7 @@ export * from './Radio';
 export * from './Select';
 export * from './Avatar';
 export * from './Icon';
+export { default as UserAvatar } from './UserAvatar.svelte';
 
 // Другие компоненты будут добавлены позже
 // и т.д.
