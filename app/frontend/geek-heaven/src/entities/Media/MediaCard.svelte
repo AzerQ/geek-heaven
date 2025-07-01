@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Badge, Button } from '../../shared/ui';
+  import { StarRating } from '../../shared/ui/StarRating';
   import { userLibrary, type UserMovieData } from '../../shared/stores/movies';
   import type { Movie } from '../../shared/services/kinopoisk';
   import { 
@@ -108,10 +109,7 @@
     <div class="media-card__footer">
       <div class="media-card__ratings">
         {#if primaryRating}
-          <div class="rating rating--primary">
-            <span class="rating__label">{movie.rating.kp ? 'КП:' : 'IMDB:'}</span>
-            <span class="rating__value">{formatMovieRating(primaryRating)}</span>
-          </div>
+          <StarRating rating={primaryRating} size="md" />
         {/if}
         
         {#if userRating}

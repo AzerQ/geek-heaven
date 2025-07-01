@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Button, Badge, Input } from '../../shared/ui';
+  import { StarRating } from '../../shared/ui/StarRating';
   import { kinopoiskService, type Movie, type Review, type ReviewsResponse } from '../../shared/services/kinopoisk';
   import { userLibrary, getMovieFromLibrary } from '../../shared/stores/movies';
   import { settings } from '../../shared/stores/settings';
@@ -274,14 +275,14 @@
           {#if movie.rating?.kp}
             <div class="movie-details__rating">
               <span class="movie-details__rating-label">Рейтинг Кинопоиск:</span>
-              <span class="movie-details__rating-value">{formatMovieRating(movie.rating.kp)}</span>
+              <StarRating rating={movie.rating.kp} size="lg" />
             </div>
           {/if}
-
+          
           {#if movie.rating?.imdb}
             <div class="movie-details__rating">
               <span class="movie-details__rating-label">Рейтинг IMDb:</span>
-              <span class="movie-details__rating-value">{formatMovieRating(movie.rating.imdb)}</span>
+              <StarRating rating={movie.rating.imdb} size="lg" />
             </div>
           {/if}
         </div>
