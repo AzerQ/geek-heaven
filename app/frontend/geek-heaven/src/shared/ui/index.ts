@@ -20,6 +20,8 @@ export * from './NotificationToast';
 export * from './NotificationContainer';
 export * from './NotificationHistory';
 export * from './NotificationCenter';
+export { default as AISearch } from './AISearch.svelte';
+export { default as MovieSuggestionCard } from './MovieSuggestionCard.svelte';
 
 // Другие компоненты будут добавлены позже
 // и т.д.

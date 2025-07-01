@@ -10,6 +10,7 @@ const browser = typeof window !== 'undefined';
 
 export interface AppSettings {
   kinopoiskApiKey: string;
+  openrouterApiKey: string;
   theme: 'light' | 'dark';
   language: 'ru' | 'en';
   autoSave: boolean;
@@ -17,6 +18,7 @@ export interface AppSettings {
 
 const defaultSettings: AppSettings = {
   kinopoiskApiKey: '',
+  openrouterApiKey: '',
   theme: 'dark',
   language: 'ru',
   autoSave: true
@@ -73,6 +75,13 @@ function createSettingsStore() {
         return newSettings;
       });
     },
+    updateOpenRouterApiKey: (apiKey: string) => {
+      update((settings) => {
+        const newSettings = { ...settings, openrouterApiKey: apiKey };
+        saveSettings(newSettings);
+        return newSettings;
+      });
+    },
     updateTheme: (theme: 'light' | 'dark') => {
       update((settings) => {
         const newSettings = { ...settings, theme };
@@ -95,7 +104,18 @@ export function validateApiKey(apiKey: string): boolean {
   return apiKey.length > 0 && /^[a-zA-Z0-9-_]+$/.test(apiKey);
 }
 
+// Validate OpenRouter API key format
+export function validateOpenRouterApiKey(apiKey: string): boolean {
+  // OpenRouter API keys typically start with 'sk-or-'
+  return apiKey.length > 0 && /^sk-or-[a-zA-Z0-9-_]+$/.test(apiKey);
+}
+
 // Check if API key is configured
 export function isApiKeyConfigured(apiKey: string): boolean {
+  return apiKey.length > 0;
+}
+
+// Check if OpenRouter API key is configured
+export function isOpenRouterApiKeyConfigured(apiKey: string): boolean {
   return apiKey.length > 0;
 }

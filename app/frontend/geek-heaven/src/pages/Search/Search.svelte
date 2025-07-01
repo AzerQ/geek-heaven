@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Input, Button, Badge } from '../../shared/ui';
+  import { Input, Button, Badge, AISearch } from '../../shared/ui';
   import { MediaCard } from '../../entities/Media';
   import { kinopoiskService, type Movie } from '../../shared/services/kinopoisk';
   import { movies } from '../../shared/stores/movies';
@@ -23,6 +23,7 @@
   let selectedGenre = '';
   let selectedType = '';
   let selectedYear = '';
+  let searchMode: 'normal' | 'ai' = 'normal';
   
   // Заголовки для разных категорий
   const categoryTitles: Record<string, string> = {
@@ -242,6 +243,52 @@
       handleSearch();
     }
   }
+
+  /**
+   * Handle AI suggestion selection
+   */
+  function handleAISuggestionSelect(event: CustomEvent) {
+    const { query, type } = event.detail;
+    
+    // Switch to normal search mode
+    searchMode = 'normal';
+    
+    // Set search parameters
+    searchQuery = query;
+    if (type && !isTypeFilterDisabled) {
+      selectedType = type;
+    }
+    
+    // Perform search
+    handleSearch();
+  }
+
+  /**
+   * Switch search mode
+   */
+  function switchSearchMode(mode: 'normal' | 'ai') {
+    searchMode = mode;
+    
+    // Clear current search when switching modes
+    if (mode === 'ai') {
+      searchQuery = '';
+      selectedGenre = '';
+      if (!isTypeFilterDisabled) {
+        selectedType = '';
+      }
+      selectedYear = '';
+      searchResults = [];
+      hasSearched = false;
+      error = null;
+    }
+  }
+
+  /**
+   * Handle navigation from AI search
+   */
+  function handleAINavigation(event: CustomEvent) {
+    dispatch('navigate', event.detail);
+  }
 </script>
 
 <div class="search">
@@ -259,22 +306,43 @@
       </Button>
     </div>
   {:else}
-    <div class="search__controls">
-      <!-- Search Input -->
-      <div class="search__input">
-        <Input
-          placeholder="Введите название фильма или сериала..."
-          bind:value={searchQuery}
-          on:keypress={handleKeyPress}
-        />
-        <Button 
-          variant="primary" 
-          disabled={isLoading}
-          on:click={handleSearch}
+    <!-- Search Mode Toggle -->
+    <div class="search__mode-toggle">
+      <div class="search__mode-buttons">
+        <button 
+          class="search__mode-button" 
+          class:active={searchMode === 'normal'}
+          on:click={() => switchSearchMode('normal')}
         >
-          {isLoading ? 'Поиск...' : 'Найти'}
-        </Button>
+          🔍 Обычный поиск
+        </button>
+        <button 
+          class="search__mode-button" 
+          class:active={searchMode === 'ai'}
+          on:click={() => switchSearchMode('ai')}
+        >
+          🤖 AI поиск по описанию
+        </button>
       </div>
+    </div>
+
+    {#if searchMode === 'normal'}
+      <div class="search__controls">
+        <!-- Search Input -->
+        <div class="search__input">
+          <Input
+            placeholder="Введите название фильма или сериала..."
+            bind:value={searchQuery}
+            on:keypress={handleKeyPress}
+          />
+          <Button 
+            variant="primary" 
+            disabled={isLoading}
+            on:click={handleSearch}
+          >
+            {isLoading ? 'Поиск...' : 'Найти'}
+          </Button>
+        </div>
 
       <!-- Filters -->
       <div class="search__filters">
@@ -313,16 +381,25 @@
         </Button>
       </div>
     </div>
+    {:else}
+      <!-- AI Search Component -->
+      <div class="search__ai-container">
+        <AISearch 
+          on:suggestionSelect={handleAISuggestionSelect}
+          on:navigate={handleAINavigation}
+        />
+      </div>
+    {/if}
 
-    <!-- Error Message -->
-    {#if error}
+    <!-- Error Message (only for normal search) -->
+    {#if error && searchMode === 'normal'}
       <div class="search__error">
         <p>{error}</p>
       </div>
     {/if}
 
-    <!-- Results -->
-    {#if hasSearched}
+    <!-- Results (only for normal search) -->
+    {#if hasSearched && searchMode === 'normal'}
       <div class="search__results">
         {#if searchResults.length > 0}
           <div class="search__results-header">
@@ -357,15 +434,15 @@
           </div>
         {/if}
       </div>
-    {:else if !isLoading}
+    {:else if !isLoading && searchMode === 'normal'}
       <div class="search__welcome">
         <h2>Добро пожаловать в поиск!</h2>
         <p>Введите название фильма или используйте фильтры для поиска</p>
       </div>
     {/if}
 
-    <!-- Loading -->
-    {#if isLoading && searchResults.length === 0}
+    <!-- Loading (only for normal search) -->
+    {#if isLoading && searchResults.length === 0 && searchMode === 'normal'}
       <div class="search__loading">
         <p>Загрузка...</p>
       </div>
@@ -411,7 +488,54 @@
       }
     }
 
+    &__mode-toggle {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__mode-buttons {
+      display: flex;
+      background: var(--color-surface);
+      border-radius: var(--border-radius-lg);
+      padding: var(--spacing-xs);
+      border: 1px solid var(--color-border);
+      gap: var(--spacing-xs);
+    }
+
+    &__mode-button {
+      flex: 1;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border: none;
+      background: transparent;
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: var(--border-radius-md);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      
+      &:hover {
+        background: var(--color-background);
+        color: var(--color-text-primary);
+      }
+      
+      &.active {
+        background: var(--color-primary);
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+    }
+
     &__controls {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__ai-container {
       margin-bottom: var(--spacing-xl);
     }
 
@@ -526,6 +650,16 @@
   @media (max-width: 768px) {
     .search {
       padding: var(--spacing-md);
+      
+      &__mode-buttons {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+      
+      &__mode-button {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.85rem;
+      }
       
       &__input {
         flex-direction: column;

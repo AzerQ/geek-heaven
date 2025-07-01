@@ -1,25 +1,34 @@
 <script lang="ts">
-  import { settings, validateApiKey, type AppSettings } from '../../shared/stores/settings';
+  import { settings, validateApiKey, validateOpenRouterApiKey, type AppSettings } from '../../shared/stores/settings';
   import { kinopoiskService } from '../../shared/services/kinopoisk';
+  import { openRouterService } from '../../shared/services/openrouter';
   import { Button, Input, Badge, NotificationHistory } from '../../shared/ui';
   import { onMount } from 'svelte';
 
   let currentSettings: AppSettings;
   let apiKeyInput = '';
+  let openRouterApiKeyInput = '';
   let isValidating = false;
+  let isValidatingOpenRouter = false;
   let validationResult: 'success' | 'error' | null = null;
+  let openRouterValidationResult: 'success' | 'error' | null = null;
   let validationMessage = '';
+  let openRouterValidationMessage = '';
 
   // Subscribe to settings
   settings.subscribe(value => {
     currentSettings = value;
     apiKeyInput = value.kinopoiskApiKey;
+    openRouterApiKeyInput = value.openrouterApiKey;
   });
 
   onMount(() => {
-    // Set current API key to service
+    // Set current API keys to services
     if (currentSettings.kinopoiskApiKey) {
       kinopoiskService.setApiKey(currentSettings.kinopoiskApiKey);
+    }
+    if (currentSettings.openrouterApiKey) {
+      openRouterService.setApiKey(currentSettings.openrouterApiKey);
     }
   });
 
@@ -61,6 +70,44 @@
     }
   }
 
+  async function validateAndSaveOpenRouterApiKey() {
+    if (!openRouterApiKeyInput.trim()) {
+      openRouterValidationResult = 'error';
+      openRouterValidationMessage = 'Введите API ключ OpenRouter';
+      return;
+    }
+
+    if (!validateOpenRouterApiKey(openRouterApiKeyInput)) {
+      openRouterValidationResult = 'error';
+      openRouterValidationMessage = 'Неверный формат API ключа OpenRouter';
+      return;
+    }
+
+    isValidatingOpenRouter = true;
+    openRouterValidationResult = null;
+    openRouterValidationMessage = '';
+
+    try {
+      const isValid = await openRouterService.testConnection(openRouterApiKeyInput);
+      
+      if (isValid) {
+        settings.updateOpenRouterApiKey(openRouterApiKeyInput);
+        openRouterService.setApiKey(openRouterApiKeyInput);
+        openRouterValidationResult = 'success';
+        openRouterValidationMessage = 'API ключ OpenRouter успешно сохранен';
+      } else {
+        openRouterValidationResult = 'error';
+        openRouterValidationMessage = 'Неверный API ключ OpenRouter или нет доступа к API';
+      }
+    } catch (error) {
+      openRouterValidationResult = 'error';
+      openRouterValidationMessage = 'Ошибка при проверке API ключа OpenRouter';
+      console.error('OpenRouter API key validation error:', error);
+    } finally {
+      isValidatingOpenRouter = false;
+    }
+  }
+
   function updateTheme(theme: 'light' | 'dark') {
     settings.updateTheme(theme);
   }
@@ -70,6 +117,8 @@
       settings.reset();
       validationResult = null;
       validationMessage = '';
+      openRouterValidationResult = null;
+      openRouterValidationMessage = '';
     }
   }
 </script>
@@ -111,6 +160,44 @@
           </Button>
           
           {#if currentSettings.kinopoiskApiKey}
+            <Badge variant="success" text="Ключ настроен" />
+          {:else}
+            <Badge variant="warning" text="Ключ не настроен" />
+          {/if}
+        </div>
+      </div>
+    </section>
+
+    <!-- OpenRouter API Configuration -->
+    <section class="settings__section">
+      <h2>OpenRouter API Конфигурация</h2>
+      <p class="settings__description">
+        Для работы с AI поиском фильмов необходим API ключ от OpenRouter.
+        <a href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer">
+          Получить ключ
+        </a>
+      </p>
+      
+      <div class="settings__field">
+        <Input
+          label="API Ключ OpenRouter"
+          type="password"
+          bind:value={openRouterApiKeyInput}
+          placeholder="Введите ваш API ключ OpenRouter"
+          error={openRouterValidationResult === 'error' ? openRouterValidationMessage : ''}
+          success={openRouterValidationResult === 'success' ? openRouterValidationMessage : ''}
+        />
+        
+        <div class="settings__actions">
+          <Button
+            variant="primary"
+            disabled={isValidatingOpenRouter || !openRouterApiKeyInput.trim()}
+            on:click={validateAndSaveOpenRouterApiKey}
+          >
+            {isValidatingOpenRouter ? 'Проверка...' : 'Сохранить ключ'}
+          </Button>
+          
+          {#if currentSettings.openrouterApiKey}
             <Badge variant="success" text="Ключ настроен" />
           {:else}
             <Badge variant="warning" text="Ключ не настроен" />
