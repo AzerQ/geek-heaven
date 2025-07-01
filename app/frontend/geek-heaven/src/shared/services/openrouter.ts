@@ -39,7 +39,9 @@ export interface AISearchResponse {
 class OpenRouterService {
   private apiKey: string = '';
   private baseUrl = 'https://openrouter.ai/api/v1';
-  private model = 'deepseek/deepseek-r1-0528:free';
+  private model = 'qwen/qwen3-235b-a22b:free';
+
+  public maxTokens = 7000;
 
   /**
    * Set API key for OpenRouter service
@@ -104,7 +106,7 @@ class OpenRouterService {
           content: `Пользователь описал фильм: "${description.trim()}"`
         }
       ],
-      max_tokens: 1000,
+      max_tokens: this.maxTokens,
       temperature: 0.3
     };
 
