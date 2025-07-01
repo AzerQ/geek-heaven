@@ -8,6 +8,8 @@ export * from './Typography';
 export { UIKitDemo } from './UIKitDemo';
 export * from './Card';
 export * from './Input';
+export { GalleryButton } from './GalleryButton';
+export { GalleryModal } from './GalleryModal';
 export * from './Checkbox';
 export * from './Radio';
 export * from './Select';

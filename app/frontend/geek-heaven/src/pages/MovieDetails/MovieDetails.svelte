@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Button, Badge, Input } from '../../shared/ui';
+  import { Button, Badge, Input, GalleryButton, GalleryModal } from '../../shared/ui';
   import { StarRating } from '../../shared/ui/StarRating';
+  import { MediaGallery } from '../../entities/MediaGallery';
   import { kinopoiskService, type Movie, type Review, type ReviewsResponse } from '../../shared/services/kinopoisk';
   import { userLibrary, getMovieFromLibrary } from '../../shared/stores/movies';
   import { settings } from '../../shared/stores/settings';
@@ -25,6 +26,7 @@
   let userNotes = '';
   let showNotesInput = false;
   let libraryData: any[] = [];
+  let isGalleryOpen = false;
   
   // Reviews state
   let reviews: Review[] = [];
@@ -193,6 +195,15 @@
   function handleBack() {
     dispatch('back');
   }
+  
+  function handleOpenGallery(event: Event) {
+    event.stopPropagation();
+    isGalleryOpen = true;
+  }
+  
+  function handleCloseGallery() {
+    isGalleryOpen = false;
+  }
 </script>
 
 <div class="movie-details">
@@ -230,6 +241,8 @@
           >
             {isInLibrary ? 'Удалить из библиотеки' : 'Добавить в библиотеку'}
           </Button>
+          
+          <GalleryButton on:click={handleOpenGallery} />
           
           {#if isInLibrary}
             <div class="movie-details__status">
@@ -507,6 +520,16 @@
         </div>
       </div>
     </div>
+  {/if}
+  
+  <!-- Gallery Modal -->
+  {#if movie}
+    <GalleryModal 
+      isOpen={isGalleryOpen}
+      movieId={movie.id}
+      movieTitle={movie.name || movie.alternativeName}
+      on:close={handleCloseGallery}
+    />
   {/if}
 </div>
 
@@ -943,4 +966,7 @@
       }
     }
   }
+  
+
+
 </style>

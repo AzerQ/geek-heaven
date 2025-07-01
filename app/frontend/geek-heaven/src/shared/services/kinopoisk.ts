@@ -269,6 +269,101 @@ class KinopoiskService {
       this.apiKey = tempKey;
     }
   }
+
+  /**
+   * Get images for a specific movie
+   * @param movieId - Movie ID
+   * @param type - Type of images to fetch (optional)
+   * @param page - Page number (default: 1)
+   * @param limit - Number of images per page (default: 20)
+   */
+  async getMovieImages(
+    movieId: number, 
+    type?: ImageType, 
+    page: number = 1, 
+    limit: number = 20
+  ): Promise<ImagesResponse> {
+    const params: Record<string, any> = {
+      movieId,
+      page,
+      limit
+    };
+    
+    if (type) {
+      params.type = type;
+    }
+    
+    return this.makeRequest<ImagesResponse>('/image', params);
+  }
+
+  /**
+   * Get posters for a specific movie
+   * @param movieId - Movie ID
+   * @param page - Page number (default: 1)
+   * @param limit - Number of posters per page (default: 10)
+   */
+  async getMoviePosters(movieId: number, page: number = 1, limit: number = 10): Promise<ImagesResponse> {
+    return this.getMovieImages(movieId, 'cover', page, limit);
+  }
+
+  /**
+   * Get screenshots for a specific movie
+   * @param movieId - Movie ID
+   * @param page - Page number (default: 1)
+   * @param limit - Number of screenshots per page (default: 10)
+   */
+  async getMovieScreenshots(movieId: number, page: number = 1, limit: number = 10): Promise<ImagesResponse> {
+    return this.getMovieImages(movieId, 'screenshot', page, limit);
+  }
+
+  /**
+   * Get backdrops for a specific movie
+   * @param movieId - Movie ID
+   * @param page - Page number (default: 1)
+   * @param limit - Number of backdrops per page (default: 10)
+   */
+  async getMovieBackdrops(movieId: number, page: number = 1, limit: number = 10): Promise<ImagesResponse> {
+    return this.getMovieImages(movieId, 'backdrops', page, limit);
+  }
+
+  /**
+   * Get frames for a specific movie
+   * @param movieId - Movie ID
+   * @param page - Page number (default: 1)
+   * @param limit - Number of frames per page (default: 10)
+   */
+  async getMovieFrames(movieId: number, page: number = 1, limit: number = 10): Promise<ImagesResponse> {
+    return this.getMovieImages(movieId, 'frame', page, limit);
+  }
+}
+
+/**
+ * Image types available from Kinopoisk API
+ */
+export type ImageType = 'cover' | 'backdrops' | 'screenshot' | 'frame';
+
+/**
+ * Image data structure from Kinopoisk API
+ */
+export interface MovieImage {
+  movieId: number;
+  type: ImageType;
+  language?: string;
+  url: string;
+  previewUrl: string;
+  height?: number;
+  width?: number;
+}
+
+/**
+ * Response structure for images API
+ */
+export interface ImagesResponse {
+  docs: MovieImage[];
+  total: number;
+  limit: number;
+  page: number;
+  pages: number;
 }
 
 export const kinopoiskService = new KinopoiskService();

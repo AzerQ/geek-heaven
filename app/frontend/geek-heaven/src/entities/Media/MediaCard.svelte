@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Badge, Button } from '../../shared/ui';
+  import { Badge, Button, GalleryButton, GalleryModal } from '../../shared/ui';
   import { StarRating } from '../../shared/ui/StarRating';
+  import { MediaGallery } from '../MediaGallery';
   import { userLibrary, type UserMovieData } from '../../shared/stores/movies';
   import type { Movie } from '../../shared/services/kinopoisk';
   import { 
@@ -15,6 +16,8 @@
   export let movie: Movie;
   
   const dispatch = createEventDispatcher();
+  
+  let isGalleryOpen = false;
   
   $: userMovieData = $userLibrary.find(item => item.id === movie.id);
   $: isInLibrary = !!userMovieData;
@@ -51,6 +54,15 @@
   function handleAddToLibrary(event: Event) {
     event.stopPropagation();
     dispatch('addToLibrary', { movie });
+  }
+  
+  function handleOpenGallery(event: Event) {
+    event.stopPropagation();
+    isGalleryOpen = true;
+  }
+  
+  function handleCloseGallery() {
+    isGalleryOpen = false;
   }
 </script>
 
@@ -119,9 +131,21 @@
           </div>
         {/if}
       </div>
+      
+      <div class="media-card__actions">
+        <GalleryButton on:click={handleOpenGallery} />
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Gallery Modal -->
+<GalleryModal 
+  isOpen={isGalleryOpen}
+  movieId={movie.id}
+  movieTitle={movie.name || movie.alternativeName}
+  on:close={handleCloseGallery}
+/>
 
 <style lang="scss">
   .media-card {
@@ -196,12 +220,20 @@
 
     &__footer {
       margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
     }
 
     &__ratings {
       display: flex;
       align-items: center;
       gap: var(--spacing-sm);
+    }
+    
+    &__actions {
+      display: flex;
+      justify-content: center;
     }
 
     &__status-badge {
@@ -248,8 +280,6 @@
       &__meta {
         font-size: 0.75rem;
       }
-      
-
     }
   }
 </style>
