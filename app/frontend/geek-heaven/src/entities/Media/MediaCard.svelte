@@ -3,6 +3,7 @@
   import { StarRating } from '../../shared/ui/StarRating';
   import { MediaGallery } from '../MediaGallery';
   import { userLibrary, type UserMovieData } from '../../shared/stores/movies';
+  import { notifications } from '../../shared/stores/notifications';
   import type { Movie } from '../../shared/services/kinopoisk';
   import { 
     getMoviePosterUrl, 
@@ -54,6 +55,25 @@
   function handleAddToLibrary(event: Event) {
     event.stopPropagation();
     dispatch('addToLibrary', { movie });
+    
+    // Show notification
+    notifications.success(
+      'Добавлено в библиотеку',
+      `"${movie.name || movie.alternativeName}" добавлен в вашу библиотеку`,
+      {
+        duration: 4000,
+        actions: [
+          {
+            label: 'Перейти в библиотеку',
+            action: () => {
+              // This could dispatch an event to navigate to library
+              dispatch('navigateToLibrary');
+            },
+            variant: 'primary'
+          }
+        ]
+      }
+    );
   }
   
   function handleOpenGallery(event: Event) {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon } from '../../shared/ui';
+  import { Icon, NotificationCenter } from '../../shared/ui';
   import { createEventDispatcher } from 'svelte';
   import UserAvatar from '../../shared/ui/UserAvatar.svelte';
   
@@ -19,10 +19,7 @@
     dispatch('navigate', { page: 'dashboard' });
   }
   
-  function handleNotifications() {
-    // TODO: Implement notifications
-    console.log('Notifications clicked');
-  }
+
 </script>
 
 <header class="header">
@@ -49,9 +46,12 @@
     
     <!-- Пользовательское меню -->
     <div class="header__user-menu">
-      <button type="button" class="notifications-btn" on:click={handleNotifications}>
-        <Icon name="bell" size="20" />
-      </button>
+      <NotificationCenter 
+        variant="icon" 
+        size="md" 
+        showBadge={true}
+        on:viewAll={() => dispatch('navigate', { page: 'settings' })}
+      />
       
      <UserAvatar/>
     </div>
@@ -142,21 +142,7 @@
       align-items: center;
       gap: var(--spacing-md);
       
-      .notifications-btn {
-        background: none;
-        border: none;
-        color: var(--color-text-light);
-        cursor: pointer;
-        padding: var(--spacing-sm);
-        border-radius: var(--radius-md);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-      }
+
       
       .user-avatar {
         width: 40px;

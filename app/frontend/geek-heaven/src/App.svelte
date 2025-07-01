@@ -5,6 +5,7 @@
   import { Library } from './pages/Library';
   import { Settings } from './pages/Settings';
   import { MovieDetails } from './pages/MovieDetails';
+  import { NotificationContainer } from './shared/ui';
   import { settings } from './shared/stores/settings';
   import type { Movie } from './shared/services/kinopoisk';
 
@@ -84,6 +85,9 @@
   </main>
   
   <MobileNav {currentPage} on:navigate={handleNavigation} />
+  
+  <!-- Notification Container -->
+  <NotificationContainer position="top-right" />
 </div>
 
 <style lang="scss">

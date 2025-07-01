@@ -1,7 +1,7 @@
 <script lang="ts">
   import { settings, validateApiKey, type AppSettings } from '../../shared/stores/settings';
   import { kinopoiskService } from '../../shared/services/kinopoisk';
-  import { Button, Input, Badge } from '../../shared/ui';
+  import { Button, Input, Badge, NotificationHistory } from '../../shared/ui';
   import { onMount } from 'svelte';
 
   let currentSettings: AppSettings;
@@ -124,7 +124,7 @@
       <h2>Внешний вид</h2>
       
       <div class="settings__field">
-        <label class="settings__label">Тема</label>
+        <div class="settings__label">Тема</div>
         <div class="settings__theme-buttons">
           <Button
             variant={currentSettings.theme === 'dark' ? 'primary' : 'outline'}
@@ -139,6 +139,18 @@
             Светлая
           </Button>
         </div>
+      </div>
+    </section>
+
+    <!-- Notifications History -->
+    <section class="settings__section">
+      <h2>История уведомлений</h2>
+      <p class="settings__description">
+        Просматривайте все ваши уведомления и управляйте ими.
+      </p>
+      
+      <div class="settings__notifications">
+        <NotificationHistory showSearch={true} itemsPerPage={10} />
       </div>
     </section>
 
@@ -251,6 +263,14 @@
     &__theme-buttons {
       display: flex;
       gap: var(--spacing-sm);
+    }
+
+    &__notifications {
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-lg);
+      background: var(--color-background);
+      border-radius: var(--border-radius-md);
+      border: 1px solid var(--color-border);
     }
 
     &__info {

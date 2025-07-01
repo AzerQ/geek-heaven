@@ -4,6 +4,7 @@
 
 import { writable, derived } from 'svelte/store';
 import type { Movie } from '../services/kinopoisk';
+import { notifications } from './notifications';
 
 // Browser detection without SvelteKit dependency
 const browser = typeof window !== 'undefined';
@@ -152,6 +153,9 @@ function createUserLibraryStore() {
     },
     updateMovieStatus: (movieId: number, status: UserMovieData['status']) => {
       update(library => {
+        const movieItem = library.find(item => item.id === movieId);
+        const movieName = movieItem?.movieInfo?.name || movieItem?.movieInfo?.alternativeName || 'Фильм';
+        
         const newLibrary = library.map(item => {
           if (item.id === movieId) {
             return {
@@ -162,19 +166,56 @@ function createUserLibraryStore() {
           }
           return item;
         });
+        
         saveUserLibrary(newLibrary);
+        
+        // Show notification based on status change
+        const statusMessages = {
+          'watching': 'Добавлен в "Смотрю"',
+          'watched': 'Отмечен как просмотренный',
+          'want-to-watch': 'Добавлен в "Хочу посмотреть"',
+          'favorite': 'Добавлен в избранное',
+          'dropped': 'Отмечен как брошенный'
+        };
+        
+        const statusIcons = {
+          'watching': 'play',
+          'watched': 'check-circle',
+          'want-to-watch': 'bookmark',
+          'favorite': 'heart',
+          'dropped': 'x-circle'
+        };
+        
+        notifications.success(
+          statusMessages[status],
+          `"${movieName}" ${statusMessages[status].toLowerCase()}`,
+          { duration: 3000 }
+        );
+        
         return newLibrary;
       });
     },
     updateMovieRating: (movieId: number, userRating: number) => {
       update(library => {
+        const movieItem = library.find(item => item.id === movieId);
+        const movieName = movieItem?.movieInfo?.name || movieItem?.movieInfo?.alternativeName || 'Фильм';
+        
         const newLibrary = library.map(item => {
           if (item.id === movieId) {
             return { ...item, userRating };
           }
           return item;
         });
+        
         saveUserLibrary(newLibrary);
+        
+        // Show notification for rating update
+        notifications.info(
+          'Рейтинг обновлен',
+          `Вы поставили "${movieName}" оценку ${userRating}/10`,
+          { duration: 3000 }
+        );
+        
         return newLibrary;
       });
     },

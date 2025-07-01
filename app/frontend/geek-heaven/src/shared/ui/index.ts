@@ -16,6 +16,10 @@ export * from './Select';
 export * from './Avatar';
 export * from './Icon';
 export { default as UserAvatar } from './UserAvatar.svelte';
+export * from './NotificationToast';
+export * from './NotificationContainer';
+export * from './NotificationHistory';
+export * from './NotificationCenter';
 
 // Другие компоненты будут добавлены позже
 // и т.д.
