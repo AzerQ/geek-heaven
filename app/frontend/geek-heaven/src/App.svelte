@@ -14,19 +14,22 @@
   let selectedMovie: Movie | null = null;
   let selectedMovieId: number | null = null;
   let searchCategory: string = '';
+  let searchContentType: string = '';
 
   // Settings are loaded automatically when the store is created
   // No need for manual loading in onMount
 
   function handleNavigation(event: CustomEvent) {
-    const { page, category } = event.detail;
+    const { page, category, contentType } = event.detail;
     currentPage = page;
     
-    // Set category for search page
+    // Set category and content type for search page
     if (page === 'search' && category) {
       searchCategory = category;
+      searchContentType = contentType || '';
     } else if (page !== 'search') {
       searchCategory = '';
+      searchContentType = '';
     }
     
     // Clear movie selection when navigating away from movie details
@@ -58,7 +61,7 @@
     {#if currentPage === 'dashboard'}
       <Dashboard on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
     {:else if currentPage === 'search'}
-      <Search category={searchCategory} on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
+      <Search category={searchCategory} contentType={searchContentType} on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
     {:else if currentPage === 'library'}
       <Library on:navigate={handleNavigation} on:movieSelect={handleMovieSelect} />
     {:else if currentPage === 'settings'}

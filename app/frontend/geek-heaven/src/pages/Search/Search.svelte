@@ -10,6 +10,7 @@
   const dispatch = createEventDispatcher();
 
   export let category: string = ''; // Category from navigation
+  export let contentType: string = ''; // Content type from navigation
 
   let searchQuery = '';
   let searchResults: Movie[] = [];
@@ -21,6 +22,20 @@
   let selectedGenre = '';
   let selectedType = '';
   let selectedYear = '';
+  
+  // Заголовки для разных категорий
+  const categoryTitles: Record<string, string> = {
+    'movies': 'Поиск фильмов',
+    'series': 'Поиск сериалов',
+    'anime': 'Поиск аниме'
+  };
+  
+  // Получаем заголовок в зависимости от категории
+  $: pageTitle = category ? categoryTitles[category] || 'Поиск фильмов' : 'Поиск фильмов';
+  $: pageDescription = category ? `Найдите интересные ${category === 'movies' ? 'фильмы' : category === 'series' ? 'сериалы' : category === 'anime' ? 'аниме' : 'фильмы и сериалы'}` : 'Найдите интересные фильмы и сериалы';
+  
+  // Блокируем фильтр типа если задана категория
+  $: isTypeFilterDisabled = !!contentType;
 
   const genres = [
     'драма', 'комедия', 'боевик', 'триллер', 'ужасы', 'фантастика',
@@ -62,6 +77,14 @@
   // Watch for category changes
   $: if (category && apiKeyConfigured) {
     loadCategoryMovies(category);
+  }
+  
+  // Автоматически устанавливаем тип контента при изменении contentType
+  $: if (contentType && contentType !== selectedType) {
+    selectedType = contentType;
+    if (apiKeyConfigured && hasSearched) {
+      handleSearch();
+    }
   }
 
   async function loadCategoryMovies(cat: string) {
@@ -173,14 +196,21 @@
   function clearFilters() {
     searchQuery = '';
     selectedGenre = '';
-    selectedType = '';
+    // Не очищаем selectedType если он задан через категорию
+    if (!isTypeFilterDisabled) {
+      selectedType = '';
+    }
     selectedYear = '';
     searchResults = [];
     hasSearched = false;
     error = null;
     
     if (apiKeyConfigured) {
-      loadPopularMovies();
+      if (category) {
+        loadCategoryMovies(category);
+      } else {
+        loadPopularMovies();
+      }
     }
   }
 
@@ -207,8 +237,8 @@
 
 <div class="search">
   <div class="search__header">
-    <h1>Поиск фильмов</h1>
-    <p>Найдите интересные фильмы и сериалы</p>
+    <h1>{pageTitle}</h1>
+    <p>{pageDescription}</p>
   </div>
 
   {#if !apiKeyConfigured}
@@ -251,7 +281,7 @@
 
         <div class="search__filter">
           <label>Тип:</label>
-          <select bind:value={selectedType} on:change={handleSearch}>
+          <select bind:value={selectedType} on:change={handleSearch} disabled={isTypeFilterDisabled}>
             <option value="">Все типы</option>
             {#each types as type}
               <option value={type.value}>{type.label}</option>
@@ -416,6 +446,14 @@
         &:focus {
           outline: 2px solid var(--color-primary);
           outline-offset: -2px;
+        }
+        
+        &:disabled {
+          background: var(--color-background);
+          color: var(--color-text-secondary);
+          border-color: var(--color-border);
+          cursor: not-allowed;
+          opacity: 0.6;
         }
       }
     }

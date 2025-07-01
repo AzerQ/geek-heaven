@@ -31,13 +31,24 @@
     { id: 'anime', title: 'Аниме', icon: 'anime' }
   ];
   
+  // Mapping категорий на типы контента для API
+  const categoryToTypeMapping: Record<string, string> = {
+    'movies': 'movie',
+    'series': 'tv-series', 
+    'anime': 'anime'
+  };
+  
   function handleNavClick(itemId: string) {
     dispatch('navigate', { page: itemId });
   }
   
   function handleCategoryClick(categoryId: string) {
-    // Navigate to search with category filter
-    dispatch('navigate', { page: 'search', category: categoryId });
+    // Navigate to search with category filter and content type
+    dispatch('navigate', { 
+      page: 'search', 
+      category: categoryId,
+      contentType: categoryToTypeMapping[categoryId] || ''
+    });
   }
 </script>
 
