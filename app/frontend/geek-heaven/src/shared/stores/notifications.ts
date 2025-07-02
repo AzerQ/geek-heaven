@@ -218,7 +218,7 @@ function createNotificationsStore() {
       addNotification({ type: 'success', title, message, ...options }),
     
     error: (title: string, message?: string, options?: Partial<Notification>) => 
-      addNotification({ type: 'error', title, message, duration: 0, ...options }),
+      addNotification({ type: 'error', title, message, ...options }),
     
     warning: (title: string, message?: string, options?: Partial<Notification>) => 
       addNotification({ type: 'warning', title, message, ...options }),

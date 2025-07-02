@@ -4,6 +4,7 @@
   import { kinopoiskService, type Movie } from '../../shared/services/kinopoisk';
   import { movies, userLibrary } from '../../shared/stores/movies';
   import { settings } from '../../shared/stores/settings';
+  import { notifications } from '../../shared/stores/notifications';
   import { onMount } from 'svelte';
   import { createEventDispatcher } from 'svelte';
 
@@ -110,8 +111,19 @@
       hasSearched = true;
       currentPage = 1;
     } catch (err) {
-      error = err instanceof Error ? err.message : `Ошибка при загрузке ${cat}`;
+      const errorMessage = err instanceof Error ? err.message : `Ошибка при загрузке ${cat}`;
       console.error('Error loading category movies:', err);
+      notifications.error(
+        'Ошибка загрузки',
+        errorMessage,
+        {
+          actions: [{
+            label: 'Повторить',
+            action: () => loadCategoryMovies(cat)
+          }],
+          duration: 3000
+        }
+      );
     } finally {
       isLoading = false;
     }
@@ -129,8 +141,18 @@
       totalPages = response.pages;
       hasSearched = true;
     } catch (err) {
-      error = err instanceof Error ? err.message : 'Ошибка при загрузке популярных фильмов';
+      const errorMessage = err instanceof Error ? err.message : 'Ошибка при загрузке популярных фильмов';
       console.error('Error loading popular movies:', err);
+      notifications.error(
+        'Ошибка загрузки',
+        errorMessage,
+        {
+          actions: [{
+            label: 'Повторить',
+            action: () => loadPopularMovies()
+          }]
+        }
+      );
     } finally {
       isLoading = false;
     }
@@ -138,7 +160,16 @@
 
   async function handleSearch() {
     if (!apiKeyConfigured) {
-      error = 'API ключ не настроен. Перейдите в настройки.';
+      notifications.warning(
+        'API ключ не настроен',
+        'Для поиска фильмов необходимо настроить API ключ Kinopoisk в настройках.',
+        {
+          actions: [{
+            label: 'Перейти в настройки',
+            action: () => dispatch('navigate', { page: 'settings' })
+          }]
+        }
+      );
       return;
     }
 
@@ -166,10 +197,28 @@
       
       searchResults = response.docs;
       totalPages = response.pages;
+      
+      // Показываем уведомление об успешном поиске, если найдены результаты
+      if (response.docs.length > 0) {
+        notifications.success(
+          'Поиск завершен',
+          `Найдено ${response.docs.length} результатов`
+        );
+      }
     } catch (err) {
-      error = err instanceof Error ? err.message : 'Ошибка при поиске';
+      const errorMessage = err instanceof Error ? err.message : 'Ошибка при поиске';
       console.error('Search error:', err);
       searchResults = [];
+      notifications.error(
+        'Ошибка поиска',
+        errorMessage,
+        {
+          actions: [{
+            label: 'Повторить поиск',
+            action: () => handleSearch()
+          }]
+        }
+      );
     } finally {
       isLoading = false;
     }
@@ -195,9 +244,29 @@
       }
       
       searchResults = [...searchResults, ...response.docs];
+      
+      // Показываем уведомление об успешной загрузке дополнительных результатов
+      if (response.docs.length > 0) {
+        notifications.info(
+          'Загружено больше результатов',
+          `Добавлено ${response.docs.length} новых результатов`
+        );
+      }
     } catch (err) {
-      error = err instanceof Error ? err.message : 'Ошибка при загрузке';
+      const errorMessage = err instanceof Error ? err.message : 'Ошибка при загрузке';
       console.error('Load more error:', err);
+      // Возвращаем страницу назад при ошибке
+      currentPage -= 1;
+      notifications.error(
+        'Ошибка загрузки',
+        errorMessage,
+        {
+          actions: [{
+            label: 'Повторить',
+            action: () => loadMore()
+          }]
+        }
+      );
     } finally {
       isLoading = false;
     }
@@ -214,6 +283,13 @@
     searchResults = [];
     hasSearched = false;
     error = null;
+    
+    // Показываем уведомление об очистке фильтров
+    notifications.info(
+      'Фильтры очищены',
+      'Все фильтры поиска были сброшены',
+      { duration: 2000 }
+    );
     
     if (apiKeyConfigured) {
       if (category) {
@@ -235,6 +311,13 @@
       console.error('Ошибка при загрузке полных данных фильма:', error);
       // В случае ошибки используем данные из поиска
       dispatch('movieSelect', { movie });
+      
+      // Показываем предупреждение пользователю
+      notifications.warning(
+        'Неполные данные фильма',
+        'Не удалось загрузить полную информацию о фильме. Показаны базовые данные.',
+        { duration: 3000 }
+      );
     }
   }
 
@@ -259,6 +342,13 @@
       selectedType = type;
     }
     
+    // Показываем уведомление о применении AI-предложения
+    notifications.success(
+      'AI-предложение применено',
+      `Поиск по запросу: "${query}"`,
+      { duration: 3000 }
+    );
+    
     // Perform search
     handleSearch();
   }
@@ -267,6 +357,7 @@
    * Switch search mode
    */
   function switchSearchMode(mode: 'normal' | 'ai') {
+    const previousMode = searchMode;
     searchMode = mode;
     
     // Clear current search when switching modes
@@ -280,6 +371,20 @@
       searchResults = [];
       hasSearched = false;
       error = null;
+    }
+    
+    // Показываем уведомление о переключении режима
+    if (previousMode !== mode) {
+      const modeNames = {
+        'normal': 'обычный поиск',
+        'ai': 'AI поиск по описанию'
+      };
+      
+      notifications.info(
+        'Режим поиска изменен',
+        `Переключено на ${modeNames[mode]}`,
+        { duration: 2000 }
+      );
     }
   }
 
@@ -296,8 +401,24 @@
   function handleAddToLibrary(event: CustomEvent) {
     const { movie } = event.detail;
     
-    // Add movie to library with default status 'want-to-watch'
-    userLibrary.addMovie(movie, 'want-to-watch');
+    try {
+      // Add movie to library with default status 'want-to-watch'
+      userLibrary.addMovie(movie, 'want-to-watch');
+      
+      // Показываем уведомление об успешном добавлении
+      notifications.success(
+        'Фильм добавлен',
+        `"${movie.name || movie.alternativeName}" добавлен в библиотеку`,
+        { duration: 3000 }
+      );
+    } catch (error) {
+      console.error('Ошибка при добавлении фильма в библиотеку:', error);
+      notifications.error(
+        'Ошибка добавления',
+        'Не удалось добавить фильм в библиотеку. Попробуйте еще раз.',
+        { duration: 4000 }
+      );
+    }
   }
 </script>
 
@@ -401,12 +522,7 @@
       </div>
     {/if}
 
-    <!-- Error Message (only for normal search) -->
-    {#if error && searchMode === 'normal'}
-      <div class="search__error">
-        <p>{error}</p>
-      </div>
-    {/if}
+
 
     <!-- Results (only for normal search) -->
     {#if hasSearched && searchMode === 'normal'}
@@ -602,18 +718,7 @@
       }
     }
 
-    &__error {
-      padding: var(--spacing-md);
-      background: color-mix(in srgb, var(--color-danger) 10%, var(--color-surface));
-      border: 1px solid var(--color-danger);
-      border-radius: var(--border-radius-md);
-      margin-bottom: var(--spacing-lg);
-      
-      p {
-        margin: 0;
-        color: var(--color-danger);
-      }
-    }
+
 
     &__results {
       &-header {
