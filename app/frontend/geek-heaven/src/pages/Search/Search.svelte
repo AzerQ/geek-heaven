@@ -2,7 +2,7 @@
   import { Input, Button, Badge, AISearch } from '../../shared/ui';
   import { MediaCard } from '../../entities/Media';
   import { kinopoiskService, type Movie } from '../../shared/services/kinopoisk';
-  import { movies } from '../../shared/stores/movies';
+  import { movies, userLibrary } from '../../shared/stores/movies';
   import { settings } from '../../shared/stores/settings';
   import { onMount } from 'svelte';
   import { createEventDispatcher } from 'svelte';
@@ -289,6 +289,16 @@
   function handleAINavigation(event: CustomEvent) {
     dispatch('navigate', event.detail);
   }
+
+  /**
+   * Handle adding movie to library from MediaCard
+   */
+  function handleAddToLibrary(event: CustomEvent) {
+    const { movie } = event.detail;
+    
+    // Add movie to library with default status 'want-to-watch'
+    userLibrary.addMovie(movie, 'want-to-watch');
+  }
 </script>
 
 <div class="search">
@@ -412,6 +422,7 @@
               <MediaCard 
                 {movie} 
                 on:click={handleMovieClick}
+                on:addToLibrary={handleAddToLibrary}
               />
             {/each}
           </div>
