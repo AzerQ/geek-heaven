@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450" fill="none">
-  <rect width="300" height="450" fill="#f0f0f0"/>
-  <rect x="50" y="150" width="200" height="150" rx="8" fill="#d0d0d0"/>
-  <circle cx="120" cy="200" r="20" fill="#b0b0b0"/>
-  <path d="M80 250 L120 210 L160 250 L220 190 L220 280 L80 280 Z" fill="#b0b0b0"/>
-  <text x="150" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#888">
-    Нет постера
-  </text>
-</svg>
