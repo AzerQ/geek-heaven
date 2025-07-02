@@ -1,29 +1,36 @@
 <script lang="ts">
-  import { settings, validateApiKey, validateOpenRouterApiKey, type AppSettings } from '../../shared/stores/settings';
+  import { settings, validateOpenRouterApiKey, type AppSettings, getProviderManagerConfig } from '../../shared/stores/settings';
   import { AI_MODELS, getAIModelById, validateAIModelId, type AIModel } from '../../shared/constants/aiModels';
   import { kinopoiskService } from '../../shared/services/kinopoisk';
   import { openRouterService } from '../../shared/services/openrouter';
   import { Button, Input, Badge, NotificationHistory, Select } from '../../shared/ui';
+  import { ProviderSelector, ProviderConfig, ProviderStatus, FallbackConfig } from '../../lib/components/settings';
+  import type { ProviderType, KinopoiskProviderConfig } from '../../shared/services/providers';
   import { onMount } from 'svelte';
 
   let currentSettings: AppSettings;
-  let apiKeyInput = '';
   let openRouterApiKeyInput = '';
   let selectedAiModel = '';
   let customAiModel = '';
   let showCustomModel = false;
-  let isValidating = false;
   let isValidatingOpenRouter = false;
-  let validationResult: 'success' | 'error' | null = null;
   let openRouterValidationResult: 'success' | 'error' | null = null;
-  let validationMessage = '';
   let openRouterValidationMessage = '';
+  
+  // Provider-related state
+  let selectedProvider: ProviderType;
+  let providerConfigs: Map<ProviderType, KinopoiskProviderConfig> = new Map();
+  let showMigrationNotice = false;
 
   // Subscribe to settings
   settings.subscribe(value => {
     currentSettings = value;
-    apiKeyInput = value.kinopoiskApiKey;
     openRouterApiKeyInput = value.openrouterApiKey;
+    selectedProvider = value.selectedKinopoiskProvider;
+    providerConfigs = getProviderManagerConfig(value);
+    
+    // Check if migration is needed
+    showMigrationNotice = value.kinopoiskApiKey && !value.kinopoiskProviders?.dev?.apiKey;
     
     // Initialize AI model selection
     const isKnownModel = AI_MODELS.some(model => model.id === value.aiModel);
@@ -38,51 +45,28 @@
     }
   });
 
-  onMount(() => {
-    // Set current API keys to services
-    if (currentSettings.kinopoiskApiKey) {
-      kinopoiskService.setApiKey(currentSettings.kinopoiskApiKey);
-    }
+  onMount(async () => {
+    // Initialize KinopoiskService with new provider system
+    await kinopoiskService.initialize();
+    
+    // Set OpenRouter API key
     if (currentSettings.openrouterApiKey) {
       openRouterService.setApiKey(currentSettings.openrouterApiKey);
     }
   });
 
-  async function validateAndSaveApiKey() {
-    if (!apiKeyInput.trim()) {
-      validationResult = 'error';
-      validationMessage = 'Введите API ключ';
-      return;
-    }
-
-    if (!validateApiKey(apiKeyInput)) {
-      validationResult = 'error';
-      validationMessage = 'Неверный формат API ключа';
-      return;
-    }
-
-    isValidating = true;
-    validationResult = null;
-    validationMessage = '';
-
-    try {
-      const isValid = await kinopoiskService.validateApiKey(apiKeyInput);
+  // Migration function
+  async function migrateLegacyApiKey() {
+    if (currentSettings.kinopoiskApiKey) {
+      // Migrate to new provider system
+      await settings.updateKinopoiskProviderConfig('dev', {
+        apiKey: currentSettings.kinopoiskApiKey,
+        enabled: true
+      });
       
-      if (isValid) {
-        settings.updateApiKey(apiKeyInput);
-        kinopoiskService.setApiKey(apiKeyInput);
-        validationResult = 'success';
-        validationMessage = 'API ключ успешно сохранен';
-      } else {
-        validationResult = 'error';
-        validationMessage = 'Неверный API ключ или нет доступа к API';
-      }
-    } catch (error) {
-      validationResult = 'error';
-      validationMessage = 'Ошибка при проверке API ключа';
-      console.error('API key validation error:', error);
-    } finally {
-      isValidating = false;
+      // Clear legacy API key
+      await settings.updateKinopoiskApiKey('');
+      showMigrationNotice = false;
     }
   }
 
@@ -162,41 +146,41 @@
   </div>
 
   <div class="settings__content">
-    <!-- API Configuration -->
-    <section class="settings__section">
-      <h2>API Конфигурация</h2>
-      <p class="settings__description">
-        Для работы с фильмами необходим API ключ от Kinopoisk API.
-        <a href="https://kinopoisk.dev/" target="_blank" rel="noopener noreferrer">
-          Получить ключ
-        </a>
-      </p>
-      
-      <div class="settings__field">
-        <Input
-          label="API Ключ Kinopoisk"
-          type="password"
-          bind:value={apiKeyInput}
-          placeholder="Введите ваш API ключ"
-          error={validationResult === 'error' ? validationMessage : ''}
-          success={validationResult === 'success' ? validationMessage : ''}
-        />
-        
-        <div class="settings__actions">
-          <Button
-            variant="primary"
-            disabled={isValidating || !apiKeyInput.trim()}
-            on:click={validateAndSaveApiKey}
-          >
-            {isValidating ? 'Проверка...' : 'Сохранить ключ'}
+    <!-- Migration Notice -->
+    {#if showMigrationNotice}
+      <section class="settings__section migration-notice">
+        <h2>Обновление конфигурации</h2>
+        <div class="migration-content">
+          <p>Обнаружен устаревший API ключ Kinopoisk. Мигрировать в новую систему провайдеров?</p>
+          <Button variant="primary" on:click={migrateLegacyApiKey}>
+            Мигрировать настройки
           </Button>
-          
-          {#if currentSettings.kinopoiskApiKey}
-            <Badge variant="success" text="Ключ настроен" />
-          {:else}
-            <Badge variant="warning" text="Ключ не настроен" />
-          {/if}
         </div>
+      </section>
+    {/if}
+
+    <!-- Kinopoisk Providers Configuration -->
+    <section class="settings__section">
+      <h2>Провайдеры Kinopoisk</h2>
+      
+      <!-- Provider Selection -->
+      <div class="settings__field">
+        <ProviderSelector bind:selectedProvider />
+      </div>
+      
+      <!-- Provider Configuration -->
+      <div class="settings__field">
+        <ProviderConfig {providerConfigs} />
+      </div>
+      
+      <!-- Provider Status -->
+      <div class="settings__field">
+        <ProviderStatus />
+      </div>
+      
+      <!-- Fallback Configuration -->
+      <div class="settings__field">
+        <FallbackConfig />
       </div>
     </section>
 
@@ -405,6 +389,27 @@
         margin: 0 0 var(--spacing-md) 0;
         color: var(--color-text-primary);
         font-size: 1.25rem;
+      }
+    }
+
+    // Migration notice styles
+    .migration-notice {
+      border-color: var(--color-warning);
+      background: color-mix(in srgb, var(--color-warning) 5%, var(--color-surface));
+      
+      h2 {
+        color: var(--color-warning);
+      }
+    }
+
+    .migration-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      
+      p {
+        margin: 0;
+        color: var(--color-text-secondary);
       }
     }
 
