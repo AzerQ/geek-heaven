@@ -1,13 +1,17 @@
 <script lang="ts">
   import { settings, validateApiKey, validateOpenRouterApiKey, type AppSettings } from '../../shared/stores/settings';
+  import { AI_MODELS, getAIModelById, validateAIModelId, type AIModel } from '../../shared/constants/aiModels';
   import { kinopoiskService } from '../../shared/services/kinopoisk';
   import { openRouterService } from '../../shared/services/openrouter';
-  import { Button, Input, Badge, NotificationHistory } from '../../shared/ui';
+  import { Button, Input, Badge, NotificationHistory, Select } from '../../shared/ui';
   import { onMount } from 'svelte';
 
   let currentSettings: AppSettings;
   let apiKeyInput = '';
   let openRouterApiKeyInput = '';
+  let selectedAiModel = '';
+  let customAiModel = '';
+  let showCustomModel = false;
   let isValidating = false;
   let isValidatingOpenRouter = false;
   let validationResult: 'success' | 'error' | null = null;
@@ -20,6 +24,18 @@
     currentSettings = value;
     apiKeyInput = value.kinopoiskApiKey;
     openRouterApiKeyInput = value.openrouterApiKey;
+    
+    // Initialize AI model selection
+    const isKnownModel = AI_MODELS.some(model => model.id === value.aiModel);
+    if (isKnownModel) {
+      selectedAiModel = value.aiModel;
+      showCustomModel = false;
+      customAiModel = '';
+    } else {
+      selectedAiModel = 'custom';
+      showCustomModel = true;
+      customAiModel = value.aiModel;
+    }
   });
 
   onMount(() => {
@@ -112,6 +128,22 @@
     settings.updateTheme(theme);
   }
 
+  function handleAiModelChange() {
+    if (selectedAiModel === 'custom') {
+      showCustomModel = true;
+    } else {
+      showCustomModel = false;
+      customAiModel = '';
+      settings.updateAiModel(selectedAiModel);
+    }
+  }
+
+  function saveCustomAiModel() {
+    if (customAiModel.trim() && validateAIModelId(customAiModel.trim())) {
+      settings.updateAiModel(customAiModel.trim());
+    }
+  }
+
   function resetSettings() {
     if (confirm('Вы уверены, что хотите сбросить все настройки?')) {
       settings.reset();
@@ -201,6 +233,68 @@
             <Badge variant="success" text="Ключ настроен" />
           {:else}
             <Badge variant="warning" text="Ключ не настроен" />
+          {/if}
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Model Selection -->
+    <section class="settings__section">
+      <h2>Модель ИИ</h2>
+      <p class="settings__description">
+        Выберите модель искусственного интеллекта для анализа описаний фильмов.
+        <a href="https://openrouter.ai/docs#models" target="_blank" rel="noopener noreferrer">
+          Список всех моделей
+        </a>
+      </p>
+      
+      <div class="settings__field">
+        <Select
+          label="Модель ИИ"
+          bind:value={selectedAiModel}
+          on:change={handleAiModelChange}
+          options={[
+            ...AI_MODELS.map(model => ({
+              value: model.id,
+              label: `${model.name} (${model.provider})${model.recommended ? ' - Рекомендуется' : ''}`,
+              description: model.description
+            })),
+            {
+              value: 'custom',
+              label: 'Другая модель...',
+              description: 'Введите идентификатор модели вручную'
+            }
+          ]}
+        />
+        
+        {#if showCustomModel}
+          <div class="settings__custom-model">
+            <Input
+              label="Идентификатор модели"
+              bind:value={customAiModel}
+              placeholder="Например: anthropic/claude-3.5-sonnet"
+              on:blur={saveCustomAiModel}
+            />
+            <p class="settings__help-text">
+              Формат: provider/model-name (например: anthropic/claude-3.5-sonnet)
+            </p>
+          </div>
+        {/if}
+        
+        <div class="settings__model-info">
+          {#if selectedAiModel !== 'custom'}
+            {@const modelInfo = getAIModelById(selectedAiModel)}
+            {#if modelInfo}
+              <div class="settings__current-model">
+                <strong>Текущая модель:</strong> {modelInfo.name} ({modelInfo.provider})
+                <br>
+                <span class="settings__model-description">{modelInfo.description}</span>
+              </div>
+            {/if}
+          {:else if customAiModel}
+            <div class="settings__current-model">
+              <strong>Кастомная модель:</strong> {customAiModel}
+            </div>
           {/if}
         </div>
       </div>
@@ -373,6 +467,41 @@
           color: var(--color-text-primary);
         }
       }
+    }
+
+    &__custom-model {
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-md);
+      background: var(--color-background);
+      border-radius: var(--border-radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    &__help-text {
+      margin: var(--spacing-sm) 0 0 0;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    &__model-info {
+      margin-top: var(--spacing-md);
+    }
+
+    &__current-model {
+      padding: var(--spacing-md);
+      background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+      border-radius: var(--border-radius-md);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-border));
+      
+      strong {
+        color: var(--color-text-primary);
+      }
+    }
+
+    &__model-description {
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
     }
   }
 

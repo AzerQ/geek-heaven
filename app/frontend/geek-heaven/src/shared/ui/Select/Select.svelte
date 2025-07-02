@@ -1,6 +1,9 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte';
   import type { ChangeEventHandler, FormEventHandler } from 'svelte/elements';
   import type { SelectProps, SelectOption } from '../types';
+
+  const dispatch = createEventDispatcher();
 
   /**
    * Select component for forms
@@ -28,6 +31,7 @@
 
    const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
     value = event.currentTarget.value;
+    dispatch('change', { value });
   }
 
   // Определяем классы для стилизации

@@ -3,6 +3,9 @@
  * Provides integration with OpenRouter's language models for movie recommendations
  */
 
+import { settings } from '../stores/settings';
+import { get } from 'svelte/store';
+
 // Types for OpenRouter API
 export interface OpenRouterMessage {
   role: 'user' | 'assistant' | 'system';
@@ -39,9 +42,16 @@ export interface AISearchResponse {
 class OpenRouterService {
   private apiKey: string = '';
   private baseUrl = 'https://openrouter.ai/api/v1';
-  private model = 'qwen/qwen3-235b-a22b:free';
 
   public maxTokens = 7000;
+
+  /**
+   * Get current AI model from settings
+   */
+  private getCurrentModel(): string {
+    const currentSettings = get(settings);
+    return currentSettings.aiModel || 'anthropic/claude-3.5-sonnet';
+  }
 
   /**
    * Set API key for OpenRouter service
@@ -95,7 +105,7 @@ class OpenRouterService {
     }
 
     const request: OpenRouterRequest = {
-      model: this.model,
+      model: this.getCurrentModel(),
       messages: [
         {
           role: 'system',

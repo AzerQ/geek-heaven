@@ -11,6 +11,7 @@ const browser = typeof window !== 'undefined';
 export interface AppSettings {
   kinopoiskApiKey: string;
   openrouterApiKey: string;
+  aiModel: string;
   theme: 'light' | 'dark';
   language: 'ru' | 'en';
   autoSave: boolean;
@@ -19,6 +20,7 @@ export interface AppSettings {
 const defaultSettings: AppSettings = {
   kinopoiskApiKey: '',
   openrouterApiKey: '',
+  aiModel: 'anthropic/claude-3.5-sonnet',
   theme: 'dark',
   language: 'ru',
   autoSave: true
@@ -85,6 +87,13 @@ function createSettingsStore() {
     updateTheme: (theme: 'light' | 'dark') => {
       update((settings) => {
         const newSettings = { ...settings, theme };
+        saveSettings(newSettings);
+        return newSettings;
+      });
+    },
+    updateAiModel: (aiModel: string) => {
+      update((settings) => {
+        const newSettings = { ...settings, aiModel };
         saveSettings(newSettings);
         return newSettings;
       });
